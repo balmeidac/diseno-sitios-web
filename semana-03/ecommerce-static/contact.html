@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contacta con TiendaMax - Estamos aquí para ayudarte">
+    <title>Contacto - TiendaMax</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- HEADER con LOGO y NAVEGACIÓN -->
+    <header class="header">
+        <div class="header__container">
+            <div class="header__logo">
+                <img src="https://placehold.co/150x50?text=TiendaMax" alt="Logo TiendaMax" class="logo">
+            </div>
+            <nav class="header__nav">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="index.html" class="nav__link">Inicio</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="products.html" class="nav__link">Productos</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="about.html" class="nav__link">Acerca de</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="contact.html" class="nav__link nav__link--active">Contacto</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="cart.html" class="nav__link">Carrito <span id="cart-count">0</span></a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- MAIN: Formulario de Contacto -->
+    <main class="main">
+        <section class="contact-section">
+            <div class="container">
+                <h1 class="contact-section__title">Contacto</h1>
+                <p class="contact-section__subtitle">Nos gustaría saber de ti. Completa el formulario a continuación.</p>
+
+                <div class="contact-wrapper">
+                    <form class="contact-form" data-validate>
+                        <div class="form-group">
+                            <label for="name" class="form-label">Nombre Completo:</label>
+                            <input type="text" id="name" name="name" class="form-input" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email" class="form-label">Correo Electrónico:</label>
+                            <input type="email" id="email" name="email" class="form-input" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone" class="form-label">Teléfono (Opcional):</label>
+                            <input type="tel" id="phone" name="phone" class="form-input">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="subject" class="form-label">Asunto:</label>
+                            <select id="subject" name="subject" class="form-input" required>
+                                <option value="">-- Selecciona un asunto --</option>
+                                <option value="order">Consulta sobre pedido</option>
+                                <option value="product">Consulta sobre producto</option>
+                                <option value="complaint">Reclamación</option>
+                                <option value="suggestion">Sugerencia</option>
+                                <option value="other">Otro</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message" class="form-label">Mensaje:</label>
+                            <textarea id="message" name="message" class="form-input form-textarea" rows="6" required></textarea>
+                        </div>
+
+                        <button type="submit" class="form-button">Enviar Mensaje</button>
+                    </form>
+
+                    <div class="contact-info">
+                        <h2 class="contact-info__title">Información de Contacto</h2>
+                        
+                        <div class="contact-info__item">
+                            <h3>Email</h3>
+                            <p><a href="mailto:info@tiendamax.com">info@tiendamax.com</a></p>
+                            <p><a href="mailto:soporte@tiendamax.com">soporte@tiendamax.com</a></p>
+                        </div>
+
+                        <div class="contact-info__item">
+                            <h3>Teléfono</h3>
+                            <p><a href="tel:+15551234567">+1 (555) 123-4567</a></p>
+                            <p>Lunes a Viernes: 8:00 AM - 6:00 PM</p>
+                            <p>Sábado: 9:00 AM - 2:00 PM</p>
+                        </div>
+
+                        <div class="contact-info__item">
+                            <h3>Ubicación</h3>
+                            <p>TiendaMax Headquarters</p>
+                            <p>123 Calle Principal</p>
+                            <p>Ciudad, País 12345</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer__container">
+            <section class="footer__section">
+                <h3 class="footer__title">Información</h3>
+                <ul class="footer__list">
+                    <li><a href="pages/terms.html" class="footer__link">Términos de Servicio</a></li>
+                    <li><a href="pages/privacy.html" class="footer__link">Política de Privacidad</a></li>
+                    <li><a href="pages/help.html" class="footer__link">Centro de Ayuda</a></li>
+                </ul>
+            </section>
+            <section class="footer__section">
+                <h3 class="footer__title">Contacto</h3>
+                <ul class="footer__list">
+                    <li><a href="contact.html" class="footer__link">Formulario de Contacto</a></li>
+                    <li><p class="footer__text">Email: info@tiendamax.com</p></li>
+                    <li><p class="footer__text">Teléfono: +1 (555) 123-4567</p></li>
+                </ul>
+            </section>
+            <section class="footer__section">
+                <h3 class="footer__title">Síguenos</h3>
+                <ul class="footer__list">
+                    <li><a href="#" class="footer__link">Facebook</a></li>
+                    <li><a href="#" class="footer__link">Twitter</a></li>
+                    <li><a href="#" class="footer__link">Instagram</a></li>
+                </ul>
+            </section>
+        </div>
+        <div class="footer__bottom">
+            <p class="footer__copyright">&copy; 2025 TiendaMax. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

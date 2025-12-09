@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Centro de Ayuda de TiendaMax">
+    <title>Centro de Ayuda - TiendaMax</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <!-- HEADER con LOGO y NAVEGACIÓN -->
+    <header class="header">
+        <div class="header__container">
+            <div class="header__logo">
+                <img src="https://placehold.co/150x50?text=TiendaMax" alt="Logo TiendaMax" class="logo">
+            </div>
+            <nav class="header__nav">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="../index.html" class="nav__link">Inicio</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="../products.html" class="nav__link">Productos</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="../about.html" class="nav__link">Acerca de</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="../contact.html" class="nav__link">Contacto</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="../cart.html" class="nav__link">Carrito <span id="cart-count">0</span></a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- MAIN: Centro de Ayuda -->
+    <main class="main">
+        <section class="help-section">
+            <div class="container">
+                <h1 class="help-section__title">Centro de Ayuda</h1>
+                <p class="help-section__subtitle">Encuentra respuestas a las preguntas más frecuentes</p>
+
+                <div class="faq-container">
+                    <article class="faq-item">
+                        <h3 class="faq-question">¿Cómo realizo una compra?</h3>
+                        <p class="faq-answer">
+                            Puedes seleccionar los productos deseados, agregarlos al carrito y proceder al pago siguiendo 
+                            las instrucciones. Aceptamos varias formas de pago seguras.
+                        </p>
+                    </article>
+
+                    <article class="faq-item">
+                        <h3 class="faq-question">¿Cuál es el tiempo de entrega?</h3>
+                        <p class="faq-answer">
+                            Los pedidos generalmente se entregan en 3-5 días hábiles. Para compras mayores a $100 ofrecemos 
+                            envío gratis. Los tiempos pueden variar según la ubicación.
+                        </p>
+                    </article>
+
+                    <article class="faq-item">
+                        <h3 class="faq-question">¿Puedo devolver un producto?</h3>
+                        <p class="faq-answer">
+                            Sí, aceptamos devoluciones dentro de 30 días desde la compra. El producto debe estar en perfectas 
+                            condiciones y con el embalaje original. Contacta a nuestro equipo de soporte para iniciar el proceso.
+                        </p>
+                    </article>
+
+                    <article class="faq-item">
+                        <h3 class="faq-question">¿Es seguro comprar en TiendaMax?</h3>
+                        <p class="faq-answer">
+                            Sí, utilizamos encriptación SSL de 256 bits para proteger tus datos personales y financieros. 
+                            Todos nuestros productos son verificados y auténticos.
+                        </p>
+                    </article>
+
+                    <article class="faq-item">
+                        <h3 class="faq-question">¿Cómo puedo rastrear mi pedido?</h3>
+                        <p class="faq-answer">
+                            Una vez tu pedido sea enviado, recibirás un email con el número de rastreo que podrás usar en 
+                            el sitio del transportista para seguir el estado de tu envío.
+                        </p>
+                    </article>
+
+                    <article class="faq-item">
+                        <h3 class="faq-question">¿Ofrecen soporte al cliente?</h3>
+                        <p class="faq-answer">
+                            Sí, nuestro equipo de soporte está disponible 24/7 a través de email, teléfono o el formulario 
+                            de contacto. Nos esforzamos por responder en menos de 24 horas.
+                        </p>
+                    </article>
+                </div>
+
+                <div class="help-contact">
+                    <h2>¿No encontraste lo que buscas?</h2>
+                    <p>Contacta con nuestro equipo de soporte para más asistencia</p>
+                    <a href="../contact.html" class="hero__button">Ir al Contacto</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer__container">
+            <section class="footer__section">
+                <h3 class="footer__title">Información</h3>
+                <ul class="footer__list">
+                    <li><a href="terms.html" class="footer__link">Términos de Servicio</a></li>
+                    <li><a href="privacy.html" class="footer__link">Política de Privacidad</a></li>
+                    <li><a href="help.html" class="footer__link">Centro de Ayuda</a></li>
+                </ul>
+            </section>
+            <section class="footer__section">
+                <h3 class="footer__title">Contacto</h3>
+                <ul class="footer__list">
+                    <li><a href="../contact.html" class="footer__link">Formulario de Contacto</a></li>
+                    <li><p class="footer__text">Email: info@tiendamax.com</p></li>
+                    <li><p class="footer__text">Teléfono: +1 (555) 123-4567</p></li>
+                </ul>
+            </section>
+            <section class="footer__section">
+                <h3 class="footer__title">Síguenos</h3>
+                <ul class="footer__list">
+                    <li><a href="#" class="footer__link">Facebook</a></li>
+                    <li><a href="#" class="footer__link">Twitter</a></li>
+                    <li><a href="#" class="footer__link">Instagram</a></li>
+                </ul>
+            </section>
+        </div>
+        <div class="footer__bottom">
+            <p class="footer__copyright">&copy; 2025 TiendaMax. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>

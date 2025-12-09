@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Catálogo de productos de TiendaMax">
+    <title>Productos - TiendaMax</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- HEADER con LOGO y NAVEGACIÓN -->
+    <header class="header">
+        <div class="header__container">
+            <div class="header__logo">
+                <img src="https://placehold.co/150x50?text=TiendaMax" alt="Logo TiendaMax" class="logo">
+            </div>
+            <nav class="header__nav">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="../index.html" class="nav__link">Inicio</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="products.html" class="nav__link nav__link--active">Productos</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="about.html" class="nav__link">Acerca de</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="contact.html" class="nav__link">Contacto</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="cart.html" class="nav__link">Carrito <span id="cart-count">0</span></a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- MAIN: Catálogo de Productos -->
+    <main class="main">
+        <section class="products-section">
+            <div class="container">
+                <h1 class="products-section__title">Nuestros Productos</h1>
+                <p class="products-section__subtitle">Selecciona los mejores productos con los mejores precios</p>
+                
+                <div class="products-grid">
+                    <!-- Producto 1 -->
+                    <article class="product-card">
+                        <div class="product-card__image">
+                            <!-- Ruta local: ../img/products/prod1.jpg -->
+                            <img src="https://placehold.co/300x200?text=Producto+1" alt="Producto Premium 1">
+                        </div>
+                        <div class="product-card__content">
+                            <h3 class="product-card__title">Producto Premium 1</h3>
+                            <p class="product-card__description">Descripción detallada del producto premium 1</p>
+                            <div class="product-card__price">$99.99</div>
+                            <button class="product-card__button btn-add-to-cart" data-product-id="1">
+                                Agregar al Carrito
+                            </button>
+                        </div>
+                    </article>
+
+                    <!-- Producto 2 -->
+                    <article class="product-card">
+                        <div class="product-card__image">
+                            <!-- Ruta local: ../img/products/prod2.jpg -->
+                            <img src="https://placehold.co/300x200?text=Producto+2" alt="Producto Premium 2">
+                        </div>
+                        <div class="product-card__content">
+                            <h3 class="product-card__title">Producto Premium 2</h3>
+                            <p class="product-card__description">Descripción detallada del producto premium 2</p>
+                            <div class="product-card__price">$149.99</div>
+                            <button class="product-card__button btn-add-to-cart" data-product-id="2">
+                                Agregar al Carrito
+                            </button>
+                        </div>
+                    </article>
+
+                    <!-- Producto 3 -->
+                    <article class="product-card">
+                        <div class="product-card__image">
+                            <!-- Ruta local: ../img/products/prod3.jpg -->
+                            <img src="https://placehold.co/300x200?text=Producto+3" alt="Producto Premium 3">
+                        </div>
+                        <div class="product-card__content">
+                            <h3 class="product-card__title">Producto Premium 3</h3>
+                            <p class="product-card__description">Descripción detallada del producto premium 3</p>
+                            <div class="product-card__price">$199.99</div>
+                            <button class="product-card__button btn-add-to-cart" data-product-id="3">
+                                Agregar al Carrito
+                            </button>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer__container">
+            <section class="footer__section">
+                <h3 class="footer__title">Información</h3>
+                <ul class="footer__list">
+                    <li><a href="pages/terms.html" class="footer__link">Términos de Servicio</a></li>
+                    <li><a href="pages/privacy.html" class="footer__link">Política de Privacidad</a></li>
+                    <li><a href="pages/help.html" class="footer__link">Centro de Ayuda</a></li>
+                </ul>
+            </section>
+            <section class="footer__section">
+                <h3 class="footer__title">Contacto</h3>
+                <ul class="footer__list">
+                    <li><a href="contact.html" class="footer__link">Formulario de Contacto</a></li>
+                    <li><p class="footer__text">Email: info@tiendamax.com</p></li>
+                    <li><p class="footer__text">Teléfono: +1 (555) 123-4567</p></li>
+                </ul>
+            </section>
+            <section class="footer__section">
+                <h3 class="footer__title">Síguenos</h3>
+                <ul class="footer__list">
+                    <li><a href="#" class="footer__link">Facebook</a></li>
+                    <li><a href="#" class="footer__link">Twitter</a></li>
+                    <li><a href="#" class="footer__link">Instagram</a></li>
+                </ul>
+            </section>
+        </div>
+        <div class="footer__bottom">
+            <p class="footer__copyright">&copy; 2025 TiendaMax. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
