@@ -129,7 +129,7 @@ function updateCartDisplay() {
  */
 function calculateTotal() {
     const subtotal = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
-    const tax = subtotal * 0.1; // 10% de impuestos
+    const tax = subtotal * 0.15; // 15% de impuestos
     const shipping = subtotal > 100 ? 0 : 10; // Envío gratis si > $100
     return subtotal + tax + shipping;
 }
