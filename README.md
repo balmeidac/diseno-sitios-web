@@ -26,8 +26,8 @@ A continuación presento las unidades de estudio y los enlaces a las prácticas 
 | Tema | Estado | Carpeta / Práctica |
 | :--- | :---: | :--- |
 | **1.1** Introducción a la web (HTTP/HTTPS) | ✅ | [Semana 01](./semana-01) |
-| **1.2** Normas W3C y Accesibilidad (WCAG) | ⏳ | _Pendiente_ |
-| **1.3** Estructura de sitio y mapas de navegación | ⏳ | _Pendiente_ |
+| **1.2** Normas W3C y Accesibilidad (WCAG) | ✅ | [Semana 02](./semana-02/) |
+| **1.3** Estructura de sitio y mapas de navegación | ✅ | [Semana 03](./semana-03/) |
 | **1.4** Intro al desarrollo estático y Herramientas | ⏳ | _Pendiente_ |
 
 ### 🔹 Unidad 2: Lenguaje de Marcado HTML5
