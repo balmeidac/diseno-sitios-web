@@ -140,7 +140,7 @@ function calculateTotal() {
  */
 function getTotalBreakdown() {
     const subtotal = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
-    const tax = subtotal * 0.1;
+    const tax = subtotal * 0.15;
     const shipping = subtotal > 100 ? 0 : 10;
     return {
         subtotal: subtotal.toFixed(2),
