@@ -1,0 +1,172 @@
+/* Reset y estilos base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Courier New', monospace;
+}
+
+body {
+    background-color: #0a0a0a;
+    color: #00ff00;
+    line-height: 1.6;
+}
+
+/* Header y Navegación */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    background-color: #000;
+    border-bottom: 1px solid #00ff00;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #00ff00;
+    text-shadow: 0 0 10px #00ff00;
+    letter-spacing: 2px;
+}
+
+.nav ul {
+    display: flex;
+    list-style: none;
+}
+
+.nav li {
+    margin-left: 2rem;
+}
+
+.nav a {
+    color: #00ff00;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+}
+
+.nav a:hover,
+.nav a.active {
+    background-color: #00ff00;
+    color: #000;
+    text-shadow: none;
+}
+
+/* Contenido Principal */
+.main-content {
+    padding: 2rem 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.hero {
+    margin-bottom: 3rem;
+    border: 1px solid #00ff00;
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.2);
+}
+
+.hero-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+h1 {
+    color: #00ff00;
+    margin-bottom: 1.5rem;
+    font-size: 2.2rem;
+    text-shadow: 0 0 5px #00ff00;
+}
+
+p {
+    margin-bottom: 1.5rem;
+    color: #ccc;
+    line-height: 1.8;
+}
+
+/* Servicios */
+.service {
+    background-color: #111;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-left: 3px solid #00ff00;
+    transition: transform 0.3s ease;
+}
+
+.service:hover {
+    transform: translateX(10px);
+}
+
+.service h2 {
+    color: #00ff00;
+    margin-bottom: 0.8rem;
+    font-size: 1.5rem;
+}
+
+/* Enlaces */
+a {
+    color: #00a8ff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #00ff00;
+    text-decoration: underline;
+}
+
+.back-link {
+    display: inline-block;
+    margin-top: 2rem;
+    padding: 0.5rem 1rem;
+    background-color: #111;
+    border: 1px solid #00ff00;
+    color: #00ff00;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.back-link:hover {
+    background-color: #00ff00;
+    color: #000;
+    text-decoration: none;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 2rem 5%;
+    background-color: #000;
+    color: #00ff00;
+    border-top: 1px solid #00ff00;
+    margin-top: 3rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        text-align: center;
+        padding: 1rem;
+    }
+    
+    .nav {
+        margin-top: 1rem;
+    }
+    
+    .nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .nav li {
+        margin: 0.5rem 0;
+    }
+    
+    h1 {
+        font-size: 1.8rem;
+    }
+}
