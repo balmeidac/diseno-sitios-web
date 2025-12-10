@@ -132,11 +132,11 @@ a:hover {
 }
 
 /* ===== SECCIONES ===== */
-.about, .services {
+.about, .services, .about-us {
     padding: 4rem 0;
 }
 
-.about h2, .services h1 {
+.about h2, .services h1, .about-us h1 {
     text-align: center;
     font-size: 2.2rem;
     margin-bottom: 2rem;
@@ -144,7 +144,7 @@ a:hover {
     padding-bottom: 1rem;
 }
 
-.about h2::after, .services h1::after {
+.about h2::after, .services h1::after, .about-us h1::after {
     content: '';
     position: absolute;
     bottom: 0;
@@ -155,14 +155,129 @@ a:hover {
     background-color: var(--accent-color);
 }
 
+/* ===== SECCIÓN ACERCA DE ===== */
+.about-content {
+    margin-top: 3rem;
+}
+
+.about-card {
+    background-color: var(--white);
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    transition: var(--transition);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.about-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.about-card-image {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+}
+
+.about-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.about-card:hover .about-img {
+    transform: scale(1.05);
+}
+
+.about-card-content {
+    padding: 2rem;
+}
+
+.about-card h2 {
+    color: var(--secondary-color);
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+.about-card h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 2px;
+    background-color: var(--accent-color);
+}
+
+.about-card p {
+    margin-bottom: 1.5rem;
+    line-height: 1.7;
+    color: var(--text-color);
+}
+
+/* Estilos responsivos para la sección Acerca de */
+@media (min-width: 768px) {
+    .about-card {
+        flex-direction: row;
+        align-items: stretch;
+    }
+    
+    .about-card:nth-child(even) {
+        flex-direction: row-reverse;
+    }
+    
+    .about-card-image {
+        width: 50%;
+        height: auto;
+    }
+    
+    .about-card-content {
+        width: 50%;
+        padding: 2.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 767px) {
+    .about-card {
+        margin-bottom: 2.5rem;
+    }
+    
+    .about-card-image {
+        height: 250px;
+    }
+}
+
 /* ===== TARJETAS DE SERVICIOS ===== */
 .service-card {
     background-color: var(--white);
     border-radius: 8px;
-    padding: 2rem;
     margin-bottom: 2rem;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
     transition: var(--transition);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+@media (min-width: 768px) {
+    .service-card {
+        flex-direction: row;
+        align-items: center;
+    }
+    
+    .service-card:nth-child(even) {
+        flex-direction: row-reverse;
+    }
 }
 
 .service-card:hover {
@@ -170,10 +285,52 @@ a:hover {
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
 }
 
+.service-image {
+    flex: 1;
+    min-height: 250px;
+    overflow: hidden;
+}
+
+.service-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.service-card:hover .service-image img {
+    transform: scale(1.05);
+}
+
+.service-content {
+    flex: 1;
+    padding: 2rem;
+}
+
 .service-card h2 {
     color: var(--secondary-color);
     font-size: 1.5rem;
     margin-bottom: 1rem;
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+.service-card h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 2px;
+    background-color: var(--accent-color);
+}
+
+/* Estilos para pantallas pequeñas */
+@media (max-width: 767px) {
+    .service-image {
+        height: 200px;
+    }
 }
 
 /* ===== BOTÓN ===== */
