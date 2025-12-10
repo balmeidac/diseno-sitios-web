@@ -20,7 +20,7 @@ Sitio web oficial de La Cosecha, cafetería de especialidad ubicada en Quito, Ec
 - Responsive Design
 - Buenas prácticas de SEO
 
-## 📸 Capturas de Pantalla (Evidencia)
+## 📸 Capturas de Pantalla
 
 ### Vista de la Página de Inicio
 Aquí se muestra el Header, la sección Hero y la presentación de la marca.
@@ -42,59 +42,69 @@ la-cosecha/
 │   ├── servicios.html     # Página de servicios
 │   ├── acerca.html        # Sobre nosotros
 │   └── contacto.html      # Formulario de contacto
-├── index.html             # Página de inicio
-└── README.md              # Este archivo
-```
-
-## 🌐 Navegación
-
-- **Inicio**: Página principal con información destacada
-- **Servicios**: Nuestra oferta de productos y servicios de café
-- **Acerca de**: Historia y equipo de La Cosecha
-- **Contacto**: Formulario para ponerse en contacto con nosotros
-
-## 🎨 Paleta de Colores
-
-- Principal: `#5D4037` (Marrón oscuro)
-- Secundario: `#8D6E63` (Marrón claro)
-- Fondo: `#EFEBE9` (Beige claro)
-- Texto: `#3E2723` (Casi negro)
-
-## 📱 Diseño Responsive
-
-El sitio está diseñado para funcionar perfectamente en:
-- Escritorio (≥1200px)
-- Tablets (≥768px)
-- Móviles (≥320px)
-
-## 📝 Requisitos
-
-- Navegador web actualizado (Chrome, Firefox, Safari, Edge)
-- Conexión a internet (para fuentes de Google)
 
 ## 🚀 Cómo Empezar
 
+### Requisitos Previos
+- Navegador web actualizado (Chrome, Firefox, Safari, Edge)
+- Git instalado (opcional)
+
+### Instalación Local
+
 1. Clona el repositorio:
    ```bash
-   git clone https://github.com/tu-usuario/la-cosecha.git
+   git clone https://github.com/balmeidac/diseno-sitios-web.git
    ```
-2. Abre el archivo `index.html` en tu navegador
+
+2. Navega al directorio del proyecto:
+   ```bash
+   cd diseno-sitios-web/semana-04/la-cosecha
+   ```
+
+3. Abre el archivo `index.html` en tu navegador:
+   - Haz doble clic en el archivo, o
+   - Arrástralo a una ventana del navegador, o
+   - Usa la opción "Abrir con" del menú contextual
+
+## 📸 Vista Previa
+
+### Página de Inicio
+![Página de Inicio](./img/screenshots/home.jpg)
+*Presentación de la marca y productos destacados*
+
+### Nuestros Servicios
+![Servicios](./img/screenshots/servicios.jpg)
+*Muestra de nuestros productos y servicios de café*
+
+### Acerca de Nosotros
+![Acerca de](./img/screenshots/acerca.jpg)
+*Nuestra historia y equipo de trabajo*
 
 ## 📄 Licencia
 
-Este proyecto está bajo la Licencia MIT. Ver el archivo `LICENSE` para más detalles.
+Este proyecto está bajo la [Licencia MIT](LICENSE).
 
-## 🤝 Contribuciones
+## 🤝 Cómo Contribuir
 
-Las contribuciones son bienvenidas. Por favor, lee las [pautas de contribución](CONTRIBUTING.md) antes de enviar un pull request.
+Las contribuciones son bienvenidas. Sigue estos pasos:
+
+1. Haz un Fork del proyecto
+2. Crea una rama con tu nueva característica (`git checkout -b feature/nueva-caracteristica`)
+3. Haz commit de tus cambios (`git commit -m 'Añade nueva característica'`)
+4. Haz push a la rama (`git push origin feature/nueva-caracteristica`)
+5. Abre un Pull Request
 
 ## 📧 Contacto
 
-Para más información, contáctanos en:
-- Email: info@lacosecha.com
-- Teléfono: +593 2 123 4567
-- Dirección: Av. Amazonas N23-45 y Veintimilla, Quito, Ecuador
+¿Tienes preguntas o comentarios? No dudes en contactarnos:
+
+- ✉️ Email: info@lacosecha.com
+- 📞 Teléfono: +593 2 123 4567
+- 📍 Dirección: Av. Amazonas N23-45 y Veintimilla, Quito, Ecuador
+- 🌐 Sitio web: [www.lacosecha.com](https://www.lacosecha.com)
 
 ---
+
+*© 2025 La Cosecha - Todos los derechos reservados*
 
 Desarrollado con ❤️ por Grupo 1 para La Cosecha - Dic 2025
