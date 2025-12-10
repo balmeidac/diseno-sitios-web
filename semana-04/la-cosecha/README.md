@@ -97,4 +97,4 @@ Para más información, contáctanos en:
 
 ---
 
-Desarrollado con ❤️ por [Tu Nombre] para La Cosecha - 2025
+Desarrollado con ❤️ por Grupo 1 para La Cosecha - Dic 2025
