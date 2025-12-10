@@ -9,7 +9,7 @@ Bienvenido a mi repositorio académico. Aquí documento mi proceso de aprendizaj
 ## 🛠️ Tecnologías y Herramientas
 Este repositorio utiliza las siguientes tecnologías basadas en el temario del curso:
 
-* **Lenguajes:** HTML5 (Semántico), CSS3
+* **Lenguajes:** HTML5 (Semántico), CSS3, Javascript
 * **Diseño:** Responsive Design (Flexbox, Grid), Bootstrap
 * **Control de Versiones:** Git & GitHub
 * **Editor:** VS Code / Windsurf IDE
@@ -28,7 +28,7 @@ A continuación presento las unidades de estudio y los enlaces a las prácticas 
 | **1.1** Introducción a la web (HTTP/HTTPS) | ✅ | [Semana 01](./semana-01) |
 | **1.2** Normas W3C y Accesibilidad (WCAG) | ✅ | [Semana 02](./semana-02/) |
 | **1.3** Estructura de sitio y mapas de navegación | ✅ | [Semana 03](./semana-03/) |
-| **1.4** Intro al desarrollo estático y Herramientas | ⏳ | _Pendiente_ |
+| **1.4** Intro al desarrollo estático y Herramientas | ✅ |[Semana 04](./semana-04/) |
 
 ### 🔹 Unidad 2: Lenguaje de Marcado HTML5
 *Estructura semántica, formularios y multimedia.*

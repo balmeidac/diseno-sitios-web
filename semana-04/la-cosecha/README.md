@@ -22,26 +22,35 @@ Sitio web oficial de La Cosecha, cafetería de especialidad ubicada en Quito, Ec
 
 ## 📸 Capturas de Pantalla
 
-### Vista de la Página de Inicio
-Aquí se muestra el Header, la sección Hero y la presentación de la marca.
-![Página de Inicio](./img/vista-inicio.jpg)
-
-### Vista de Servicios
-Detalle de los servicios ofrecidos por la cafetería.
-![Sección de Servicios](./img/vista-servicios.jpg)
+Las siguientes capturas de pantalla muestran las diferentes secciones del sitio web. Para ver las imágenes en su totalidad, asegúrate de que los archivos estén en la carpeta `img/screenshots/` con los nombres indicados.
 
 ## 📁 Estructura del Proyecto
 
 ```
 la-cosecha/
 ├── css/
-│   └── style.css          # Estilos principales
-├── img/                   # Imágenes del sitio
-│   └── logo.jpg
+│   └── style.css             # Estilos principales
+├── img/                      # Imágenes del sitio
+│   ├── acerca/               # Imágenes de la sección "Acerca de"
+│   │   ├── cafe-cultivo.jpg
+│   │   ├── nuestro-equipo.jpg
+│   │   └── nuestro-compromiso.jpg
+│   ├── products/             # Imágenes de productos
+│   │   ├── cafe-grano.jpg
+│   │   ├── tostado-artesanal.jpg
+│   │   └── catas-talleres.jpg
+│   ├── screenshots/          # Capturas de pantalla para el README
+│   │   ├── home.jpg
+│   │   ├── servicios.jpg
+│   │   └── acerca.jpg
+│   ├── banner.jpg            # Banner principal
+│   └── logo.jpg              # Logo de la marca
 ├── pages/
-│   ├── servicios.html     # Página de servicios
-│   ├── acerca.html        # Sobre nosotros
-│   └── contacto.html      # Formulario de contacto
+│   ├── servicios.html        # Página de servicios
+│   ├── acerca.html           # Sobre nosotros
+│   └── contacto.html         # Formulario de contacto
+├── index.html               # Página de inicio
+└── README.md                # Este archivo
 
 ## 🚀 Cómo Empezar
 
