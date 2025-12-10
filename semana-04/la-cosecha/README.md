@@ -103,6 +103,15 @@ Las contribuciones son bienvenidas. Sigue estos pasos:
 4. Haz push a la rama (`git push origin feature/nueva-caracteristica`)
 5. Abre un Pull Request
 
+## 👥 Autores
+
+Este proyecto fue desarrollado por el **Grupo 1 - SISINF-A** para la asignatura de Diseño de Sitios Web:
+
+* **JARAMILLO RIVERA JOHN DAVID** - *Desarrollador / Diseño*
+* **MORA QUIJIJE YARITZA CRISTHEL** - *Investigación / Contenido*
+* **ANDRADE LOOR THALIA MERCEDES** - *QA / Documentación*
+* **ALMEIDA COELLO BYRON OMAR (balmeidac)** - *Líder de Proyecto / Integración*
+
 ## 📧 Contacto
 
 ¿Tienes preguntas o comentarios? No dudes en contactarnos:
