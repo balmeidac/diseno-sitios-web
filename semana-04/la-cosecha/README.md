@@ -20,6 +20,16 @@ Sitio web oficial de La Cosecha, cafetería de especialidad ubicada en Quito, Ec
 - Responsive Design
 - Buenas prácticas de SEO
 
+## 📸 Capturas de Pantalla (Evidencia)
+
+### Vista de la Página de Inicio
+Aquí se muestra el Header, la sección Hero y la presentación de la marca.
+![Página de Inicio](/img/vista-inicio.jpg)
+
+### Vista de Servicios
+Detalle de los servicios ofrecidos por la cafetería.
+![Sección de Servicios](/img/vista-servicios.jpg)
+
 ## 📁 Estructura del Proyecto
 
 ```
