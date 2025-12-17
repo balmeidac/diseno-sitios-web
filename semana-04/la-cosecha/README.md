@@ -20,10 +20,6 @@ Sitio web oficial de La Cosecha, cafetería de especialidad ubicada en Quito, Ec
 - Responsive Design
 - Buenas prácticas de SEO
 
-## 📸 Capturas de Pantalla
-
-Las siguientes capturas de pantalla muestran las diferentes secciones del sitio web. Para ver las imágenes en su totalidad, asegúrate de que los archivos estén en la carpeta `img/screenshots/` con los nombres indicados.
-
 ## 📁 Estructura del Proyecto
 
 ```
@@ -75,7 +71,9 @@ la-cosecha/
    - Arrástralo a una ventana del navegador, o
    - Usa la opción "Abrir con" del menú contextual
 
-## 📸 Vista Previa
+## 📸 Capturas de Pantalla
+
+Las siguientes capturas de pantalla muestran las diferentes secciones del sitio web. Para ver las imágenes en su totalidad, asegúrate de que los archivos estén en la carpeta `img/screenshots/` con los nombres indicados.
 
 ### Página de Inicio
 ![Página de Inicio](./img/screenshots/home.jpg)
