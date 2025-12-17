@@ -5,7 +5,7 @@ Este ejercicio de práctica tiene como objetivo aplicar los conceptos básicos d
 
 ## Captura de Pantalla
 
-![Vista previa de la página web](images/captura.png)
+![Vista previa de la página web](images/capturas/captura.png)
 
 ## Contenido del Proyecto
 El archivo `index.html` contiene una página web básica con los siguientes elementos:
