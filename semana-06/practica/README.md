@@ -3,6 +3,10 @@
 ## Descripción
 Este ejercicio de práctica tiene como objetivo aplicar los conceptos básicos de estructura HTML aprendidos en clase. Se ha creado una página web simple que incluye diferentes elementos estructurales y de contenido de HTML.
 
+## Captura de Pantalla
+
+![Vista previa de la página web](images/captura.png)
+
 ## Contenido del Proyecto
 El archivo `index.html` contiene una página web básica con los siguientes elementos:
 
