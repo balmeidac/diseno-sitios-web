@@ -25,8 +25,8 @@ A continuación presento las unidades de estudio y los enlaces a las prácticas 
 
 | Tema | Estado | Carpeta / Práctica |
 | :--- | :---: | :--- |
-| **1.1** Introducción a la web (HTTP/HTTPS) | ✅ | [Semana 01](./semana-01) |
-| **1.2** Normas W3C y Accesibilidad (WCAG) | ✅ | [Semana 02](./semana-02/) |
+| **1.1** Introducción a la web (HTTP/HTTPS) | ⏳ | [_Pendiente_](./semana-01) |
+| **1.2** Normas W3C y Accesibilidad (WCAG) | ⏳ | [_Pendiente_](./semana-02/) |
 | **1.3** Estructura de sitio y mapas de navegación | ✅ | [Semana 03](./semana-03/) |
 | **1.4** Intro al desarrollo estático y Herramientas | ✅ |[Semana 04](./semana-04/) |
 
@@ -36,8 +36,8 @@ A continuación presento las unidades de estudio y los enlaces a las prácticas 
 | Tema | Estado | Carpeta / Práctica |
 | :--- | :---: | :--- |
 | **2.1** Estructura básica y etiquetas esenciales | ⏳ | _Pendiente_ |
-| **2.2** Contenido: Listas, Tablas y Enlaces | ⏳ | [Semana 06](./semana-06/) |
-| **2.3** Formularios y Validación | ⏳ | _Pendiente_ |
+| **2.2** Contenido: Listas, Tablas y Enlaces | ✅ | [Semana 06](./semana-06/) |
+| **2.3** Formularios y Validación | ✅ | [Semana 07](./semana-07) |
 | **2.4** Multimedia (Audio, Video, SVG, Canvas) | ⏳ | _Pendiente_ |
 
 ### 🔹 Unidad 3: Estilo y Diseño con CSS
