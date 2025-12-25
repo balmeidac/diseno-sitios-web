@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - PC Gamer Store</title>
+</head>
+<body>
+    <header>
+        <h1>PC Gamer Store</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="productos.html">Productos</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="registro.html">Registro</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Contáctanos</h2>
+            <p>¿Tienes alguna pregunta? Estamos aquí para ayudarte</p>
+            
+            <div>
+                <h3>Información de Contacto</h3>
+                
+                <div>
+                    <h4>Dirección</h4>
+                    <p>Av. Principal 1234, Quito</p>
+                    <p>Pichincha, Ecuador</p>
+                </div>
+                
+                <div>
+                    <h4>Teléfono</h4>
+                    <p><a href="tel:+593991234567">+593 99 123 4567</a></p>
+                    <p>Lunes a Viernes: 9:00 - 18:00</p>
+                </div>
+                
+                <div>
+                    <h4>Email</h4>
+                    <p><a href="mailto:info@pcgamerstore.com">info@pcgamerstore.com</a></p>
+                    <p>Soporte 24/7</p>
+                </div>
+                
+                <div>
+                    <h4>Síguenos</h4>
+                    <p>
+                        <a href="#">Facebook</a> | 
+                        <a href="#">Twitter</a> | 
+                        <a href="#">Instagram</a> |
+                        <a href="#">Discord</a>
+                    </p>
+                </div>
+            </div>
+            
+            <div>
+                <h3>Envíanos un Mensaje</h3>
+                <form>
+                    <div>
+                        <label for="name">Nombre Completo:</label><br>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    
+                    <div>
+                        <label for="email">Correo Electrónico:</label><br>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    
+                    <div>
+                        <label for="subject">Asunto:</label><br>
+                        <select id="subject" name="subject" required>
+                            <option value="">Selecciona un asunto</option>
+                            <option value="consulta">Consulta General</option>
+                            <option value="soporte">Soporte Técnico</option>
+                            <option value="ventas">Ventas</option>
+                            <option value="sugerencia">Sugerencia</option>
+                            <option value="otro">Otro</option>
+                        </select>
+                    </div>
+                    
+                    <div>
+                        <label for="message">Mensaje:</label><br>
+                        <textarea id="message" name="message" rows="6" cols="50" required></textarea>
+                    </div>
+                    
+                    <button type="submit">Enviar Mensaje</button>
+                </form>
+            </div>
+            
+            <div>
+                <h3>Nuestra Ubicación</h3>
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.78695862888!2d-78.48622092499996!3d-0.18011029999999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91d59a4002427ed9%3A0x3d3cd0645a1ac1b9!2sQuito%2C%20Ecuador!5e0!3m2!1sen!2sus!4v1623456789012!5m2!1sen!2sus" 
+                    width="600" 
+                    height="450" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy">
+                </iframe>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2025 PC Gamer Store. Todos los derechos reservados.</p>
+        <p>
+            <a href="https://facebook.com">Facebook</a> | 
+            <a href="https://twitter.com">Twitter</a> | 
+            <a href="https://instagram.com">Instagram</a>
+        </p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro - PC Gamer Store</title>
+</head>
+<body>
+    <header>
+        <h1>PC Gamer Store</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="productos.html">Productos</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="registro.html">Registro</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>¡Únete a la Comunidad Gamer!</h2>
+            <p>Crea tu cuenta y accede a ofertas exclusivas y contenido premium</p>
+            
+            <form>
+                <div>
+                    <label for="firstName">Nombres:</label><br>
+                    <input type="text" id="firstName" name="firstName" required>
+                </div>
+                
+                <div>
+                    <label for="lastName">Apellidos:</label><br>
+                    <input type="text" id="lastName" name="lastName" required>
+                </div>
+                
+                <div>
+                    <label for="email">Correo Electrónico:</label><br>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div>
+                    <label for="username">Nombre de Usuario:</label><br>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                
+                <div>
+                    <label for="password">Contraseña (mínimo 8 caracteres):</label><br>
+                    <input type="password" id="password" name="password" required minlength="8">
+                </div>
+                
+                <div>
+                    <label for="confirmPassword">Confirmar Contraseña:</label><br>
+                    <input type="password" id="confirmPassword" name="confirmPassword" required>
+                </div>
+                
+                <div>
+                    <label for="birthdate">Fecha de Nacimiento:</label><br>
+                    <input type="date" id="birthdate" name="birthdate" required>
+                </div>
+                
+                <div>
+                    <input type="checkbox" id="terms" name="terms" required>
+                    <label for="terms">
+                        Acepto los <a href="#">Términos y Condiciones</a> y la 
+                        <a href="#">Política de Privacidad</a>
+                    </label>
+                </div>
+                
+                <div>
+                    <button type="submit">Crear Cuenta</button>
+                </div>
+                
+                <div>
+                    <p>¿Ya tienes una cuenta? <a href="#">Inicia Sesión</a></p>
+                </div>
+            </form>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2025 PC Gamer Store. Todos los derechos reservados.</p>
+        <p>
+            <a href="https://facebook.com">Facebook</a> | 
+            <a href="https://twitter.com">Twitter</a> | 
+            <a href="https://instagram.com">Instagram</a>
+        </p>
+    </footer>
+</body>
+</html>

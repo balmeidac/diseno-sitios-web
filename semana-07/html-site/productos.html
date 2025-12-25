@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos - PC Gamer Store</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .products-hero {
+            background: linear-gradient(rgba(15, 52, 96, 0.8), rgba(15, 52, 96, 0.8)), 
+                        url('https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 5rem 1rem;
+            margin-bottom: 3rem;
+            border-radius: 10px;
+        }
+        
+        .products-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        
+        .products-container {
+            display: grid;
+            grid-template-columns: 250px 1fr;
+            gap: 2rem;
+        }
+        
+        .filters {
+            background: rgba(26, 26, 46, 0.8);
+            padding: 1.5rem;
+            border-radius: 10px;
+            height: fit-content;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .filters h2 {
+            color: #e94560;
+            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .filter-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .filter-group h3 {
+            color: #e0e0e0;
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid #0f3460;
+        }
+        
+        .filter-option {
+            margin-bottom: 0.8rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .filter-option input[type="checkbox"] {
+            width: 16px;
+            height: 16px;
+            accent-color: #e94560;
+        }
+        
+        .filter-option label {
+            color: #b8c1ec;
+            cursor: pointer;
+        }
+        
+        .price-range {
+            width: 100%;
+            margin: 1rem 0;
+        }
+        
+        .price-inputs {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 0.5rem;
+        }
+        
+        .price-inputs input {
+            width: 45%;
+            padding: 0.5rem;
+            background: #16213e;
+            border: 1px solid #0f3460;
+            border-radius: 5px;
+            color: #e0e0e0;
+        }
+        
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .product-card {
+            background: rgba(26, 26, 46, 0.8);
+            border-radius: 10px;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+        }
+        
+        .product-badge {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: #e94560;
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            z-index: 2;
+        }
+        
+        .product-image {
+            position: relative;
+            height: 200px;
+            overflow: hidden;
+        }
+        
+        .product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .product-card:hover .product-image img {
+            transform: scale(1.05);
+        }
+        
+        .product-info {
+            padding: 1.5rem;
+        }
+        
+        .product-category {
+            color: #e94560;
+            font-size: 0.9rem;
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+        
+        .product-title {
+            color: #e0e0e0;
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+        
+        .product-rating {
+            color: #ffc107;
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+        }
+        
+        .product-price {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid #0f3460;
+        }
+        
+        .price {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #e94560;
+        }
+        
+        .original-price {
+            text-decoration: line-through;
+            color: #b8c1ec;
+            font-size: 0.9rem;
+            margin-left: 0.5rem;
+        }
+        
+        .add-to-cart {
+            background: #0f3460;
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .add-to-cart:hover {
+            background: #e94560;
+        }
+        
+        .pagination {
+            display: flex;
+            justify-content: center;
+            margin-top: 3rem;
+            gap: 0.5rem;
+        }
+        
+        .page-btn {
+            background: #16213e;
+            color: #e0e0e0;
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .page-btn.active, .page-btn:hover {
+            background: #e94560;
+            color: white;
+        }
+        
+        .page-btn.disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+        
+        @media (max-width: 992px) {
+            .products-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .filters {
+                position: sticky;
+                top: 0;
+                z-index: 100;
+            }
+            
+            .products-hero h1 {
+                font-size: 2.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <button class="mobile-menu-btn" aria-label="Menú">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav>
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-home"></i> Inicio</a></li>
+                    <li><a href="productos.html" class="active"><i class="fas fa-desktop"></i> Productos</a></li>
+                    <li><a href="contacto.html"><i class="fas fa-envelope"></i> Contacto</a></li>
+                    <li><a href="registro.html"><i class="fas fa-user-plus"></i> Registro</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="products-hero">
+            <h1>Nuestros Productos</h1>
+            <p>Encuentra los mejores productos para gamers</p>
+        </section>
+
+        <div class="products-container">
+            <aside class="filters">
+                <h2><i class="fas fa-filter"></i> Filtros</h2>
+                
+                <div class="filter-group">
+                    <h3>Categorías</h3>
+                    <div class="filter-option">
+                        <input type="checkbox" id="category1" checked>
+                        <label for="category1">PC Gamer</label>
+                    </div>
+                    <div class="filter-option">
+                        <input type="checkbox" id="category2" checked>
+                        <label for="category2">Laptops</label>
+                    </div>
+                    <div class="filter-option">
+                        <input type="checkbox" id="category3" checked>
+                        <label for="category3">Periféricos</label>
+                    </div>
+                    <div class="filter-option">
+                        <input type="checkbox" id="category4" checked>
+                        <label for="category4">Accesorios</label>
+                    </div>
+                </div>
+                
+                <div class="filter-group">
+                    <h3>Precio</h3>
+                    <input type="range" class="price-range" min="0" max="5000" value="5000">
+                    <div class="price-inputs">
+                        <input type="number" placeholder="Mínimo" value="0">
+                        <input type="number" placeholder="Máximo" value="5000">
+                    </div>
+                </div>
+                
+                <div class="filter-group">
+                    <h3>Marca</h3>
+                    <div class="filter-option">
+                        <input type="checkbox" id="brand1" checked>
+                        <label for="brand1">ASUS ROG</label>
+                    </div>
+                    <div class="filter-option">
+                        <input type="checkbox" id="brand2" checked>
+                        <label for="brand2">MSI</label>
+                    </div>
+                    <div class="filter-option">
+                        <input type="checkbox" id="brand3" checked>
+                        <label for="brand3">Razer</label>
+                    </div>
+                    <div class="filter-option">
+                        <input type="checkbox" id="brand4" checked>
+                        <label for="brand4">Logitech</label>
+                    </div>
+                </div>
+                
+                <button class="btn-apply-filters">
+                    <i class="fas fa-check"></i> Aplicar Filtros
+                </button>
+            </aside>
+            
+            <div class="products-content">
+                <div class="products-grid">
+                    <!-- Producto 1 -->
+                    <article class="product-card">
+                        <div class="product-badge">Nuevo</div>
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1552831388-6a0b3575b32a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="PC Gamer Pro">
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">PC Gamer</span>
+                            <h3 class="product-title">PC Gamer Pro - RTX 4090, Ryzen 9 7950X</h3>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <span>(24)</span>
+                            </div>
+                            <div class="product-price">
+                                <div>
+                                    <span class="price">$3,499</span>
+                                    <span class="original-price">$3,999</span>
+                                </div>
+                                <button class="add-to-cart">
+                                    <i class="fas fa-shopping-cart"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <!-- Producto 2 -->
+                    <article class="product-card">
+                        <div class="product-badge">Oferta</div>
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1593642702821-c8da6771f0c6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1632&q=80" alt="Laptop Gamer">
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">Laptops</span>
+                            <h3 class="product-title">Laptop Gamer ASUS ROG Zephyrus</h3>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <span>(18)</span>
+                            </div>
+                            <div class="product-price">
+                                <div>
+                                    <span class="price">$2,199</span>
+                                    <span class="original-price">$2,499</span>
+                                </div>
+                                <button class="add-to-cart">
+                                    <i class="fas fa-shopping-cart"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <!-- Producto 3 -->
+                    <article class="product-card">
+                        <div class="product-image">
+                            <img src="img/productos/prod2.jpg" alt="Teclado Mecánico">
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">Teclados</span>
+                            <h3 class="product-title">Teclado Mecánico Razer BlackWidow V3</h3>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <span>(42)</span>
+                            </div>
+                            <div class="product-price">
+                                <div>
+                                    <span class="price">$149</span>
+                                </div>
+                                <button class="add-to-cart">
+                                    <i class="fas fa-shopping-cart"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <!-- Producto 4 -->
+                    <article class="product-card">
+                        <div class="product-badge">Nuevo</div>
+                        <div class="product-image">
+                            <img src="img/productos/prod3.jpg" alt="Mouse Gamer">
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">Mouse</span>
+                            <h3 class="product-title">Mouse Gamer Logitech G Pro X Superlight</h3>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <span>(36)</span>
+                            </div>
+                            <div class="product-price">
+                                <div>
+                                    <span class="price">$129</span>
+                                    <span class="original-price">$149</span>
+                                </div>
+                                <button class="add-to-cart">
+                                    <i class="fas fa-shopping-cart"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <!-- Producto 5 -->
+                    <article class="product-card">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Audífonos Gamer">
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">Audífonos</span>
+                            <h3 class="product-title">Audífonos Gamer HyperX Cloud II</h3>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <span>(29)</span>
+                            </div>
+                            <div class="product-price">
+                                <div>
+                                    <span class="price">$99</span>
+                                    <span class="original-price">$129</span>
+                                </div>
+                                <button class="add-to-cart">
+                                    <i class="fas fa-shopping-cart"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <!-- Producto 6 -->
+                    <article class="product-card">
+                        <div class="product-badge">Oferta</div>
+                        <div class="product-image">
+                            <img src="img/productos/prod4.jpg" alt="Monitor Gamer">
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">Monitores</span>
+                            <h3 class="product-title">Monitor Gamer ASUS TUF 27" 165Hz</h3>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <span>(15)</span>
+                            </div>
+                            <div class="product-price">
+                                <div>
+                                    <span class="price">$349</span>
+                                    <span class="original-price">$399</span>
+                                </div>
+                                <button class="add-to-cart">
+                                    <i class="fas fa-shopping-cart"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                
+                <div class="pagination">
+                    <button class="page-btn disabled"><i class="fas fa-chevron-left"></i></button>
+                    <button class="page-btn active">1</button>
+                    <button class="page-btn">2</button>
+                    <button class="page-btn">3</button>
+                    <button class="page-btn">4</button>
+                    <button class="page-btn">5</button>
+                    <button class="page-btn"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 PC Gamer Store. Todos los derechos reservados.</p>
+            <div class="social-links">
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" aria-label="Discord"><i class="fab fa-discord"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <a href="#" class="back-to-top" aria-label="Volver arriba">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
