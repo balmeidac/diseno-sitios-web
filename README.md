@@ -35,7 +35,7 @@ A continuación presento las unidades de estudio y los enlaces a las prácticas 
 
 | Tema | Estado | Carpeta / Práctica |
 | :--- | :---: | :--- |
-| **2.1** Estructura básica y etiquetas esenciales | ⏳ | _Pendiente_ |
+| **2.1** Estructura básica y etiquetas esenciales | ✅ | [Semana 05](./semana-05/) |
 | **2.2** Contenido: Listas, Tablas y Enlaces | ✅ | [Semana 06](./semana-06/) |
 | **2.3** Formularios y Validación | ✅ | [Semana 07](./semana-07) |
 | **2.4** Multimedia (Audio, Video, SVG, Canvas) | ⏳ | _Pendiente_ |
