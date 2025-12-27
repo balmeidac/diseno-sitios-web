@@ -185,7 +185,7 @@ a {
 /* Botón CTA */
 .cta-button {
     display: inline-block;
-    background-color: var(--primary-color);
+    background-color: #10b981;
     color: white;
     padding: 0.8rem 2rem;
     border-radius: 50px;
@@ -196,9 +196,9 @@ a {
 }
 
 .cta-button:hover {
-    background-color: var(--secondary-color);
+    background-color: #059669;
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
+    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
 }
 
 /* ===== BANNER SECTION ===== */
