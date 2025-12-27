@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+  <defs>
+    <linearGradient id="heroBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e3a8a;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#2563eb;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0f172a;stop-opacity:1" />
+    </linearGradient>
+    
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Fondo degradado -->
+  <rect width="1920" height="1080" fill="url(#heroBg)"/>
+  
+  <!-- Líneas abstractas de tecnología - esquina superior izquierda -->
+  <g opacity="0.15" stroke="#ffffff" stroke-width="2" fill="none">
+    <path d="M 100 150 L 400 50 L 600 200"/>
+    <path d="M 150 100 L 500 80 L 700 300"/>
+    <path d="M 200 200 L 450 150 L 800 250"/>
+    <circle cx="100" cy="150" r="8"/>
+    <circle cx="400" cy="50" r="8"/>
+    <circle cx="600" cy="200" r="8"/>
+  </g>
+  
+  <!-- Líneas abstractas - esquina inferior derecha -->
+  <g opacity="0.15" stroke="#ffffff" stroke-width="2" fill="none">
+    <path d="M 1820 930 L 1520 1030 L 1320 880"/>
+    <path d="M 1770 980 L 1420 1000 L 1220 780"/>
+    <path d="M 1720 880 L 1470 930 L 1120 830"/>
+    <circle cx="1820" cy="930" r="8"/>
+    <circle cx="1520" cy="1030" r="8"/>
+    <circle cx="1320" cy="880" r="8"/>
+  </g>
+  
+  <!-- Puntos flotantes con efecto tech -->
+  <g opacity="0.2" fill="#ffffff" filter="url(#glow)">
+    <circle cx="300" cy="300" r="6"/>
+    <circle cx="700" cy="400" r="4"/>
+    <circle cx="1200" cy="350" r="5"/>
+    <circle cx="1600" cy="600" r="4"/>
+    <circle cx="400" cy="750" r="6"/>
+    <circle cx="1300" cy="800" r="5"/>
+    <circle cx="900" cy="200" r="4"/>
+    <circle cx="500" cy="950" r="5"/>
+  </g>
+  
+  <!-- Rectángulos abstractos -->
+  <g opacity="0.1" stroke="#ffffff" stroke-width="1.5" fill="none">
+    <rect x="800" y="200" width="150" height="120" rx="10"/>
+    <rect x="1100" y="650" width="200" height="150" rx="10"/>
+    <rect x="300" y="600" width="180" height="100" rx="10"/>
+  </g>
+  
+  <!-- Círculos concéntricos - efecto tech -->
+  <g opacity="0.1" fill="none" stroke="#ffffff" stroke-width="1">
+    <circle cx="960" cy="540" r="100"/>
+    <circle cx="960" cy="540" r="150"/>
+    <circle cx="960" cy="540" r="200"/>
+  </g>
+  
+  <!-- Línea horizontal divisoria sutil -->
+  <line x1="0" y1="540" x2="1920" y2="540" stroke="#ffffff" stroke-width="1" opacity="0.05"/>
+  
+  <!-- Elementos decorativos en las esquinas -->
+  <g opacity="0.12" stroke="#ffffff" stroke-width="2" fill="none">
+    <!-- Esquina superior izquierda -->
+    <line x1="50" y1="50" x2="150" y2="50"/>
+    <line x1="50" y1="50" x2="50" y2="150"/>
+    <line x1="50" y1="150" x2="150" y2="150"/>
+    <line x1="150" y1="50" x2="150" y2="150"/>
+    
+    <!-- Esquina inferior derecha -->
+    <line x1="1870" y1="1030" x2="1770" y2="1030"/>
+    <line x1="1870" y1="1030" x2="1870" y2="930"/>
+    <line x1="1870" y1="930" x2="1770" y2="930"/>
+    <line x1="1770" y1="1030" x2="1770" y2="930"/>
+  </g>
+  
+  <!-- Patrón de puntos sutil -->
+  <defs>
+    <pattern id="dots" x="50" y="50" width="50" height="50" patternUnits="userSpaceOnUse">
+      <circle cx="25" cy="25" r="1" fill="#ffffff" opacity="0.08"/>
+    </pattern>
+  </defs>
+  <rect width="1920" height="1080" fill="url(#dots)"/>
+</svg>

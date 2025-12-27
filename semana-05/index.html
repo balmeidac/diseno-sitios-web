@@ -3,36 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Landing page profesional con HTML5 y CSS3">
-    <title>TechSolutions - Soluciones Digitales</title>
+    <meta name="description" content="Landing page profesional de TechSolutions - Soluciones digitales innovadoras para tu negocio">
+    <meta name="keywords" content="diseño web, desarrollo, soluciones digitales">
+    <meta name="author" content="Byron Almeida">
+    
+    <title>TechSolutions - Soluciones Digitales Innovadoras</title>
+    
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <!-- Encabezado de la página -->
-    <header class="header">
+    <header class="header" role="banner">
         <div class="container">
             <div class="logo">
-                <h1>TechSolutions</h1>
+                <div class="logo-image-placeholder">
+                    <img src="img/logo.svg" alt="Logo de TechSolutions" class="logo-img">
+                    <div class="logo-placeholder">Logo</div>
+                </div>
+                <div class="logo-text">
+                    <h1>TechSolutions</h1>
+                    <p class="tagline">Innovación Digital</p>
+                </div>
             </div>
-            <nav class="nav">
+            <nav role="navigation" aria-label="Navegación principal">
                 <ul class="nav-list">
                     <li class="nav-item"><a href="#inicio" class="nav-link">Inicio</a></li>
                     <li class="nav-item"><a href="#servicios" class="nav-link">Servicios</a></li>
+                    <li class="nav-item"><a href="#acerca" class="nav-link">Acerca de</a></li>
                     <li class="nav-item"><a href="#contacto" class="nav-link">Contacto</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <!-- Contenido principal -->
-    <main>
-        <!-- Sección Hero -->
+    <main role="main">
         <section id="inicio" class="hero">
             <div class="container">
                 <div class="hero-content">
                     <h2>Soluciones Digitales a tu Medida</h2>
                     <p>Transformamos tus ideas en experiencias digitales excepcionales con tecnología de vanguardia y diseño innovador.</p>
-                    <a href="#contacto" class="cta-button">¡Contáctanos!</a>
+                    <a href="#contacto" class="cta-button" aria-label="Ir a la sección de contacto">¡Contáctanos!</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="banner-tech">
+            <div class="container">
+                <div class="banner-content">
+                    <h3>Innovando para el Futuro</h3>
+                    <p>Descubre cómo la tecnología puede escalar tu negocio.</p>
                 </div>
             </div>
         </section>
@@ -41,34 +59,171 @@
         <section id="servicios" class="services">
             <div class="container">
                 <h2>Nuestros Servicios</h2>
+                <p class="services-subtitle">Oferecemos soluciones digitales completas adaptadas a las necesidades de tu negocio</p>
+                
                 <div class="services-grid">
+                    <!-- Servicio 1: Diseño Web -->
                     <div class="service-card">
+                        <div class="service-image">
+                            <img src="img/service-design.svg" alt="Diseño Web" class="service-icon">
+                            <div class="service-placeholder">Diseño Web</div>
+                        </div>
                         <h3>Diseño Web</h3>
-                        <p>Sitios web modernos y responsivos que cautivan a tus clientes.</p>
+                        <p class="service-description">
+                            Creamos sitios web modernos, atractivos y funcionales que capturan la esencia de tu marca. 
+                            Nuestros diseños son completamente responsivos, garantizando una experiencia perfecta en 
+                            cualquier dispositivo. Utilizamos las últimas tendencias de diseño UX/UI para maximizar la 
+                            conversión y satisfacción del usuario.
+                        </p>
+                        <ul class="service-features">
+                            <li>Diseño responsive</li>
+                            <li>UX/UI moderno</li>
+                            <li>Optimización de conversión</li>
+                        </ul>
                     </div>
+
+                    <!-- Servicio 2: Desarrollo -->
                     <div class="service-card">
-                        <h3>Desarrollo a Medida</h3>
-                        <p>Soluciones personalizadas para tus necesidades específicas.</p>
+                        <div class="service-image">
+                            <img src="img/service-development.svg" alt="Desarrollo Web" class="service-icon">
+                            <div class="service-placeholder">Desarrollo</div>
+                        </div>
+                        <h3>Desarrollo Full-Stack</h3>
+                        <p class="service-description">
+                            Desarrollamos aplicaciones web robustas y escalables con las tecnologías más actuales. 
+                            Desde backends potentes hasta interfaces de usuario intuitivas, nos encargamos de todo. 
+                            Nuestro equipo está especializado en crear soluciones personalizadas que se adapten 
+                            perfectamente a tus requisitos específicos y crezcan con tu negocio.
+                        </p>
+                        <ul class="service-features">
+                            <li>Backend robusto</li>
+                            <li>Frontend moderno</li>
+                            <li>Bases de datos optimizadas</li>
+                        </ul>
                     </div>
+
+                    <!-- Servicio 3: Marketing Digital -->
                     <div class="service-card">
+                        <div class="service-image">
+                            <img src="img/service-marketing.svg" alt="Marketing Digital" class="service-icon">
+                            <div class="service-placeholder">Marketing</div>
+                        </div>
                         <h3>Marketing Digital</h3>
-                        <p>Estrategias efectivas para hacer crecer tu presencia en línea.</p>
+                        <p class="service-description">
+                            Potenciamos tu presencia en línea con estrategias de marketing integral. Desde SEO 
+                            hasta publicidad digital, redes sociales y análisis de datos, nos enfocamos en resultados 
+                            medibles. Aumentamos tu visibilidad, generamos tráfico cualificado y convertimos visitantes 
+                            en clientes leales para tu negocio.
+                        </p>
+                        <ul class="service-features">
+                            <li>SEO y SEM</li>
+                            <li>Redes Sociales</li>
+                            <li>Analítica y reportes</li>
+                        </ul>
+                    </div>
+
+                    <!-- Servicio 4: Consultoría -->
+                    <div class="service-card">
+                        <div class="service-image">
+                            <img src="img/service-consulting.svg" alt="Consultoría Tech" class="service-icon">
+                            <div class="service-placeholder">Consultoría</div>
+                        </div>
+                        <h3>Consultoría Tecnológica</h3>
+                        <p class="service-description">
+                            Asesoramos a empresas en su transformación digital con estrategias personalizadas. 
+                            Analizamos tus procesos actuales, identificamos oportunidades de mejora y recomendamos 
+                            soluciones tecnológicas óptimas. Nuestros consultores tienen amplia experiencia en diversas 
+                            industrias y te guiarán hacia la innovación sostenible.
+                        </p>
+                        <ul class="service-features">
+                            <li>Auditoría digital</li>
+                            <li>Estrategia tecnológica</li>
+                            <li>Implementación ágil</li>
+                        </ul>
+                    </div>
+
+                    <!-- Servicio 5: Soporte Técnico -->
+                    <div class="service-card">
+                        <div class="service-image">
+                            <img src="img/service-support.svg" alt="Soporte Técnico" class="service-icon">
+                            <div class="service-placeholder">Soporte</div>
+                        </div>
+                        <h3>Soporte Técnico 24/7</h3>
+                        <p class="service-description">
+                            Ofrecemos soporte técnico continuo para garantizar que tu infraestructura digital 
+                            funcione sin interrupciones. Nuestro equipo está disponible las 24 horas del día para 
+                            resolver problemas, actualizar sistemas y proporcionar mantenimiento preventivo. 
+                            Descansa sabiendo que tus sistemas están protegidos.
+                        </p>
+                        <ul class="service-features">
+                            <li>Soporte 24/7</li>
+                            <li>Mantenimiento preventivo</li>
+                            <li>Seguridad y backup</li>
+                        </ul>
+                    </div>
+
+                    <!-- Servicio 6: E-Commerce -->
+                    <div class="service-card">
+                        <div class="service-image">
+                            <img src="img/service-ecommerce.svg" alt="E-Commerce" class="service-icon">
+                            <div class="service-placeholder">E-Commerce</div>
+                        </div>
+                        <h3>Soluciones E-Commerce</h3>
+                        <p class="service-description">
+                            Creamos tiendas en línea poderosas que generan ventas. Con plataformas como Shopify, 
+                            WooCommerce o soluciones personalizadas, construimos experiencias de compra fluidas y seguras. 
+                            Incluimos gestión de inventario, procesamiento de pagos y análisis de ventas para maximizar 
+                            tus ganancias en línea.
+                        </p>
+                        <ul class="service-features">
+                            <li>Plataformas e-commerce</li>
+                            <li>Pago seguro</li>
+                            <li>Gestión de inventario</li>
+                        </ul>
                     </div>
                 </div>
             </div>
         </section>
+
+        <section id="acerca" class="about">
+            <div class="container">
+                <h2>¿Quiénes Somos?</h2>
+                <article class="about-content">
+                    <p>Somos un equipo de profesionales especializados en desarrollo web y soluciones digitales. Con más de 10 años de experiencia, hemos ayudado a cientos de empresas a lograr sus objetivos en línea.</p>
+                    <ul class="features-list">
+                        <li>✓ Diseño web responsivo y moderno</li>
+                        <li>✓ Desarrollo full-stack personalizado</li>
+                        <li>✓ Optimización SEO y rendimiento</li>
+                        <li>✓ Soporte técnico 24/7</li>
+                    </ul>
+                </article>
+            </div>
+        </section>
     </main>
 
-    <!-- Pie de página -->
-    <footer id="contacto" class="footer">
+    <footer class="footer" role="contentinfo" id="contacto">
         <div class="container">
             <div class="footer-content">
-                <p>&copy; 2025 TechSolutions. Todos los derechos reservados.</p>
-                <div class="social-links">
-                    <a href="#" class="social-link">Facebook</a>
-                    <a href="#" class="social-link">Twitter</a>
-                    <a href="#" class="social-link">Instagram</a>
+                <div class="footer-section">
+                    <h3>TechSolutions</h3>
+                    <p>Transformando ideas en realidad digital.</p>
                 </div>
+                <div class="footer-section">
+                    <h4>Enlaces</h4>
+                    <ul>
+                        <li><a href="#inicio">Inicio</a></li>
+                        <li><a href="#acerca">Acerca de</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contacto</h4>
+                    <p>Email: <a href="mailto:contacto@techsolutions.com">contacto@techsolutions.com</a></p>
+                    <p>Teléfono: <a href="tel:+593987654321">+593 98 765 4321</a></p>
+                </div>
+            </div>
+            <hr class="footer-divider">
+            <div class="footer-bottom">
+                <p>&copy; 2025 TechSolutions. Todos los derechos reservados.</p>
             </div>
         </div>
     </footer>
