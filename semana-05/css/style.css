@@ -140,12 +140,11 @@ a {
 /* ===== HERO SECTION ===== */
 .hero {
     padding: 8rem 0 5rem;
-    background: linear-gradient(135deg, rgba(224, 242, 254, 0.8) 0%, rgba(186, 230, 253, 0.8) 100%),
-                url('img/hero-bg.svg') center/cover no-repeat;
-    background-attachment: fixed;
+    background: linear-gradient(135deg, #2563eb 0%, #1e40af 50%, #1e3a8a 100%);
     text-align: center;
     margin-top: 70px;
     position: relative;
+    overflow: hidden;
 }
 
 .hero::before {
@@ -155,7 +154,11 @@ a {
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(135deg, rgba(224, 242, 254, 0.7) 0%, rgba(186, 230, 253, 0.7) 100%);
+    background-image: 
+        radial-gradient(circle, rgba(255,255,255,0.2) 1px, transparent 1px),
+        radial-gradient(circle, rgba(255,255,255,0.1) 2px, transparent 2px);
+    background-size: 40px 40px, 80px 80px;
+    background-position: 0 0, 20px 20px;
     pointer-events: none;
 }
 
@@ -169,13 +172,14 @@ a {
 .hero h2 {
     font-size: 2.5rem;
     margin-bottom: 1.5rem;
-    color: var(--text-color);
+    color: white;
+    font-weight: 700;
 }
 
 .hero p {
     font-size: 1.2rem;
     margin-bottom: 2rem;
-    color: #4b5563;
+    color: #e0e7ff;
 }
 
 /* Botón CTA */
