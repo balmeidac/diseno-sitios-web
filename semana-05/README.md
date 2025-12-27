@@ -121,17 +121,18 @@ Implementadas características WCAG:
 ## 📸 Capturas de Pantalla
 
 ### 💻 Vista Desktop
-- [🔝 Header con navegación y logo](capturas/header.png)
-- [🌟 Hero section con fondo paralax](capturas/hero.png)
-- [💼 Sección de servicios con 6 tarjetas](capturas/servicios.png)
-- [📞 Footer con información de contacto](capturas/footer.png)
 
-### 📱 Vista Mobile
-- [📲 Navegación responsive en móvil](capturas/header.png)
-- [📱 Secciones adaptadas a pantallas pequeñas](capturas/hero.png)
-- [⬇️ Tarjetas de servicios apiladas verticalmente](capturas/servicios.png)
+#### 🔝 Header con navegación y logo
+![Header](capturas/header.png)
 
-*Las capturas están almacenadas en la carpeta `capturas/`*
+#### 🌟 Hero section con fondo paralax
+![Hero](capturas/hero.png)
+
+#### 💼 Sección de servicios con 6 tarjetas
+![Servicios](capturas/servicios.png)
+
+#### 📞 Footer con información de contacto
+![Footer](capturas/footer.png)
 
 ## 👥 Autores - GRUPO 1
 
