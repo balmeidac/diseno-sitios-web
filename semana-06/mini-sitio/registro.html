@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro - Sitio Educativo</title>
+</head>
+<body>
+    <header>
+        <h1>Registro de Usuario</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="productos.html">Productos</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="registro.html">Registro</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Formulario de Registro</h2>
+            <form action="#" method="post">
+                <div>
+                    <label for="nombre">Nombre completo:</label><br>
+                    <input type="text" id="nombre" name="nombre" required>
+                </div>
+                
+                <div>
+                    <label for="email">Correo electrónico:</label><br>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div>
+                    <label for="edad">Edad:</label><br>
+                    <input type="number" id="edad" name="edad" min="1" max="120" required>
+                </div>
+                
+                <div>
+                    <label for="password">Contraseña:</label><br>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                
+                <div>
+                    <button type="submit">Registrarse</button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Sitio Educativo - Todos los derechos reservados</p>
+    </footer>
+</body>
+</html>
