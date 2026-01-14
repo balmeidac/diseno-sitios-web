@@ -70,10 +70,10 @@ img {
 /* Selector de clase */
 .header {
     background-color: #1a73e8;
-    background-image: linear-gradient(135deg, #1a73e8 0%, #0d47a1 100%);
+    background-image: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
     padding: 40px 20px;
     text-align: center;
-    border-bottom: 4px solid #0d47a1;
+    border-bottom: 4px solid #764ba2;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
@@ -202,6 +202,165 @@ main > section {
 .destacado {
     color: #1a73e8;
     font-weight: bold;
+}
+
+/* Estilos para información de contacto */
+.info-contacto {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin: 25px 0;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    border-left: 4px solid #1a73e8;
+}
+
+.contacto-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.05rem;
+}
+
+.contacto-item .icono {
+    font-size: 1.5rem;
+}
+
+.contacto-item strong {
+    color: #2c3e50;
+    min-width: 100px;
+}
+
+.contacto-item a {
+    color: #1a73e8;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contacto-item a:hover {
+    color: #0d47a1;
+    text-decoration: underline;
+}
+
+/* Redes sociales */
+.redes-sociales {
+    margin: 30px 0;
+    text-align: center;
+}
+
+.redes-sociales h3 {
+    color: #2c3e50;
+    margin-bottom: 20px;
+    font-size: 1.3rem;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-link {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ffffff;
+    transition: all 0.3s ease;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+}
+
+.social-link.linkedin {
+    background-color: #0077b5;
+}
+
+.social-link.twitter {
+    background-color: #000000;
+}
+
+.social-link.facebook {
+    background-color: #1877f2;
+}
+
+.social-link:hover {
+    transform: translateY(-5px) scale(1.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+}
+
+.social-link:active {
+    transform: translateY(-2px) scale(1.05);
+}
+
+/* Formulario de contacto */
+.formulario-contacto {
+    margin-top: 30px;
+    padding: 25px;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    border: 2px solid #e0e0e0;
+}
+
+.formulario-contacto h3 {
+    color: #2c3e50;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 1.3rem;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #1a73e8;
+    box-shadow: 0 0 0 3px rgba(26, 115, 232, 0.1);
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.btn-enviar {
+    width: 100%;
+    padding: 15px;
+    background-color: #4caf50;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(76, 175, 80, 0.3);
+}
+
+.btn-enviar:hover {
+    background-color: #45a049;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(76, 175, 80, 0.4);
+}
+
+.btn-enviar:active {
+    transform: translateY(0);
+    box-shadow: 0 3px 6px rgba(76, 175, 80, 0.4);
 }
 
 /* Estilos para la imagen */
