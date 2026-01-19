@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semana 11 - Modelo de Caja y Posicionamiento</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            background: linear-gradient(135deg, #ff6b6b 0%, #4ecdc4 100%);
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+            margin-bottom: 2rem;
+            border-radius: 10px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        nav {
+            background: white;
+            padding: 1rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        nav a {
+            color: #ff6b6b;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #f0f0f0;
+        }
+
+        section {
+            background: white;
+            margin-bottom: 2rem;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            color: #2c3e50;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 3px solid #ff6b6b;
+        }
+
+        h3 {
+            color: #34495e;
+            margin: 1.5rem 0 1rem 0;
+        }
+
+        h4 {
+            color: #555;
+            margin: 1rem 0 0.5rem 0;
+        }
+
+        p {
+            margin-bottom: 1rem;
+        }
+
+        ul, ol {
+            margin-left: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        .highlight {
+            background-color: #fff3cd;
+            padding: 1rem;
+            border-left: 4px solid #ffc107;
+            margin: 1rem 0;
+            border-radius: 4px;
+        }
+
+        .code-block {
+            background-color: #f8f9fa;
+            border: 1px solid #e9ecef;
+            border-radius: 4px;
+            padding: 1rem;
+            margin: 1rem 0;
+            font-family: 'Courier New', monospace;
+            white-space: pre-wrap;
+        }
+
+        .exercise {
+            background-color: #e8f5e8;
+            border-left: 4px solid #28a745;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 4px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 0.75rem;
+            text-align: left;
+        }
+
+        th {
+            background-color: #ff6b6b;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f8f9fa;
+        }
+
+        .demo {
+            background-color: #f0f8ff;
+            border-left: 4px solid #4169e1;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 4px;
+        }
+
+        .box-demo {
+            border: 5px solid rebeccapurple;
+            background-color: lightgray;
+            padding: 40px;
+            margin: 40px;
+            width: 300px;
+            height: 150px;
+        }
+
+        .alternate {
+            box-sizing: border-box;
+        }
+
+        .position-demo {
+            border: 3px solid #73AD21;
+            padding: 10px;
+            margin: 10px;
+        }
+
+        .static { position: static; }
+        .relative { position: relative; left: 30px; }
+        .fixed { position: fixed; bottom: 0; right: 0; width: 300px; }
+        .absolute { position: absolute; top: 80px; right: 0; width: 200px; height: 100px; }
+        .sticky { position: sticky; top: 0; background-color: green; border: 2px solid #4CAF50; }
+
+        .overflow-demo {
+            width: 200px;
+            height: 65px;
+            background-color: coral;
+            margin: 10px;
+        }
+
+        .visible { overflow: visible; }
+        .hidden { overflow: hidden; }
+        .scroll { overflow: scroll; }
+        .auto { overflow: auto; }
+
+        .display-demo {
+            border: 1px solid #333;
+            margin: 10px;
+            padding: 10px;
+        }
+
+        .block { display: block; }
+        .inline { display: inline; }
+        .inline-block { display: inline-block; }
+        .none { display: none; }
+
+        .visibility-demo {
+            border: 1px solid #333;
+            margin: 10px;
+            padding: 10px;
+        }
+
+        .visible { visibility: visible; }
+        .hidden-visibility { visibility: hidden; }
+
+        .opacity-demo {
+            border: 1px solid #333;
+            margin: 10px;
+            padding: 10px;
+            background-color: lightblue;
+        }
+
+        .opacity-50 { opacity: 0.5; }
+        .opacity-25 { opacity: 0.25; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Semana 11 - Modelo de Caja y Posicionamiento</h1>
+            <p class="subtitle">Box Model, Display, Visibility, Opacity, Overflow y Posicionamiento</p>
+        </header>
+
+        <nav>
+            <ul>
+                <li><a href="#box-model">Modelo de Caja</a></li>
+                <li><a href="#margin">Margen</a></li>
+                <li><a href="#border">Borde</a></li>
+                <li><a href="#padding">Relleno</a></li>
+                <li><a href="#content">Contenido</a></li>
+                <li><a href="#display">Display</a></li>
+                <li><a href="#visibility">Visibility</a></li>
+                <li><a href="#opacity">Opacity</a></li>
+                <li><a href="#overflow">Overflow</a></li>
+                <li><a href="#positioning">Posicionamiento</a></li>
+                <li><a href="#exercises">Ejercicios Resueltos</a></li>
+            </ul>
+        </nav>
+
+        <section id="box-model">
+            <h2>Modelo de Caja (Box Model)</h2>
+            
+            <p>El modelo de caja es un concepto fundamental en CSS que describe cómo los elementos HTML son estructurados y espaciados en una página web. Cada elemento es representado como una caja rectangular que contiene:</p>
+            
+            <ul>
+                <li><strong>Contenido:</strong> El área donde se muestra el texto, imágenes u otros elementos</li>
+                <li><strong>Relleno (Padding):</strong> El espacio entre el contenido y el borde</li>
+                <li><strong>Borde (Border):strong> La línea que rodea el relleno y el contenido</li>
+                <li><strong>Margen (Margin):strong> El espacio exterior que separa el elemento de otros elementos</li>
+            </ul>
+
+            <div class="demo">
+                <h4>Visualización del Box Model</h4>
+                <div class="box-demo">
+                    Este es el contenido del elemento con padding, border y margin
+                </div>
+            </div>
+        </section>
+
+        <section id="margin">
+            <h2>Margen</h2>
+            
+            <p>El margen es un espacio transparente que rodea el borde de un elemento, separándolo de los demás elementos cercanos. Puede definirse con valores tanto positivos como negativos.</p>
+            
+            <div class="highlight">
+                <h4>Propiedades de Margen:</h4>
+                <ul>
+                    <li><code>margin-top</code> - Margen superior</li>
+                    <li><code>margin-right</code> - Margen derecho</li>
+                    <li><code>margin-bottom</code> - Margen inferior</li>
+                    <li><code>margin-left</code> - Margen izquierdo</li>
+                    <li><code>margin</code> - Todos los márgenes simultáneamente</li>
+                </ul>
+            </div>
+
+            <div class="code-block">
+.container {
+    border: 5px solid blue;
+    margin: 40px;
+}
+.box {
+    border: 5px solid rebeccapurple;
+    background-color: lightgray;
+    padding: 10px;
+    height: 100px;
+    margin-top: -40px;
+    margin-right: 30px;
+    margin-bottom: 40px;
+    margin-left: 4em;
+}</div>
+        </section>
+
+        <section id="border">
+            <h2>Borde</h2>
+            
+            <p>El borde se encuentra ubicado entre el margen y el relleno de un elemento. Los bordes se pueden personalizar ampliamente, ya que cada uno de los cuatro lados puede tener su propio estilo, grosor y color.</p>
+            
+            <div class="highlight">
+                <h4>Propiedades de Borde:</h4>
+                <ul>
+                    <li><code>border-top</code>, <code>border-right</code>, <code>border-bottom</code>, <code>border-left</code></li>
+                    <li><code>border-width</code>, <code>border-style</code>, <code>border-color</code></li>
+                    <li><code>border</code> - Todos los bordes simultáneamente</li>
+                </ul>
+            </div>
+
+            <div class="code-block">
+.container {
+    margin: 40px;
+    padding: 20px;
+    border-top: 5px dotted green;
+    border-right: 1px solid black;
+    border-bottom: 20px double rgb(23 45 145);
+}
+.box {
+    padding: 20px;
+    background-color: lightgray;
+    border: 1px solid #333333;
+    border-top-style: dotted;
+    border-right-width: 20px;
+    border-bottom-color: hotpink;
+}</div>
+        </section>
+
+        <section id="padding">
+            <h2>Relleno</h2>
+            
+            <p>El relleno es el espacio que se sitúa entre el borde de un elemento y su contenido. A diferencia del margen, el relleno no admite valores negativos. Además, cualquier fondo asignado al elemento se extiende también por el área de relleno.</p>
+            
+            <div class="highlight">
+                <h4>Propiedades de Relleno:</h4>
+                <ul>
+                    <li><code>padding-top</code> - Relleno superior</li>
+                    <li><code>padding-right</code> - Relleno derecho</li>
+                    <li><code>padding-bottom</code> - Relleno inferior</li>
+                    <li><code>padding-left</code> - Relleno izquierdo</li>
+                    <li><code>padding</code> - Todos los rellenos simultáneamente</li>
+                </ul>
+            </div>
+
+            <div class="code-block">
+.box {
+    border: 5px solid rebeccapurple;
+    background-color: lightgray;
+    padding-top: 0;
+    padding-right: 30px;
+    padding-bottom: 40px;
+    padding-left: 4em;
+}</div>
+        </section>
+
+        <section id="content">
+            <h2>Contenido</h2>
+            
+            <h3>Modelo de Caja Estándar</h3>
+            <p>En el modelo de caja estándar, cuando se asignan valores a las propiedades width y height, estos determinan únicamente el tamaño del área de contenido de la caja, sin incluir el relleno, el borde ni el margen.</p>
+            
+            <h3>Modelo de Caja Alternativo</h3>
+            <p>En el modelo de caja alternativo, el ancho especificado corresponde al tamaño total visible de la caja. El área de contenido se calcula restando del ancho total el espacio que ocupan el relleno y el borde.</p>
+
+            <div class="demo">
+                <h4>Comparación de Modelos de Caja</h4>
+                <div class="box-demo">
+                    Modelo estándar: width = contenido
+                </div>
+                <div class="box-demo alternate">
+                    Modelo alternativo: width = contenido + padding + border
+                </div>
+            </div>
+
+            <div class="code-block">
+.box {
+    border: 5px solid rebeccapurple;
+    background-color: lightgray;
+    padding: 40px;
+    margin: 40px;
+    width: 300px;
+    height: 150px;
+}
+.alternate {
+    box-sizing: border-box;
+}</div>
+        </section>
+
+        <section id="display">
+            <h2>Propiedad Display</h2>
+            
+            <p>La propiedad display especifica cómo se debe representar el elemento. Entre sus valores más comunes:</p>
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th>Valor</th>
+                        <th>Descripción</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>block</code></td>
+                        <td>Elemento en bloque, comienza en nueva línea, ocupa todo el ancho</td>
+                    </tr>
+                    <tr>
+                        <td><code>inline</code></td>
+                        <td>Elemento en línea, ignora width y height</td>
+                    </tr>
+                    <tr>
+                        <td><code>inline-block</code></td>
+                        <td>Elemento en línea pero con propiedades de bloque</td>
+                    </tr>
+                    <tr>
+                        <td><code>flex</code></td>
+                        <td>Contenedor flexible</td>
+                    </tr>
+                    <tr>
+                        <td><code>grid</code></td>
+                        <td>Contenedor de cuadrícula</td>
+                    </tr>
+                    <tr>
+                        <td><code>none</code></td>
+                        <td>Elemento no se muestra y no ocupa espacio</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="demo">
+                <h4>Ejemplos de Display</h4>
+                <div class="display-demo block">Elemento block</div>
+                <div class="display-demo inline">Elemento inline</div>
+                <div class="display-demo inline-block">Elemento inline-block</div>
+                <div class="display-demo none">Este no se muestra</div>
+            </div>
+        </section>
+
+        <section id="visibility">
+            <h2>Propiedad Visibility</h2>
+            
+            <p>La propiedad visibility se utiliza para controlar la visibilidad de un elemento en la página.</p>
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th>Valor</th>
+                        <th>Descripción</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>visible</code></td>
+                        <td>Elemento visible normal</td>
+                    </tr>
+                    <tr>
+                        <td><code>hidden</code></td>
+                        <td>Elemento oculto pero ocupa espacio</td>
+                    </tr>
+                    <tr>
+                        <td><code>collapse</code></td>
+                        <td>Para tablas, oculta filas/columnas sin espacio</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="demo">
+                <h4>Ejemplos de Visibility</h4>
+                <div class="visibility-demo visible">Elemento visible</div>
+                <div class="visibility-demo hidden-visibility">Elemento oculto (ocupa espacio)</div>
+                <div class="visibility-demo visible">Elemento siguiente</div>
+            </div>
+        </section>
+
+        <section id="opacity">
+            <h2>Propiedad Opacity</h2>
+            
+            <p>La propiedad opacity permite definir el nivel de transparencia de un elemento mediante un valor numérico entre 0 y 1.</p>
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th>Valor</th>
+                        <th>Descripción</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>0</code></td>
+                        <td>Totalmente transparente</td>
+                    </tr>
+                    <tr>
+                        <td><code>0.5</code></td>
+                        <td>50% de transparencia</td>
+                    </tr>
+                    <tr>
+                        <td><code>1</code></td>
+                        <td>Totalmente opaco</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="demo">
+                <h4>Ejemplos de Opacity</h4>
+                <div class="opacity-demo">Opacidad 1.0</div>
+                <div class="opacity-demo opacity-50">Opacidad 0.5</div>
+                <div class="opacity-demo opacity-25">Opacidad 0.25</div>
+            </div>
+        </section>
+
+        <section id="overflow">
+            <h2>Overflow</h2>
+            
+            <p>La propiedad overflow determina si el contenido que excede el tamaño asignado a un elemento debe ser recortado o si se deben mostrar barras de desplazamiento.</p>
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th>Valor</th>
+                        <th>Descripción</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>visible</code></td>
+                        <td>El contenido se muestra fuera de los límites</td>
+                    </tr>
+                    <tr>
+                        <td><code>hidden</code></td>
+                        <td>El contenido que se desborda es recortado</td>
+                    </tr>
+                    <tr>
+                        <td><code>scroll</code></td>
+                        <td>Se añaden barras de desplazamiento</td>
+                    </tr>
+                    <tr>
+                        <td><code>auto</code></td>
+                        <td>Barras solo si el contenido lo requiere</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="demo">
+                <h4>Ejemplos de Overflow</h4>
+                <div class="overflow-demo visible">Este contenido es muy largo y se desbordará del contenedor con overflow: visible</div>
+                <div class="overflow-demo hidden">Este contenido es muy largo y será recortado con overflow: hidden</div>
+                <div class="overflow-demo scroll">Este contenido es muy largo y tendrá barras de desplazamiento con overflow: scroll</div>
+                <div class="overflow-demo auto">Este contenido es muy largo y tendrá barras automáticas con overflow: auto</div>
+            </div>
+        </section>
+
+        <section id="positioning">
+            <h2>Posicionamiento</h2>
+            
+            <p>La propiedad position define el método que se utilizará para colocar un elemento dentro del documento.</p>
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th>Valor</th>
+                        <th>Descripción</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>static</code></td>
+                        <td>Posición normal del flujo del documento</td>
+                    </tr>
+                    <tr>
+                        <td><code>relative</code></td>
+                        <td>Relativo a su posición original</td>
+                    </tr>
+                    <tr>
+                        <td><code>fixed</code></td>
+                        <td>Fijo en relación a la ventana del navegador</td>
+                    </tr>
+                    <tr>
+                        <td><code>absolute</code></td>
+                        <td>Relativo al ancestro posicionado más cercano</td>
+                    </tr>
+                    <tr>
+                        <td><code>sticky</code></td>
+                        <td>Comportamiento híbrido entre relative y fixed</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="demo">
+                <h4>Ejemplos de Posicionamiento</h4>
+                <div class="position-demo static">Elemento static</div>
+                <div class="position-demo relative">Elemento relative (desplazado 30px a la izquierda)</div>
+                <div class="position-demo absolute">Elemento absolute (posicionado relativamente)</div>
+                <div class="position-demo sticky">Elemento sticky (se pegará al hacer scroll)</div>
+            </div>
+        </section>
+
+        <section id="exercises">
+            <h2>Ejercicios Resueltos</h2>
+
+            <div class="exercise">
+                <h3>Ejercicio 3.2.1: Box Model Card</h3>
+                
+                <h4>Objetivo:</h4>
+                <p>Comprender cómo funciona el modelo de caja y comparar diferentes configuraciones de padding, border y margin.</p>
+                
+                <h4>Código:</h4>
+                <div class="code-block">
+* { box-sizing: border-box; }
+body { font-family: system-ui, sans-serif; margin: 0; padding: 24px; }
+.wrap { display: flex; gap: 16px; flex-wrap: wrap; }
+.card {
+    width: 280px; margin: 12px; padding: 16px; border: 4px solid #198754;
+    border-radius: 8px; background: #f0fff4;
+}
+.ruler { height: 12px; background: repeating-linear-gradient(90deg,#ccc,
+#ccc 8px,#eee 8px,#eee 16px); }</div>
+
+                <h4>Mini-retos:</h4>
+                <ol>
+                    <li>Cambia a <code>content-box</code> global y compensa anchos hasta que ambas tarjetas midan igual</li>
+                    <li>Añade <code>outline</code> para depurar sin alterar el "box model"</li>
+                    <li>Crea una tercera tarjeta sin margen entre tarjetas (usa <code>gap</code> del contenedor)</li>
+                </ol>
+            </div>
+
+            <div class="exercise">
+                <h3>Ejercicio 3.2.2: Display vs Visibility vs Opacity</h3>
+                
+                <h4>Objetivo:</h4>
+                <p>Comparar display:none, visibility:hidden y opacity:0 en notificaciones, distinguir efectos en el flujo y la interacción del usuario.</p>
+                
+                <h4>Código:</h4>
+                <div class="code-block">
+.notice { padding: 12px; background: #fff3cd; border: 1px solid #ffec99;
+border-radius: 8px; margin-bottom: 12px; }
+.hidden { display: none; }
+.ghost { visibility: hidden; }
+.fade { opacity: 0; }
+
+function setState(mode) {
+    const n = document.getElementById('notice');
+    n.className = 'notice';
+    if(mode === 'hidden') n.classList.add('hidden');
+    if(mode === 'ghost') n.classList.add('ghost');
+    if(mode === 'fade') n.classList.add('fade');
+}</div>
+
+                <h4>Comparación de Efectos:</h4>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Propiedad</th>
+                            <th>Ocupa espacio</th>
+                            <th>Es accesible al foco</th>
+                            <th>Lectores de pantalla</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>display:none</td>
+                            <td>No</td>
+                            <td>No</td>
+                            <td>No anunciado</td>
+                        </tr>
+                        <tr>
+                            <td>visibility:hidden</td>
+                            <td>Sí</td>
+                            <td>No</td>
+                            <td>Generalmente omitido</td>
+                        </tr>
+                        <tr>
+                            <td>opacity:0</td>
+                            <td>Sí</td>
+                            <td>¡Sí!</td>
+                            <td>Puede anunciarse (cuidado)</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h4>Mini-retos:</h4>
+                <ol>
+                    <li>Evita que <code>opacity:0</code> reciba foco añadiendo <code>pointer-events:none</code></li>
+                    <li>Convierte la notificación en componente accesible que se cierre con tecla <kbd>Esc</kbd></li>
+                    <li>Agrega animación de entrada respetando <code>@media (prefers-reduced-motion: reduce)</code></li>
+                </ol>
+            </div>
+        </section>
+
+        <footer style="text-align: center; padding: 2rem; background: #f8f9fa; border-radius: 10px; margin-top: 2rem;">
+            <p>&copy; 2026 - Semana 11 - Modelo de Caja y Posicionamiento</p>
+            <p><em>Box Model, Display, Visibility, Opacity, Overflow y Posicionamiento</em></p>
+        </footer>
+    </div>
+</body>
+</html>
