@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semana 04 - Diseño Responsivo y Layout</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+            margin-bottom: 2rem;
+            border-radius: 10px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        section {
+            background: white;
+            margin-bottom: 2rem;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            color: #2c3e50;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 3px solid #667eea;
+        }
+
+        h3 {
+            color: #34495e;
+            margin: 1.5rem 0 1rem 0;
+        }
+
+        h4 {
+            color: #555;
+            margin: 1rem 0 0.5rem 0;
+        }
+
+        p {
+            margin-bottom: 1rem;
+        }
+
+        ul, ol {
+            margin-left: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        .highlight {
+            background-color: #fff3cd;
+            padding: 1rem;
+            border-left: 4px solid #ffc107;
+            margin: 1rem 0;
+            border-radius: 4px;
+        }
+
+        .code-block {
+            background-color: #f8f9fa;
+            border: 1px solid #e9ecef;
+            border-radius: 4px;
+            padding: 1rem;
+            margin: 1rem 0;
+            font-family: 'Courier New', monospace;
+            white-space: pre-wrap;
+        }
+
+        .exercise {
+            background-color: #e8f5e8;
+            border-left: 4px solid #28a745;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 4px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 0.75rem;
+            text-align: left;
+        }
+
+        th {
+            background-color: #667eea;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f8f9fa;
+        }
+
+        .step {
+            background-color: #e3f2fd;
+            border-left: 4px solid #2196f3;
+            padding: 1rem;
+            margin: 0.5rem 0;
+            border-radius: 4px;
+        }
+
+        .step-number {
+            font-weight: bold;
+            color: #2196f3;
+        }
+
+        nav {
+            background: white;
+            padding: 1rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        nav a {
+            color: #667eea;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #f0f0f0;
+        }
+
+        .feature {
+            background-color: #f0f8ff;
+            border-left: 4px solid #4169e1;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 4px;
+        }
+
+        .project-preview {
+            background-color: #fff5f5;
+            border-left: 4px solid #dc3545;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 4px;
+        }
+
+        .demo-link {
+            display: inline-block;
+            background-color: #667eea;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 0.5rem;
+            transition: background-color 0.3s;
+        }
+
+        .demo-link:hover {
+            background-color: #5a6fd8;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1rem;
+            margin: 1rem 0;
+        }
+
+        .card {
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 1rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Semana 04 - Diseño Responsivo y Layout</h1>
+            <p class="subtitle">Flexbox, CSS Grid y Adaptación a Dispositivos</p>
+        </header>
+
+        <nav>
+            <ul>
+                <li><a href="#estructura-web">Estructura de Sitios Web</a></li>
+                <li><a href="#mapa-navegacion">Mapa de Navegación</a></li>
+                <li><a href="#jerarquia-archivos">Jerarquía de Archivos</a></li>
+                <li><a href="#planificacion-contenido">Planificación de Contenido</a></li>
+                <li><a href="#proposito-audiencia">Propósito y Audiencia</a></li>
+                <li><a href="#projects">Proyectos Prácticos</a></li>
+                <li><a href="#exercises">Ejercicios Resueltos</a></li>
+            </ul>
+        </nav>
+
+        <section id="estructura-web">
+            <h2>Estructura de un Sitio Web</h2>
+            
+            <h3>¿Cuál es la estructura de un sitio web?</h3>
+            <p>
+                Desde el punto de vista de la organización del contenido y el diseño visual, las páginas web 
+                suelen estar compuestas por una serie de secciones comunes que conforman su estructura visual general.
+            </p>
+
+            <h4>Encabezado (Header)</h4>
+            <p>Se ubica en la parte superior de la ventana del navegador y generalmente se extiende a lo ancho de la página. Por lo general, permanece constante en todo el sitio web.</p>
+            
+            <div class="feature">
+                <h5>Elementos del Header:</h5>
+                <ul>
+                    <li><strong>Logotipo:</strong> Normalmente situado a la izquierda, representa gráficamente la marca del sitio y suele estar vinculado a la página principal.</li>
+                    <li><strong>Menú de navegación:</strong> Presenta las áreas principales de la página mediante botones, enlaces o pestañas. Puede ser horizontal, vertical o desplegable.</li>
+                    <li><strong>Menú de cortesía:</strong> Permite acceder rápidamente a diferentes secciones del sitio.</li>
+                </ul>
+            </div>
+
+            <h4>Contenido Principal (Main Content)</h4>
+            <p>Es el cuerpo central de la página, donde se encuentra la información específica y única de cada sección del sitio.</p>
+            
+            <div class="feature">
+                <h5>Elementos del Main Content:</h5>
+                <ul>
+                    <li><strong>Migas de pan (Breadcrumbs):</strong> Generalmente aparecen en la parte superior del contenido principal y ayudan al usuario a saber en qué parte del sitio se encuentra.</li>
+                    <li><strong>Imagen destacada (Hero Image):</strong> Banner de gran tamaño ubicado en la parte superior del contenido, habitual en portadas o páginas de aterrizaje.</li>
+                </ul>
+            </div>
+
+            <h4>Barra Lateral (Sidebar)</h4>
+            <p>Ubicada generalmente a la derecha del contenido principal, aunque también puede estar a la izquierda o en ambos lados. Proporciona información complementaria al contenido central.</p>
+
+            <h4>Pie de Página (Footer)</h4>
+            <p>Se encuentra al final de la página, justo después del contenido principal. Suele incluir créditos, información de contacto o un menú adicional con enlaces importantes o frecuentes.</p>
+
+            <h4>Elementos Flotantes</h4>
+            <p>Son componentes que pueden aparecer de forma temporal en la página para ofrecer o solicitar información.</p>
+            
+            <div class="feature">
+                <h5>Tipos de Elementos Flotantes:</h5>
+                <ul>
+                    <li><strong>Ventanas emergentes (Popups):</strong> Aparecen automáticamente en el centro de la pantalla y brindan mensajes de interés al usuario.</li>
+                    <li><strong>Barra promocional (Promo Bar):</strong> Se sitúa en la parte superior o inferior y presenta ofertas o mensajes promocionales.</li>
+                    <li><strong>Barra de notificación (Notification Bar):</strong> Comunica eventos relacionados con la actividad en el sitio, como mensajes de éxito o error.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="mapa-navegacion">
+            <h2>Mapa de Navegación</h2>
+            
+            <h3>¿Qué es un mapa de navegación?</h3>
+            <p>
+                Un mapa de navegación web es una representación visual que ilustra la estructura de un sitio web. 
+                Funciona como una herramienta de planificación que permite visualizar cómo se organizan y conectan 
+                las distintas páginas y secciones, promoviendo una jerarquía clara y mejorando la experiencia del usuario (UX).
+            </p>
+
+            <h3>Importancia del Mapa de Navegación</h3>
+            <ul>
+                <li>Ayuda a diseñadores y desarrolladores a comprender y optimizar la arquitectura de la información</li>
+                <li>Proporciona una guía clara para tomar decisiones sobre la disposición del contenido</li>
+                <li>Fundamental durante la etapa de diseño del sitio web</li>
+                <li>Útil como referencia en procesos de actualización, ampliación o rediseño</li>
+            </ul>
+
+            <h3>Tipos de Mapas de Navegación</h3>
+            
+            <div class="step">
+                <h4>1. Estructura Web Jerárquica</h4>
+                <p>Modelo en forma de árbol, donde la página principal (homepage) es la raíz y de ella se desprenden las diferentes secciones del sitio.</p>
+                <div class="code-block">Homepage
+├── Sección 1
+│   ├── Subsección 1.1
+│   └── Subsección 1.2
+├── Sección 2
+│   ├── Subsección 2.1
+│   └── Subsección 2.2
+└── Sección 3</div>
+            </div>
+
+            <div class="step">
+                <h4>2. Estructura Web No Jerárquica</h4>
+                
+                <h5>Estructura Lineal</h5>
+                <p>Es la más sencilla y funciona como un libro: se avanza o retrocede página por página.</p>
+                <div class="code-block">Página 1 → Página 2 → Página 3 → Página 4</div>
+
+                <h5>Estructura Lineal con Jerarquía</h5>
+                <p>Combina las dos anteriores. Los temas están organizados en niveles jerárquicos, pero el usuario tiene la opción de navegar el contenido de manera lineal.</p>
+
+                <h5>Estructura en Red</h5>
+                <p>Aquí no existe un orden fijo entre las páginas; los enlaces se conectan libremente entre sí. El inconveniente es que el usuario puede perder la noción de su ubicación.</p>
+            </div>
+        </section>
+
+        <section id="jerarquia-archivos">
+            <h2>Jerarquía de Archivos y Carpetas</h2>
+            
+            <h3>Organización de Archivos</h3>
+            <p>
+                Antes de comenzar a diseñar un sitio web, es fundamental planificar cómo se organizarán las 
+                carpetas y archivos. Cuando hay muchos archivos, resulta muy conveniente distribuirlos en 
+                carpetas para facilitar su localización y edición.
+            </p>
+
+            <h3>Estructura Recomendada</h3>
+            <div class="code-block">sitio-web/
+├── index.html              # Página principal
+├── about.html              # Acerca de nosotros
+├── contact.html            # Contacto
+├── css/
+│   ├── styles.css         # Hojas de estilo
+│   └── responsive.css     # Estilos responsivos
+├── js/
+│   ├── main.js            # JavaScript principal
+│   └── validation.js      # Validación de formularios
+├── img/
+│   ├── logo.png           # Logo del sitio
+│   ├── banners/           # Imágenes de banners
+│   ├── products/          # Imágenes de productos
+│   └── icons/             # Iconos y favicons
+├── fonts/                 # Tipografías personalizadas
+├── videos/                # Archivos de video
+├── audio/                 # Archivos de audio
+└── docs/                  # Documentación</div>
+
+            <h3>Principios de Organización</h3>
+            <ul>
+                <li><strong>Las páginas HTML</strong> se guardan en la carpeta principal</li>
+                <li><strong>Los recursos</strong> (audios, videos, hojas de estilo, imágenes) se almacenan en subcarpetas específicas para cada tipo</li>
+                <li><strong>Nomenclatura clara:</strong> Usar nombres descriptivos y consistentes</li>
+                <li><strong>Estructura escalable:</strong> Prever crecimiento futuro del sitio</li>
+            </ul>
+        </section>
+
+        <section id="planificacion-contenido">
+            <h2>Planificación de Contenido</h2>
+            
+            <h3>¿Qué es el Diseño de Contenido Web?</h3>
+            <p>
+                El diseño de contenido web consiste en planificar, crear y organizar todos los elementos 
+                visuales, auditivos y escritos que forman parte de un sitio web. Esto abarca textos, imágenes, 
+                videos, gráficos, animaciones y otros recursos multimedia.
+            </p>
+
+            <h3>Elementos Clave del Diseño de Contenido</h3>
+            
+            <div class="feature">
+                <h4>1. Arquitectura de la Información</h4>
+                <p>Consiste en definir la estructura y organización del contenido, lo que incluye:</p>
+                <ul>
+                    <li>Crear categorías y subcategorías</li>
+                    <li>Diseñar menús de navegación</li>
+                    <li>Establecer una jerarquía clara</li>
+                    <li>Facilitar la búsqueda y comprensión de la información</li>
+                </ul>
+            </div>
+
+            <div class="feature">
+                <h4>2. Diseño Visual</h4>
+                <p>Implica la elección de elementos visuales que se emplearán en el sitio:</p>
+                <ul>
+                    <li>Colores y paletas cromáticas</li>
+                    <li>Tipografías y jerarquías tipográficas</li>
+                    <li>Imágenes y gráficos</li>
+                    <li>Elementos gráficos que comunican la identidad de la marca</li>
+                </ul>
+            </div>
+
+            <div class="feature">
+                <h4>3. Optimización para Dispositivos</h4>
+                <p>Garantizar que el diseño funcione correctamente en diferentes dispositivos:</p>
+                <ul>
+                    <li>Ordenadores de escritorio</li>
+                    <li>Tabletas</li>
+                    <li>Móviles</li>
+                    <li>Diferentes tamaños de pantalla</li>
+                </ul>
+            </div>
+
+            <div class="feature">
+                <h4>4. Posicionamiento SEO</h4>
+                <p>Optimizar el contenido para mejorar su visibilidad en motores de búsqueda:</p>
+                <ul>
+                    <li>Uso adecuado de palabras clave relevantes</li>
+                    <li>Metadatos optimizados</li>
+                    <li>Estructura semántica HTML</li>
+                    <li>Contenido de calidad y relevante</li>
+                </ul>
+            </div>
+
+            <div class="feature">
+                <h4>5. Usabilidad y Accesibilidad</h4>
+                <p>Asegurar que el contenido sea sencillo de utilizar y accesible para todos:</p>
+                <ul>
+                    <li>Personas con discapacidades visuales</li>
+                    <li>Personas con discapacidades auditivas</li>
+                    <li>Personas con discapacidades intelectuales o cognitivas</li>
+                    <li>Personas con discapacidades motrices</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="proposito-audiencia">
+            <h2>Propósito y Audiencia de la Web</h2>
+            
+            <h3>Relación entre Propósito y Audiencia</h3>
+            <p>
+                El propósito y la audiencia de un sitio web son factores estrechamente vinculados que influyen 
+                en su diseño y desarrollo. Definir estos aspectos desde el inicio es esencial para construir 
+                un sitio eficiente, funcional y exitoso.
+            </p>
+
+            <h3>Propósito de la Web</h3>
+            <p>Se refiere a la razón principal por la que se creó el sitio y los objetivos que busca alcanzar:</p>
+            
+            <div class="grid">
+                <div class="card">
+                    <h4>🎯 Objetivos Comerciales</h4>
+                    <ul>
+                        <li>Promocionar y vender productos o servicios</li>
+                        <li>Generar clientes potenciales</li>
+                        <li>Convertir visitantes en leads</li>
+                        <li>Construir presencia en línea</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h4>📚 Objetivos Informativos</h4>
+                    <ul>
+                        <li>Proporcionar información sobre una empresa</li>
+                        <li>Educar y entretener a los visitantes</li>
+                        <li>Compartir conocimiento y recursos</li>
+                        <li>Establecer autoridad en un tema</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h4>🤝 Objetivos de Servicio</h4>
+                    <ul>
+                        <li>Facilitar comunicación e interacción</li>
+                        <li>Ofrecer soporte y atención al cliente</li>
+                        <li>Fortalecer la marca</li>
+                        <li>Crear comunidad</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h3>Audiencia de la Web</h3>
+            <p>La audiencia de un sitio web se refiere al conjunto de personas que se espera que visiten y utilicen la página.</p>
+
+            <h3>Factores para Conocer a la Audiencia</h3>
+            
+            <div class="feature">
+                <h4>1. Demografía</h4>
+                <ul>
+                    <li>Edad y género</li>
+                    <li>Ubicación geográfica</li>
+                    <li>Nivel socioeconómico</li>
+                    <li>Nivel educativo</li>
+                </ul>
+            </div>
+
+            <div class="feature">
+                <h4>2. Intereses y Preferencias</h4>
+                <ul>
+                    <li>Temas que les atraen</li>
+                    <li>Productos o servicios de interés</li>
+                    <li>Tendencias específicas</li>
+                    <li>Preferencias de contenido</li>
+                </ul>
+            </div>
+
+            <div class="feature">
+                <h4>3. Comportamiento en Línea</h4>
+                <ul>
+                    <li>Cómo interactúan habitualmente en internet</li>
+                    <li>Dispositivos que utilizan para acceder</li>
+                    <li>Hábitos de navegación</li>
+                    <li>Tiempo que pasan en línea</li>
+                </ul>
+            </div>
+
+            <div class="feature">
+                <h4>4. Necesidades y Objetivos</h4>
+                <ul>
+                    <li>Qué buscan cuando visitan el sitio</li>
+                    <li>Qué acciones desean llevar a cabo</li>
+                    <li>Problemas que necesitan resolver</li>
+                    <li>Valor que esperan obtener</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="projects">
+            <h2>Proyectos Prácticos</h2>
+            
+            <p>Esta semana incluye tres proyectos prácticos que aplican los conceptos de estructura web y diseño responsivo:</p>
+
+            <div class="project-preview">
+                <h3>🛡️ CyberShield - Seguridad Informática</h3>
+                <p>Sitio web especializado en ciberseguridad con diseño moderno y profesional.</p>
+                <ul>
+                    <li>Estructura semántica HTML5</li>
+                    <li>Diseño responsivo con CSS Grid</li>
+                    <li>Navegación clara y jerárquica</li>
+                    <li>Contenido optimizado para SEO</li>
+                </ul>
+                <a href="cybershield/index.html" class="demo-link">Ver Proyecto</a>
+            </div>
+
+            <div class="project-preview">
+                <h3>🌾 La Cosecha - Agrícola</h3>
+                <p>Sitio web para empresa agrícola con enfoque en productos y servicios.</p>
+                <ul>
+                    <li>Diseño adaptable a múltiples dispositivos</li>
+                    <li>Galería de productos responsiva</li>
+                    <li>Formulario de contacto funcional</li>
+                    <li>Optimización de imágenes</li>
+                </ul>
+                <a href="la-cosecha/index.html" class="demo-link">Ver Proyecto</a>
+            </div>
+
+            <div class="project-preview">
+                <h3>🔒 SecurNet - Tecnología</h3>
+                <p>Sitio corporativo de tecnología con enfoque en soluciones empresariales.</p>
+                <ul>
+                    <li>Layout avanzado con Flexbox</li>
+                    <li>Animaciones y transiciones suaves</li>
+                    <li>Estructura de archivos optimizada</li>
+                    <li>Diseño accesible</li>
+                </ul>
+                <a href="securnet/index.html" class="demo-link">Ver Proyecto</a>
+            </div>
+        </section>
+
+        <section id="exercises">
+            <h2>Ejercicios Resueltos</h2>
+
+            <div class="exercise">
+                <h3>Ejercicio 1.3.1: Análisis de estructura web y jerarquía de archivos</h3>
+                
+                <h4>Enunciado:</h4>
+                <p>Un estudiante está desarrollando un sitio web para una tienda de ropa y ha organizado sus archivos de la siguiente forma:</p>
+                
+                <div class="code-block">tienda/
+├── index.html
+├── productos/
+│   ├── camisetas.html
+│   ├── pantalones.html
+│   └── accesorios.html
+├── img/
+│   ├── logo.png
+│   ├── camiseta1.jpg
+│   └── pantalon1.jpg
+└── css/
+    └── estilos.css</div>
+
+                <h4>Preguntas:</h4>
+                <ol>
+                    <li>¿Cuál es la función del archivo index.html?</li>
+                    <li>¿Cómo se accede al archivo camisetas.html desde el index.html?</li>
+                    <li>¿Esta jerarquía de archivos es correcta? ¿Por qué?</li>
+                </ol>
+
+                <h4>Resolución:</h4>
+                
+                <div class="step">
+                    <h5>Respuestas:</h5>
+                    <ol>
+                        <li><strong>index.html</strong> es la página principal del sitio web; es la que se carga por defecto cuando se accede a la raíz del dominio o carpeta /tienda/.</li>
+                        <li>Para acceder desde index.html al archivo camisetas.html, se usaría un enlace relativo como:
+                            <div class="code-block">&lt;a href="productos/camisetas.html"&gt;Ver camisetas&lt;/a&gt;</div>
+                        </li>
+                        <li><strong>Sí, la jerarquía es correcta.</strong> El sitio está bien organizado:
+                            <ul>
+                                <li>Archivos HTML por sección temática</li>
+                                <li>Imágenes dentro de una carpeta img</li>
+                                <li>Estilos CSS separados en su propia carpeta</li>
+                            </ul>
+                            Esto sigue buenas prácticas para la escalabilidad y mantenimiento del sitio.
+                        </li>
+                    </ol>
+                </div>
+            </div>
+
+            <div class="exercise">
+                <h3>Ejercicio 1.3.2: Elaboración de un mapa de navegación</h3>
+                
+                <h4>Enunciado:</h4>
+                <p>Diseña un mapa de navegación para un sitio web educativo sobre "Introducción a la Programación". El sitio debe incluir las siguientes secciones: Inicio, Sobre el curso, Contenido, Recursos, Contacto.</p>
+
+                <h4>Resolución:</h4>
+                
+                <div class="step">
+                    <h5>Mapa de Navegación Jerárquico:</h5>
+                    <div class="code-block">Introducción a la Programación
+├── Inicio (index.html)
+├── Sobre el curso (about.html)
+├── Contenido
+│   ├── Módulo 1: Fundamentos (modulo1.html)
+│   ├── Módulo 2: Variables (modulo2.html)
+│   ├── Módulo 3: Estructuras (modulo3.html)
+│   └── Módulo 4: Funciones (modulo4.html)
+├── Recursos
+│   ├── Tutoriales (tutoriales.html)
+│   ├── Ejercicios (ejercicios.html)
+│   └── Videos (videos.html)
+└── Contacto (contact.html)</div>
+
+                    <h5>Representación Visual:</h5>
+                    <p>Opcionalmente, en diagrama:</p>
+                    <ul>
+                        <li><strong>Nivel 1:</strong> Página principal (Inicio)</li>
+                        <li><strong>Nivel 2:</strong> Secciones principales (Sobre, Contenido, Recursos, Contacto)</li>
+                        <li><strong>Nivel 3:</strong> Subsecciones de Contenido y Recursos</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="exercise">
+                <h3>Ejercicio 1.3.3: Planificación de contenido para una web personal</h3>
+                
+                <h4>Enunciado:</h4>
+                <p>Planea el contenido de un sitio web personal profesional para una diseñadora gráfica. Debe tener al menos cuatro secciones: Presentación, Portafolio, Servicios y Contacto.</p>
+
+                <h4>Resolución:</h4>
+                
+                <div class="step">
+                    <h5>Planificación del Contenido:</h5>
+                    
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Página</th>
+                                <th>Objetivo Principal</th>
+                                <th>Contenido Clave</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>index.html</strong><br>(Inicio/Presentación)</td>
+                                <td>Presentar brevemente a la diseñadora</td>
+                                <td>Nombre, foto, resumen profesional, llamada a la acción (Ver portafolio)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>portafolio.html</strong></td>
+                                <td>Mostrar trabajos anteriores</td>
+                                <td>Galería de imágenes, descripción de proyectos, herramientas utilizadas</td>
+                            </tr>
+                            <tr>
+                                <td><strong>servicios.html</strong></td>
+                                <td>Ofrecer servicios disponibles</td>
+                                <td>Diseño de marca, diseño editorial, diseño web, tarifas básicas</td>
+                            </tr>
+                            <tr>
+                                <td><strong>contacto.html</strong></td>
+                                <td>Facilitar contacto</td>
+                                <td>Formulario de contacto, correo, redes sociales, ubicación (opcional)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <h5>Recomendaciones Adicionales:</h5>
+                    <ul>
+                        <li>Usar texto alternativo en imágenes del portafolio</li>
+                        <li>Incluir enlaces de navegación en todas las páginas</li>
+                        <li>Usar un diseño responsivo desde el inicio de la planificación</li>
+                        <li>Optimizar imágenes para carga rápida</li>
+                        <li>Incluir testimonios de clientes para mayor credibilidad</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <footer style="text-align: center; padding: 2rem; background: #f8f9fa; border-radius: 10px; margin-top: 2rem;">
+            <p>&copy; 2026 - Semana 04 - Diseño Responsivo y Layout</p>
+            <p><em>Flexbox, CSS Grid y Adaptación a Dispositivos</em></p>
+        </footer>
+    </div>
+</body>
+</html>
