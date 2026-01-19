@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semana 01 - Introducción a la Web</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+            margin-bottom: 2rem;
+            border-radius: 10px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        section {
+            background: white;
+            margin-bottom: 2rem;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            color: #2c3e50;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 3px solid #667eea;
+        }
+
+        h3 {
+            color: #34495e;
+            margin: 1.5rem 0 1rem 0;
+        }
+
+        h4 {
+            color: #555;
+            margin: 1rem 0 0.5rem 0;
+        }
+
+        p {
+            margin-bottom: 1rem;
+        }
+
+        ul, ol {
+            margin-left: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        .highlight {
+            background-color: #fff3cd;
+            padding: 1rem;
+            border-left: 4px solid #ffc107;
+            margin: 1rem 0;
+            border-radius: 4px;
+        }
+
+        .code-block {
+            background-color: #f8f9fa;
+            border: 1px solid #e9ecef;
+            border-radius: 4px;
+            padding: 1rem;
+            margin: 1rem 0;
+            font-family: 'Courier New', monospace;
+            white-space: pre-wrap;
+        }
+
+        .exercise {
+            background-color: #e8f5e8;
+            border-left: 4px solid #28a745;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 4px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 0.75rem;
+            text-align: left;
+        }
+
+        th {
+            background-color: #667eea;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f8f9fa;
+        }
+
+        .step {
+            background-color: #e3f2fd;
+            border-left: 4px solid #2196f3;
+            padding: 1rem;
+            margin: 0.5rem 0;
+            border-radius: 4px;
+        }
+
+        .step-number {
+            font-weight: bold;
+            color: #2196f3;
+        }
+
+        nav {
+            background: white;
+            padding: 1rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        nav a {
+            color: #667eea;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #f0f0f0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Semana 01 - Introducción a la Web</h1>
+            <p class="subtitle">Fundamentos de la World Wide Web y Protocolos de Comunicación</p>
+        </header>
+
+        <nav>
+            <ul>
+                <li><a href="#introduccion">Introducción a la Web</a></li>
+                <li><a href="#historia">Historia y Evolución</a></li>
+                <li><a href="#www">World Wide Web</a></li>
+                <li><a href="#cliente-servidor">Cliente y Servidor</a></li>
+                <li><a href="#http-https">Protocolo HTTP/HTTPS</a></li>
+                <li><a href="#ejercicios">Ejercicios Resueltos</a></li>
+            </ul>
+        </nav>
+
+        <section id="introduccion">
+            <h2>Introducción a la Web</h2>
+            <p>
+                La World Wide Web (WWW) es un sistema de información distribuido que funciona sobre Internet 
+                y permite acceder a documentos y recursos a través de navegadores web. Es la forma más popular 
+                de acceder a información en la era digital.
+            </p>
+            
+            <h3>Conceptos Fundamentales:</h3>
+            <ul>
+                <li><strong>Internet:</strong> Infraestructura global de redes interconectadas</li>
+                <li><strong>Web:</strong> Sistema de información que funciona sobre Internet</li>
+                <li><strong>Sitio Web:</strong> Conjunto de páginas web relacionadas entre sí</li>
+                <li><strong>Página Web:</strong> Documento digital accesible mediante un navegador</li>
+                <li><strong>URL:</strong> Dirección única que identifica cada recurso en la Web</li>
+            </ul>
+
+            <div class="highlight">
+                <strong>Importante:</strong> Aunque comúnmente se usan como sinónimos, Internet y Web son conceptos diferentes. 
+                Internet es la infraestructura, mientras que la Web es uno de los servicios que funcionan sobre ella.
+            </div>
+        </section>
+
+        <section id="historia">
+            <h2>Historia y Evolución de la Web</h2>
+            
+            <h3>Línea de Tiempo:</h3>
+            
+            <h4>1960s - Los Inicios:</h4>
+            <ul>
+                <li>ARPANET: Precursor de Internet creado por el Departamento de Defensa de EE.UU.</li>
+                <li>Concepto de "red de redes" para comunicación militar y académica</li>
+            </ul>
+
+            <h4>1989 - El Nacimiento de la Web:</h4>
+            <ul>
+                <li><strong>Tim Berners-Lee</strong> propone la World Wide Web en el CERN</li>
+                <li>Crea los tres pilares fundamentales: HTML, HTTP y URL</li>
+                <li>Primera página web publicada: info.cern.ch</li>
+            </ul>
+
+            <h4>1990s - La Expansión:</h4>
+            <ul>
+                <li>1991: Primera página web pública</li>
+                <li>1993: Mosaic, el primer navegador gráfico popular</li>
+                <li>1995: Netscape Navigator y el inicio de la web comercial</li>
+                <li>1998: Google revoluciona la búsqueda de información</li>
+            </ul>
+
+            <h4>2000s - Web 2.0 y Redes Sociales:</h4>
+            <ul>
+                <li>2004: Facebook y el auge de las redes sociales</li>
+                <li>2005: YouTube y la revolución del video online</li>
+                <li>2006: Twitter y la comunicación en tiempo real</li>
+            </ul>
+
+            <h4>2010s - Web Móvil y Aplicaciones:</h4>
+            <ul>
+                <li>Explosión de smartphones y tablets</li>
+                <li>Diseño responsive como estándar</li>
+                <li>Aplicaciones web progresivas (PWA)</li>
+            </ul>
+
+            <h4>2020s - Web Moderna:</h4>
+            <ul>
+                <li>Inteligencia Artificial integrada</li>
+                <li>WebAssembly para aplicaciones de alto rendimiento</li>
+                <li>Realidad virtual y aumentada en la web</li>
+            </ul>
+        </section>
+
+        <section id="www">
+            <h2>La World Wide Web (WWW)</h2>
+            
+            <p>
+                La World Wide Web es un sistema de información hipertextual que permite acceder a documentos 
+                multimedia a través de Internet. Funciona mediante tres tecnologías fundamentales:
+            </p>
+
+            <h3>Tecnologías Fundamentales:</h3>
+            
+            <div class="step">
+                <h4>1. HTML (HyperText Markup Language)</h4>
+                <p>Lenguaje de marcado para estructurar el contenido de las páginas web.</p>
+                <ul>
+                    <li>Define la estructura y semántica del contenido</li>
+                    <li>Usa etiquetas para organizar la información</li>
+                    <li>Es el esqueleto de toda página web</li>
+                </ul>
+            </div>
+
+            <div class="step">
+                <h4>2. HTTP/HTTPS (HyperText Transfer Protocol)</h4>
+                <p>Protocolo de comunicación para transferir datos entre cliente y servidor.</p>
+                <ul>
+                    <li>Define cómo se realizan las solicitudes y respuestas</li>
+                    <li>HTTPS añade una capa de seguridad mediante cifrado</li>
+                    <li>Es el lenguaje que hablan navegadores y servidores</li>
+                </ul>
+            </div>
+
+            <div class="step">
+                <h4>3. URL (Uniform Resource Locator)</h4>
+                <p>Dirección única que identifica cada recurso en la Web.</p>
+                <ul>
+                    <li>Especifica la ubicación exacta de cada recurso</li>
+                    <li>Incluye protocolo, dominio y ruta del recurso</li>
+                    <li>Permite navegar entre diferentes páginas y sitios</li>
+                </ul>
+            </div>
+
+            <h3>Características Principales:</h3>
+            <ul>
+                <li><strong>Hipertexto:</strong> Documentos conectados mediante enlaces</li>
+                <li><strong>Accesibilidad:</strong> Disponible globalmente las 24 horas</li>
+                <li><strong>Interactividad:</strong> Permite la interacción usuario-sistema</li>
+                <li><strong>Multiplataforma:</strong> Funciona en diferentes dispositivos y sistemas</li>
+            </ul>
+        </section>
+
+        <section id="cliente-servidor">
+            <h2>Cliente y Servidor</h2>
+            
+            <p>
+                El modelo cliente-servidor es la arquitectura fundamental sobre la que funciona la Web. 
+                Define cómo se comunican y distribuyen las responsabilidades entre los diferentes componentes.
+            </p>
+
+            <h3>Componentes del Modelo:</h3>
+            
+            <div class="step">
+                <h4>Cliente:</h4>
+                <ul>
+                    <li><strong>Definición:</strong> Aplicación que solicita servicios o recursos</li>
+                    <li><strong>Ejemplos:</strong> Navegadores web (Chrome, Firefox, Safari)</li>
+                    <li><strong>Funciones:</strong>
+                        <ul>
+                            <li>Enviar solicitudes al servidor</li>
+                            <li>Procesar y mostrar las respuestas</li>
+                            <li>Manejar la interacción del usuario</li>
+                            <li>Ejecutar código del lado del cliente (JavaScript)</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="step">
+                <h4>Servidor:</h4>
+                <ul>
+                    <li><strong>Definición:</strong> Computadora o programa que proporciona servicios</li>
+                    <li><strong>Ejemplos:</strong> Servidores web (Apache, Nginx)</li>
+                    <li><strong>Funciones:</strong>
+                        <ul>
+                            <li>Recibir y procesar solicitudes</li>
+                            <li>Almacenar y gestionar recursos</li>
+                            <li>Enviar respuestas apropiadas</li>
+                            <li>Ejecutar código del lado del servidor (PHP, Python, Node.js)</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <h3>Flujo de Comunicación:</h3>
+            <ol>
+                <li>El cliente inicia una solicitud al servidor</li>
+                <li>El servidor recibe y procesa la solicitud</li>
+                <li>El servidor envía una respuesta al cliente</li>
+                <li>El cliente procesa y muestra la respuesta</li>
+            </ol>
+
+            <div class="highlight">
+                <strong>Ventajas del Modelo Cliente-Servidor:</strong>
+                Centralización de datos, mantenimiento simplificado, escalabilidad, 
+                seguridad mejorada y distribución eficiente de recursos.
+            </div>
+        </section>
+
+        <section id="http-https">
+            <h2>Protocolo HTTP/HTTPS</h2>
+            
+            <p>
+                HTTP (HyperText Transfer Protocol) es el protocolo fundamental que permite la comunicación 
+                entre clientes y servidores en la World Wide Web. HTTPS es la versión segura de HTTP.
+            </p>
+
+            <h3>HTTP (HyperText Transfer Protocol):</h3>
+            <ul>
+                <li><strong>Puerto:</strong> 80 (por defecto)</li>
+                <li><strong>Cifrado:</strong> No (datos en texto plano)</li>
+                <li><strong>Velocidad:</strong> Ligeramente más rápido</li>
+                <li><strong>Uso:</strong> Sitios no sensibles, desarrollo local</li>
+            </ul>
+
+            <h3>HTTPS (HTTP Secure):</h3>
+            <ul>
+                <li><strong>Puerto:</strong> 443 (por defecto)</li>
+                <li><strong>Cifrado:</strong> Sí (mediante SSL/TLS)</li>
+                <li><strong>Velocidad:</strong> Ligeramente más lento por el cifrado</li>
+                <li><strong>Uso:</strong> Sitios con datos sensibles, comercio electrónico</li>
+            </ul>
+
+            <h3>Métodos HTTP Principales:</h3>
+            <ul>
+                <li><strong>GET:</strong> Solicitar recursos (páginas, imágenes, etc.)</li>
+                <li><strong>POST:</strong> Enviar datos para crear nuevos recursos</li>
+                <li><strong>PUT:</strong> Actualizar recursos existentes</li>
+                <li><strong>DELETE:</strong> Eliminar recursos</li>
+                <li><strong>HEAD:</strong> Similar a GET pero sin el cuerpo de la respuesta</li>
+            </ul>
+
+            <h3>Códigos de Estado HTTP:</h3>
+            <ul>
+                <li><strong>2xx:</strong> Respuestas exitosas (200 OK, 201 Created)</li>
+                <li><strong>3xx:</strong> Redirecciones (301 Moved Permanently, 302 Found)</li>
+                <li><strong>4xx:</strong> Errores del cliente (404 Not Found, 403 Forbidden)</li>
+                <li><strong>5xx:</strong> Errores del servidor (500 Internal Server Error)</li>
+            </ul>
+
+            <div class="highlight">
+                <strong>¿Por qué usar HTTPS?</strong>
+                Protección de datos, confianza del usuario, mejor posicionamiento en buscadores, 
+                cumplimiento de normativas y acceso a APIs modernas.
+            </div>
+        </section>
+
+        <section id="ejercicios">
+            <h2>Ejercicios Resueltos</h2>
+
+            <div class="exercise">
+                <h3>Ejercicio 1.1: Análisis del modelo cliente-servidor</h3>
+                
+                <h4>Enunciado:</h4>
+                <p>Describe el funcionamiento del modelo cliente-servidor en una petición web. Considera el siguiente escenario: 
+                un usuario abre su navegador e ingresa la dirección https://www.ejemplo.com/index.html.</p>
+
+                <h4>Resolución paso a paso:</h4>
+                
+                <div class="step">
+                    <span class="step-number">Paso 1:</span>
+                    <strong>Cliente:</strong> El navegador (cliente) realiza una solicitud HTTP/HTTPS al servidor web para acceder al recurso /index.html.
+                </div>
+
+                <div class="step">
+                    <span class="step-number">Paso 2:</span>
+                    <strong>DNS:</strong> Antes de la conexión, el navegador consulta el DNS para obtener la dirección IP asociada al dominio www.ejemplo.com.
+                </div>
+
+                <div class="step">
+                    <span class="step-number">Paso 3:</span>
+                    <strong>Conexión segura (HTTPS):</strong> Al ser una URL con HTTPS, el navegador inicia un proceso de handshake TLS para establecer una conexión segura.
+                </div>
+
+                <div class="step">
+                    <span class="step-number">Paso 4:</span>
+                    <strong>Solicitud:</strong> El cliente envía una solicitud HTTP GET al servidor.
+                </div>
+
+                <div class="step">
+                    <span class="step-number">Paso 5:</span>
+                    <strong>Servidor:</strong> El servidor procesa la solicitud, busca el archivo solicitado y lo responde con un código de estado (por ejemplo, 200 OK) y el contenido HTML.
+                </div>
+
+                <div class="step">
+                    <span class="step-number">Paso 6:</span>
+                    <strong>Respuesta del cliente:</strong> El navegador recibe el contenido, lo interpreta y lo muestra al usuario.
+                </div>
+            </div>
+
+            <div class="exercise">
+                <h3>Ejercicio 1.2: Comparación entre HTTP y HTTPS</h3>
+                
+                <h4>Enunciado:</h4>
+                <p>Completa la siguiente tabla comparando los protocolos HTTP y HTTPS. Luego responde: ¿por qué se recomienda el uso de HTTPS en sitios modernos?</p>
+
+                <h4>Resolución:</h4>
+                
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Característica</th>
+                            <th>HTTP</th>
+                            <th>HTTPS</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Puerto predeterminado</td>
+                            <td>80</td>
+                            <td>443</td>
+                        </tr>
+                        <tr>
+                            <td>Cifrado de datos</td>
+                            <td>No</td>
+                            <td>Sí</td>
+                        </tr>
+                        <tr>
+                            <td>Seguridad frente a ataques</td>
+                            <td>Baja</td>
+                            <td>Alta</td>
+                        </tr>
+                        <tr>
+                            <td>Requiere certificado SSL/TLS</td>
+                            <td>No</td>
+                            <td>Sí</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="highlight">
+                    <strong>¿Por qué se recomienda HTTPS?</strong>
+                    <ul>
+                        <li>Protege la privacidad de los usuarios mediante cifrado</li>
+                        <li>Genera confianza mostrando el candado en el navegador</li>
+                        <li>Mejora el posicionamiento en Google (factor de ranking)</li>
+                        <li>Es requisito para usar APIs modernas (geolocalización, notificaciones)</li>
+                        <li>Evita advertencias de "sitio no seguro" en navegadores modernos</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="exercise">
+                <h3>Ejercicio 1.3: Interpretación de una solicitud HTTP</h3>
+                
+                <h4>Enunciado:</h4>
+                
+                <div class="code-block">GET /productos.html HTTP/1.1
+Host: www.mitienda.com
+User-Agent: Mozilla/5.0
+Accept: text/html</div>
+
+                <p>Analiza la siguiente solicitud HTTP y responde las preguntas:</p>
+
+                <h4>Preguntas:</h4>
+                <ol>
+                    <li>¿Qué recurso se está solicitando?</li>
+                    <li>¿Qué tipo de método HTTP se utiliza?</li>
+                    <li>¿Qué protocolo se usa?</li>
+                    <li>¿Cuál es el nombre del servidor?</li>
+                    <li>¿Para qué sirve la cabecera User-Agent?</li>
+                </ol>
+
+                <h4>Resolución:</h4>
+                <ol>
+                    <li><strong>Recurso solicitado:</strong> Se está solicitando el archivo productos.html.</li>
+                    <li><strong>Método HTTP:</strong> El método es GET, usado para obtener datos.</li>
+                    <li><strong>Protocolo:</strong> El protocolo especificado es HTTP/1.1.</li>
+                    <li><strong>Nombre del servidor:</strong> El servidor es www.mitienda.com.</li>
+                    <li><strong>Cabecera User-Agent:</strong> User-Agent informa al servidor sobre el navegador y sistema operativo del cliente, lo que puede ser útil para adaptar el contenido o registrar estadísticas.</li>
+                </ol>
+            </div>
+        </section>
+
+        <footer style="text-align: center; padding: 2rem; background: #f8f9fa; border-radius: 10px; margin-top: 2rem;">
+            <p>&copy; 2026 - Semana 01 - Introducción a la Web</p>
+            <p><em>Fundamentos de Desarrollo Web</em></p>
+        </footer>
+    </div>
+</body>
+</html>

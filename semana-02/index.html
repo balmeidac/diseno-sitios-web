@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semana 02 - Normas W3C y Accesibilidad Web</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            background: linear-gradient(135deg, #2ecc71 0%, #27ae60 100%);
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+            margin-bottom: 2rem;
+            border-radius: 10px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        section {
+            background: white;
+            margin-bottom: 2rem;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            color: #2c3e50;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 3px solid #2ecc71;
+        }
+
+        h3 {
+            color: #34495e;
+            margin: 1.5rem 0 1rem 0;
+        }
+
+        h4 {
+            color: #555;
+            margin: 1rem 0 0.5rem 0;
+        }
+
+        p {
+            margin-bottom: 1rem;
+        }
+
+        ul, ol {
+            margin-left: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        .highlight {
+            background-color: #fff3cd;
+            padding: 1rem;
+            border-left: 4px solid #ffc107;
+            margin: 1rem 0;
+            border-radius: 4px;
+        }
+
+        .code-block {
+            background-color: #f8f9fa;
+            border: 1px solid #e9ecef;
+            border-radius: 4px;
+            padding: 1rem;
+            margin: 1rem 0;
+            font-family: 'Courier New', monospace;
+            white-space: pre-wrap;
+        }
+
+        .exercise {
+            background-color: #e8f5e8;
+            border-left: 4px solid #28a745;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 4px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 0.75rem;
+            text-align: left;
+        }
+
+        th {
+            background-color: #2ecc71;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f8f9fa;
+        }
+
+        .step {
+            background-color: #e3f2fd;
+            border-left: 4px solid #2196f3;
+            padding: 1rem;
+            margin: 0.5rem 0;
+            border-radius: 4px;
+        }
+
+        .step-number {
+            font-weight: bold;
+            color: #2196f3;
+        }
+
+        nav {
+            background: white;
+            padding: 1rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        nav a {
+            color: #2ecc71;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #f0f0f0;
+        }
+
+        .principle {
+            background-color: #f0f8ff;
+            border-left: 4px solid #4169e1;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 4px;
+        }
+
+        .level {
+            background-color: #fff5f5;
+            border-left: 4px solid #dc3545;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 4px;
+        }
+
+        .error {
+            background-color: #ffebee;
+            border-left: 4px solid #f44336;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 4px;
+        }
+
+        .success {
+            background-color: #e8f5e8;
+            border-left: 4px solid #4caf50;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Semana 02 - Normas W3C y Accesibilidad Web</h1>
+            <p class="subtitle">Estándares Web, Validación y Accesibilidad WCAG</p>
+        </header>
+
+        <nav>
+            <ul>
+                <li><a href="#w3c">W3C</a></li>
+                <li><a href="#estandares">Estándares y Validación</a></li>
+                <li><a href="#accesibilidad">Accesibilidad Web</a></li>
+                <li><a href="#wcag">Pautas WCAG</a></li>
+                <li><a href="#niveles">Niveles de Conformidad</a></li>
+                <li><a href="#ejercicios">Ejercicios Resueltos</a></li>
+            </ul>
+        </nav>
+
+        <section id="w3c">
+            <h2>Normas básicas de la web (W3C)</h2>
+            
+            <h3>¿Qué es la W3C?</h3>
+            <p>
+                El <strong>World Wide Web Consortium (W3C)</strong> es la organización internacional que 
+                desarrolla estándares para la World Wide Web. Fundada en 1994 por Tim Berners-Lee, 
+                el inventor de la web, su misión es garantizar el crecimiento a largo plazo de la web.
+            </p>
+
+            <h3>Funciones Principales del W3C:</h3>
+            <ul>
+                <li><strong>Desarrollar estándares:</strong> Crear especificaciones técnicas para tecnologías web</li>
+                <li><strong>Validación:</strong> Proporcionar herramientas para verificar el cumplimiento de estándares</li>
+                <li><strong>Educación:</strong> Promover mejores prácticas y guías de desarrollo</li>
+                <li><strong>Interoperabilidad:</strong> Asegurar que diferentes navegadores funcionen consistentemente</li>
+                <li><strong>Accesibilidad:</strong> Garantizar que la web sea accesible para todas las personas</li>
+            </ul>
+
+            <div class="highlight">
+                <strong>Importancia del W3C:</strong>
+                Sin estándares unificados, cada navegador podría interpretar el código de manera diferente, 
+                creando caos en la experiencia del usuario y dificultando el desarrollo web.
+            </div>
+
+            <h3>Principales Estándares W3C:</h3>
+            <ul>
+                <li><strong>HTML:</strong> Lenguaje de marcado para estructura de contenido</li>
+                <li><strong>CSS:</strong> Hojas de estilo para presentación visual</li>
+                <li><strong>DOM:</strong> Document Object Model para manipulación dinámica</li>
+                <li><strong>SVG:</strong> Gráficos vectoriales escalables</li>
+                <li><strong>WCAG:</strong> Pautas de accesibilidad web</li>
+                <li><strong>ARIA:</strong> Aplicaciones internet ricas y accesibles</li>
+            </ul>
+        </section>
+
+        <section id="estandares">
+            <h2>Estándares y Validación</h2>
+            
+            <h3>¿Qué son los Estándares Web?</h3>
+            <p>
+                Los estándares web son especificaciones técnicas que definen cómo deben funcionar 
+                las tecnologías web. Estos estándares aseguran que el contenido sea accesible, 
+                interoperable y mantenga su calidad a lo largo del tiempo.
+            </p>
+
+            <h3>Beneficios de Cumplir Estándares:</h3>
+            <ul>
+                <li><strong>Compatibilidad:</strong> Funciona en todos los navegadores modernos</li>
+                <li><strong>Accesibilidad:</strong> Disponible para personas con discapacidades</li>
+                <li><strong>Mantenimiento:</strong> Código más limpio y fácil de mantener</li>
+                <li><strong>SEO:</strong> Mejor posicionamiento en buscadores</li>
+                <li><strong>Futuro:</strong> Preparado para tecnologías futuras</li>
+            </ul>
+
+            <h3>Validación</h3>
+            <p>
+                La validación es el proceso de verificar que un documento web cumple con los estándares 
+                definidos por el W3C. Es una práctica fundamental para asegurar la calidad del código.
+            </p>
+
+            <h3>Herramientas de Validación:</h3>
+            <ul>
+                <li><strong>W3C Markup Validator:</strong> Para validar documentos HTML</li>
+                <li><strong>W3C CSS Validator:</strong> Para validar hojas de estilo CSS</li>
+                <li><strong>W3C Link Checker:</strong> Para verificar enlaces rotos</li>
+                <li><strong>HTML Tidy:</strong> Para limpiar y corregir código HTML</li>
+            </ul>
+
+            <div class="step">
+                <h4>Proceso de Validación:</h4>
+                <ol>
+                    <li>Escribir código siguiendo las especificaciones W3C</li>
+                    <li>Usar herramientas de validación automática</li>
+                    <li>Corregir errores y advertencias encontradas</li>
+                    <li>Verificar que el código sea semánticamente correcto</li>
+                    <li>Probar en diferentes navegadores</li>
+                </ol>
+            </div>
+
+            <h3>Errores Comunes de Validación:</h3>
+            <ul>
+                <li>Falta de declaración DOCTYPE</li>
+                <li>Etiquetas no cerradas correctamente</li>
+                <li>Atributos obsoletos o no estándar</li>
+                <li>Estructura anidada incorrecta</li>
+                <li>Caracteres especiales no codificados</li>
+            </ul>
+        </section>
+
+        <section id="accesibilidad">
+            <h2>Accesibilidad Web (WCAG)</h2>
+            
+            <p>
+                La accesibilidad web es la práctica de hacer que los sitios web sean utilizables 
+                por todas las personas, incluyendo aquellas con discapacidades visuales, auditivas, 
+                motoras o cognitivas. Las <strong>Web Content Accessibility Guidelines (WCAG)</strong> 
+                son el estándar internacional para la accesibilidad web.
+            </p>
+
+            <h3>¿Por qué es importante la accesibilidad?</h3>
+            <ul>
+                <li><strong>Inclusión:</strong> Permite acceso a personas con discapacidades (15% de la población mundial)</li>
+                <li><strong>Legal:</strong> Cumplimiento de leyes y regulaciones en muchos países</li>
+                <li><strong>SEO:</strong> Sitios accesibles tienen mejor posicionamiento</li>
+                <li><strong>Usabilidad:</strong> Mejora la experiencia para todos los usuarios</li>
+                <li><strong>Etiqueta:</strong> Responsabilidad social y empresarial</li>
+            </ul>
+
+            <h3>Tipos de Discapacidades Consideradas:</h3>
+            <ul>
+                <li><strong>Visuales:</strong> Ceguera, baja visión, daltonismo</li>
+                <li><strong>Auditivas:</strong> Sordera, hipoacusia</li>
+                <li><strong>Motoras:</strong> Dificultades de movimiento, parálisis</li>
+                <li><strong>Cognitivas:</strong> Dislexia, autismo, TDAH</li>
+                <li><strong>Técnicas:</strong> Conexión lenta, dispositivos antiguos</li>
+            </ul>
+
+            <h3>Tecnologías Asistivas:</h3>
+            <ul>
+                <li><strong>Lectores de pantalla:</strong> JAWS, NVDA, VoiceOver</li>
+                <li><strong>Software de reconocimiento de voz:</strong> Dragon NaturallySpeaking</li>
+                <li><strong>Ampliadores de pantalla:</strong> ZoomText, Windows Magnifier</li>
+                <li><strong>Teclados adaptados:</strong> Teclados en pantalla, switches</li>
+                <li><strong>Braille:</strong> Líneas Braille, impresoras Braille</li>
+            </ul>
+        </section>
+
+        <section id="wcag">
+            <h2>Principios de Usabilidad WCAG</h2>
+            
+            <p>
+                Las WCAG se organizan en cuatro principios fundamentales. Si alguno de estos principios 
+                no se cumple, el contenido no es accesible.
+            </p>
+
+            <div class="principle">
+                <h3>1. Perceptible</h3>
+                <p>La información y los componentes de la interfaz deben presentarse de manera que los usuarios puedan percibirlos.</p>
+                
+                <h4>Directrices:</h4>
+                <ul>
+                    <li><strong>Alternativas textuales:</strong> Proporcionar texto alternativo para imágenes</li>
+                    <li><strong>Medios sincronizados:</strong> Subtítulos y descripciones para videos</li>
+                    <li><strong>Adaptable:</strong> Crear contenido presentable de diferentes formas</li>
+                    <li><strong>Distinguible:</strong> Facilitar la audición y visión del contenido</li>
+                </ul>
+
+                <div class="code-block">
+&lt;!-- Ejemplo de imagen accesible --&gt;
+&lt;img src="logo-empresa.png" alt="Logo de TechNova Solutions"&gt;
+
+&lt;!-- Video con subtítulos --&gt;
+&lt;video controls&gt;
+  &lt;source src="video.mp4" type="video/mp4"&gt;
+  &lt;track kind="subtitles" src="subtitulos.vtt" srclang="es"&gt;
+&lt;/video&gt;</div>
+            </div>
+
+            <div class="principle">
+                <h3>2. Operable</h3>
+                <p>Los componentes de la interfaz y la navegación deben ser operables por todos los usuarios.</p>
+                
+                <h4>Directrices:</h4>
+                <ul>
+                    <li><strong>Accesible por teclado:</strong> Todas las funciones deben poder usarse con teclado</li>
+                    <li><strong>Tiempo suficiente:</strong> Dar tiempo suficiente para leer y usar contenido</li>
+                    <li><strong>Convulsiones:</strong> No diseñar contenido que cause convulsiones</li>
+                    <li><strong>Navegable:</strong> Ayudar a los usuarios a navegar y encontrar contenido</li>
+                </ul>
+
+                <div class="code-block">
+&lt;!-- Enlace accesible por teclado --&gt;
+&lt;a href="#contenido" class="skip-link"&gt;Saltar al contenido principal&lt;/a&gt;
+
+&lt;!-- Botón con atajo de teclado --&gt;
+&lt;button accesskey="s" onclick="buscar()"&gt;Buscar [Alt+S]&lt;/button&gt;</div>
+            </div>
+
+            <div class="principle">
+                <h3>3. Comprensible</h3>
+                <p>La información y la operación de la interfaz deben ser comprensibles.</p>
+                
+                <h4>Directrices:</h4>
+                <ul>
+                    <li><strong>Legible:</strong> El texto debe ser legible y comprensible</li>
+                    <li><strong>Predictible:</strong> Las páginas web deben funcionar de manera predecible</li>
+                    <li><strong>Asistencia:</strong> Ayudar a los usuarios a evitar y corregir errores</li>
+                </ul>
+
+                <div class="code-block">
+&lt;!-- Formulario con etiquetas claras --&gt;
+&lt;label for="email"&gt;Correo electrónico:&lt;/label&gt;
+&lt;input type="email" id="email" name="email" required&gt;
+
+&lt;!-- Mensajes de error claros --&gt;
+&lt;span class="error"&gt;Por favor, ingrese un correo válido&lt;/span&gt;</div>
+            </div>
+
+            <div class="principle">
+                <h3>4. Robusto</h3>
+                <p>El contenido debe ser lo suficientemente robusto para ser interpretado por diferentes tecnologías asistivas.</p>
+                
+                <h4>Directrices:</h4>
+                <ul>
+                    <li><strong>Compatible:</strong> Maximizar compatibilidad con tecnologías actuales y futuras</li>
+                    <li><strong>Semántico:</strong> Usar HTML semántico correctamente</li>
+                    <li><strong>ARIA:</strong> Usar atributos ARIA cuando sea necesario</li>
+                </ul>
+
+                <div class="code-block">
+&lt;!-- HTML semántico --&gt;
+&lt;main role="main"&gt;
+  &lt;section aria-labelledby="productos-title"&gt;
+    &lt;h2 id="productos-title"&gt;Nuestros Productos&lt;/h2&gt;
+    &lt;article aria-label="Producto 1"&gt;...&lt;/article&gt;
+  &lt;/section&gt;
+&lt;/main&gt;</div>
+            </div>
+        </section>
+
+        <section id="niveles">
+            <h2>Versiones de WCAG y Niveles de Conformidad</h2>
+            
+            <h3>Versiones de WCAG:</h3>
+            <ul>
+                <li><strong>WCAG 1.0 (1999):</strong> Primera versión, 14 directrices</li>
+                <li><strong>WCAG 2.0 (2008):</strong> Reestructurado en 4 principios, 12 directrices</li>
+                <li><strong>WCAG 2.1 (2018):</strong> Añade 17 criterios de éxito nuevos</li>
+                <li><strong>WCAG 2.2 (2023):</strong> Mejoras en accesibilidad móvil y cognitiva</li>
+            </ul>
+
+            <h3>Niveles de Conformidad con las WCAG: A, AA y AAA</h3>
+            
+            <div class="level">
+                <h4>Nivel A – Conformidad Básica</h4>
+                <p>Nivel mínimo de accesibilidad. Cumplimiento básico obligatorio.</p>
+                
+                <h5>Requisitos principales:</h5>
+                <ul>
+                    <li>Imágenes con texto alternativo</li>
+                    <li>Videos con subtítulos (pregrabados)</li>
+                    <li>Contenido accesible por teclado</li>
+                    <li>No contenido que cause convulsiones</li>
+                    <li>Uso de HTML semántico básico</li>
+                </ul>
+            </div>
+
+            <div class="level">
+                <h4>Nivel AA – Conformidad Intermedia</h4>
+                <p>Nivel recomendado para la mayoría de los sitios web. Equilibrio entre accesibilidad y diseño.</p>
+                
+                <h5>Requisitos adicionales:</h5>
+                <ul>
+                    <li>Contraste de color mínimo 4.5:1</li>
+                    <li>Videos con audio descripción</li>
+                    <li>Redimensionamiento de texto hasta 200%</li>
+                    <li>Funcionamiento completo por teclado</li>
+                    <li>Navegación consistente</li>
+                    <li>Identificación de errores de formulario</li>
+                </ul>
+            </div>
+
+            <div class="level">
+                <h4>Nivel AAA – Conformidad Avanzada</h4>
+                <p>Nivel máximo de accesibilidad. No es práctico para todo el contenido.</p>
+                
+                <h5>Requisitos adicionales:</h5>
+                <ul>
+                    <li>Contraste de color mínimo 7:1</li>
+                    <li>Interpretación por lenguaje de señas</li>
+                    <li>Texto ampliado hasta 200% sin pérdida de funcionalidad</li>
+                    <li>Interrupción no automática</li>
+                    <li>Contexto de ayuda disponible</li>
+                    <li>Contenido en lenguaje sencillo</li>
+                </ul>
+            </div>
+
+            <div class="highlight">
+                <strong>Recomendación:</strong>
+                La mayoría de los sitios web deberían aspirar al nivel AA como estándar de accesibilidad. 
+                El nivel AAA es ideal para contenido específico pero no es práctico para sitios completos.
+            </div>
+
+            <h3>Declaración de Conformidad:</h3>
+            <p>Los sitios pueden declarar su nivel de conformidad WCAG mediante:</p>
+            <ul>
+                <li>Declaración completa (página completa cumple)</li>
+                <li>Declaración parcial (algunas páginas cumplen)</li>
+                <li>Declaración con conformidad respaldada (verificada por tercera parte)</li>
+            </ul>
+        </section>
+
+        <section id="ejercicios">
+            <h2>Ejercicios Resueltos</h2>
+
+            <div class="exercise">
+                <h3>Ejercicio 2.1: Evaluación de accesibilidad básica en una página web</h3>
+                
+                <h4>Enunciado:</h4>
+                <p>Analiza el siguiente fragmento de código HTML y responde: ¿Qué problemas de accesibilidad presenta? 
+                ¿Cómo se podrían mejorar para cumplir con las recomendaciones del W3C y las Pautas de Accesibilidad 
+                al Contenido en la Web (WCAG)?</p>
+
+                <div class="code-block">&lt;h1&gt;Catálogo de productos&lt;/h1&gt;
+&lt;img src="camisa.jpg"&gt;
+&lt;a href="pagina2.html"&gt;Haz clic aquí&lt;/a&gt;</div>
+
+                <h4>Resolución:</h4>
+                
+                <div class="error">
+                    <h5>Problemas identificados:</h5>
+                    <ol>
+                        <li><strong>Imagen sin texto alternativo (alt):</strong> Las personas con discapacidad visual no sabrán qué representa la imagen.</li>
+                        <li><strong>Enlace no descriptivo:</strong> "Haz clic aquí" no es una etiqueta comprensible fuera de contexto, lo que dificulta su uso por parte de lectores de pantalla.</li>
+                    </ol>
+                </div>
+
+                <div class="success">
+                    <h5>Versión mejorada:</h5>
+                    <div class="code-block">&lt;h1&gt;Catálogo de productos&lt;/h1&gt;
+&lt;img src="camisa.jpg" alt="Camisa de algodón azul para hombre"&gt;
+&lt;a href="pagina2.html"&gt;Ver más detalles del catálogo&lt;/a&gt;</div>
+                </div>
+
+                <div class="highlight">
+                    <strong>Mejoras implementadas:</strong>
+                    <ul>
+                        <li>Se añadió atributo <code>alt</code> descriptivo a la imagen</li>
+                        <li>Se reemplazó el texto del enlace por uno más descriptivo</li>
+                        <li>El código ahora cumple con los principios Perceptible y Comprensible de WCAG</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="exercise">
+                <h3>Ejercicio 2.2: Validación de un documento HTML según W3C</h3>
+                
+                <h4>Enunciado:</h4>
+                <p>Revisa el siguiente código HTML. Luego, usando los estándares del W3C, identifica los errores 
+                que podrían impedir una validación exitosa y corrígelos.</p>
+
+                <div class="code-block">&lt;html&gt;
+&lt;head&gt;
+&lt;meta charset=UTF-8&gt;
+&lt;title&gt;Mi sitio&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;h1&gt;Bienvenidos&lt;/h1&gt;
+&lt;p&gt;Esta es mi primera
+página web&lt;/body&gt;
+&lt;/html&gt;</div>
+
+                <h4>Resolución:</h4>
+                
+                <div class="error">
+                    <h5>Errores encontrados:</h5>
+                    <ol>
+                        <li><strong>Falta la declaración &lt;!DOCTYPE html&gt;.</strong></li>
+                        <li><strong>El atributo charset está mal escrito</strong> (debe ir entre comillas).</li>
+                        <li><strong>El elemento &lt;p&gt; no está cerrado.</strong></li>
+                        <li><strong>Código mal indentado.</strong></li>
+                    </ol>
+                </div>
+
+                <div class="success">
+                    <h5>Código corregido (válido según W3C):</h5>
+                    <div class="code-block">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;meta charset="UTF-8"&gt;
+&lt;title&gt;Mi sitio&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;h1&gt;Bienvenidos&lt;/h1&gt;
+&lt;p&gt;Esta es mi primera página web&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</div>
+                </div>
+
+                <div class="highlight">
+                    <strong>Correcciones realizadas:</strong>
+                    <ul>
+                        <li>Se añadió la declaración DOCTYPE HTML5</li>
+                        <li>Se corrigió el atributo charset con comillas</li>
+                        <li>Se cerró correctamente la etiqueta &lt;p&gt;</li>
+                        <li>Se mejoró la indentación del código</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="exercise">
+                <h3>Ejercicio 2.3: Aplicación práctica de estándares W3C y accesibilidad</h3>
+                
+                <h4>Enunciado:</h4>
+                <p>Un desarrollador creó el siguiente formulario. Analiza su conformidad con los estándares del 
+                W3C y las pautas de accesibilidad, y luego sugiere una versión mejorada.</p>
+
+                <div class="code-block">&lt;form&gt;
+Nombre: &lt;input type="text"&gt;&lt;br&gt;
+Correo: &lt;input type="email"&gt;&lt;br&gt;
+&lt;input type="submit" value="Enviar"&gt;
+&lt;/form&gt;</div>
+
+                <h4>Resolución:</h4>
+                
+                <div class="error">
+                    <h5>Problemas identificados:</h5>
+                    <ol>
+                        <li><strong>No se están usando etiquetas &lt;label&gt;</strong> asociadas a los campos de entrada, lo que afecta a los lectores de pantalla.</li>
+                        <li><strong>No hay atributos name,</strong> necesarios para procesar datos del formulario.</li>
+                        <li><strong>No hay agrupación semántica.</strong></li>
+                    </ol>
+                </div>
+
+                <div class="success">
+                    <h5>Versión mejorada cumpliendo con accesibilidad y estándares:</h5>
+                    <div class="code-block">&lt;form action="procesar.php" method="post"&gt;
+  &lt;fieldset&gt;
+    &lt;legend&gt;Información de contacto&lt;/legend&gt;
+    
+    &lt;label for="nombre"&gt;Nombre:&lt;/label&gt;
+    &lt;input type="text" id="nombre" name="nombre" required&gt;&lt;br&gt;
+    
+    &lt;label for="correo"&gt;Correo:&lt;/label&gt;
+    &lt;input type="email" id="correo" name="correo" required&gt;&lt;br&gt;
+    
+    &lt;input type="submit" value="Enviar"&gt;
+  &lt;/fieldset&gt;
+&lt;/form&gt;</div>
+                </div>
+
+                <div class="highlight">
+                    <strong>Mejoras implementadas:</strong>
+                    <ul>
+                        <li>Se añadieron etiquetas &lt;label&gt; con atributos <code>for</code> conectados a los inputs</li>
+                        <li>Se incluyeron atributos <code>id</code> y <code>name</code> para identificación y procesamiento</li>
+                        <li>Se agregó validación con el atributo <code>required</code></li>
+                        <li>Se usó &lt;fieldset&gt; y &lt;legend&gt; para agrupación semántica</li>
+                        <li>Se añadieron atributos <code>action</code> y <code>method</code> al formulario</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <footer style="text-align: center; padding: 2rem; background: #f8f9fa; border-radius: 10px; margin-top: 2rem;">
+            <p>&copy; 2026 - Semana 02 - Normas W3C y Accesibilidad Web</p>
+            <p><em>Estándares Web, Validación y Pautas WCAG</em></p>
+        </footer>
+    </div>
+</body>
+</html>
