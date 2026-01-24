@@ -64,4 +64,4 @@ A continuación presento las unidades de estudio y los enlaces a las prácticas 
 
 ## 📝 Nota
 Este proyecto es creado con fines educativos.
-*Última actualización: Diciembre 2025*
+*Última actualización: Enero 2026*
