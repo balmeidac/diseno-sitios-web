@@ -1,0 +1,327 @@
+/* =============================================
+   RESPONSIVE DESIGN - MOBILE FIRST
+   ============================================= */
+
+/* BASE MOBILE STYLES (<768px) */
+.product-grid,
+.products-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 0 15px;
+}
+
+.product,
+.product-card {
+    flex: 1 1 100%;
+    max-width: 100%;
+    min-width: 280px;
+}
+
+/* Mobile navigation */
+.menu {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.menu li {
+    margin: 0;
+    padding: 5px 0;
+}
+
+/* Mobile images - fluid and responsive */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Prevent horizontal scroll on mobile */
+body {
+    overflow-x: hidden;
+}
+
+/* Mobile hero banner */
+.hero-banner {
+    height: 300px;
+}
+
+.hero-banner h1 {
+    font-size: 1.8rem;
+}
+
+.hero-banner p {
+    font-size: 1rem;
+}
+
+/* Mobile container adjustments */
+.container {
+    padding: 0 10px;
+}
+
+/* =============================================
+   TABLET STYLES (768px - 1023px)
+   ============================================= */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .product-grid,
+    .products-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+        padding: 0 20px;
+    }
+    
+    .product,
+    .product-card {
+        max-width: none;
+        min-width: auto;
+    }
+    
+    /* Tablet navigation */
+    .menu {
+        flex-direction: row;
+        justify-content: center;
+        gap: 20px;
+    }
+    
+    .menu a {
+        font-size: 1.1rem;
+        padding: 10px 15px;
+    }
+    
+    /* Tablet hero banner */
+    .hero-banner {
+        height: 400px;
+    }
+    
+    .hero-banner h1 {
+        font-size: 2.5rem;
+    }
+    
+    .hero-banner p {
+        font-size: 1.2rem;
+    }
+    
+    /* Tablet typography */
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .product-info h3 {
+        font-size: 1.2rem;
+    }
+    
+    .product-info .price {
+        font-size: 1.3rem;
+    }
+    
+    /* Tablet container */
+    .container {
+        padding: 0 20px;
+    }
+}
+
+/* =============================================
+   DESKTOP STYLES (≥1024px)
+   ============================================= */
+@media (min-width: 1024px) {
+    .product-grid,
+    .products-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 30px;
+        padding: 0 25px;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    
+    /* Alternative: Fixed 3-4 columns */
+    /* .product-grid,
+    .products-grid {
+        grid-template-columns: repeat(3, 1fr);
+    } */
+    
+    .product,
+    .product-card {
+        max-width: none;
+        min-width: auto;
+    }
+    
+    /* Desktop navigation */
+    .menu {
+        flex-direction: row;
+        justify-content: flex-end;
+        gap: 25px;
+    }
+    
+    .menu a {
+        font-size: 1.1rem;
+        padding: 12px 20px;
+    }
+    
+    /* Desktop hero banner */
+    .hero-banner {
+        height: 500px;
+    }
+    
+    .hero-banner h1 {
+        font-size: 3rem;
+    }
+    
+    .hero-banner p {
+        font-size: 1.25rem;
+    }
+    
+    /* Desktop typography */
+    .section-title {
+        font-size: 2.2rem;
+    }
+    
+    .product-info h3 {
+        font-size: 1.3rem;
+    }
+    
+    .product-info .price {
+        font-size: 1.4rem;
+    }
+    
+    /* Desktop container */
+    .container {
+        padding: 0 25px;
+    }
+    
+    /* Enhanced hover effects for desktop */
+    .product-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+    }
+    
+    .product-image img {
+        transition: transform 0.5s ease;
+    }
+    
+    .product-card:hover .product-image img {
+        transform: scale(1.05);
+    }
+}
+
+/* =============================================
+   LARGE DESKTOP STYLES (≥1440px)
+   ============================================= */
+@media (min-width: 1440px) {
+    .product-grid,
+    .products-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 35px;
+        max-width: 1400px;
+    }
+    
+    .container {
+        max-width: 1400px;
+    }
+    
+    .hero-banner {
+        height: 600px;
+    }
+    
+    .hero-banner h1 {
+        font-size: 3.5rem;
+    }
+}
+
+/* =============================================
+   MOBILE MENU TOGGLE
+   ============================================= */
+@media (max-width: 767px) {
+    .menu-toggle {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 30px;
+        height: 21px;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        padding: 0;
+        z-index: 1001;
+    }
+    
+    .menu-toggle span {
+        display: block;
+        width: 100%;
+        height: 3px;
+        background-color: white;
+        border-radius: 3px;
+        transition: all 0.3s ease;
+    }
+    
+    .menu {
+        display: none;
+        position: fixed;
+        top: 0;
+        right: -300px;
+        width: 300px;
+        height: 100vh;
+        background: var(--primary-color, #2c3e50);
+        flex-direction: column;
+        padding: 80px 20px;
+        transition: right 0.3s ease;
+        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+    }
+    
+    .menu.active {
+        display: flex;
+        right: 0;
+    }
+    
+    .menu li {
+        margin: 15px 0;
+        opacity: 0;
+        transform: translateX(20px);
+        transition: all 0.3s ease 0.1s;
+    }
+    
+    .menu.active li {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    
+    .menu a {
+        font-size: 1.2rem;
+        padding: 15px 0;
+        color: white;
+    }
+}
+
+/* =============================================
+   ACCESSIBILITY & PERFORMANCE
+   ============================================= */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* Print styles */
+@media print {
+    .menu-toggle,
+    .cart-icon,
+    .product-overlay,
+    .btn {
+        display: none !important;
+    }
+    
+    .product-grid,
+    .products-grid {
+        display: block !important;
+    }
+    
+    .product-card {
+        break-inside: avoid;
+        margin-bottom: 20px;
+    }
+}

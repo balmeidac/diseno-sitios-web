@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centro de Ayuda - Tienda Online</title>
+    <link rel="stylesheet" href="../css/responsive.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        body {
+            background-color: #f9f9f9;
+            color: #2c3e50;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        header {
+            background: #2c3e50;
+            padding: 15px 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo img {
+            height: 50px;
+            width: auto;
+        }
+        .back-to-home {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+        .back-to-home:hover {
+            color: #3498db;
+        }
+        main {
+            padding: 3rem 0;
+        }
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 2rem;
+            text-align: center;
+            position: relative;
+            padding-bottom: 1rem;
+        }
+        h1:after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background: #3498db;
+            margin: 1rem auto 0;
+        }
+        .content {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+        }
+        h2 {
+            color: #2c3e50;
+            margin: 2rem 0 1rem;
+            font-size: 1.5rem;
+        }
+        p {
+            margin-bottom: 1.2rem;
+            color: #34495e;
+        }
+        .faq-item {
+            margin-bottom: 1.5rem;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 1.5rem;
+        }
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+        .faq-question {
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+        .contact-box {
+            background: #f0f8ff;
+            border-left: 4px solid #3498db;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 0 4px 4px 0;
+        }
+        .contact-link {
+            display: inline-block;
+            margin-top: 1rem;
+            color: #3498db;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .contact-link:hover {
+            text-decoration: underline;
+        }
+        footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 1.5rem;
+            margin-top: 3rem;
+        }
+        .footer-links {
+            margin-top: 1rem;
+        }
+        .footer-links a {
+            color: #ecf0f1;
+            margin: 0 10px;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        .footer-links a:hover {
+            color: #3498db;
+        }
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            .logo {
+                margin-bottom: 1rem;
+            }
+            .content {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="../index.html">
+                        <img src="../img/logo.png" alt="Logo de la tienda">
+                    </a>
+                </div>
+                <a href="../index.html" class="back-to-home">
+                    <i class="fas fa-arrow-left"></i> Volver al Inicio
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <h1>Centro de Ayuda y Preguntas Frecuentes</h1>
+            <div class="content">
+                <p>Bienvenido al centro de ayuda de Tienda Online. Aquí encontrarás respuestas a las preguntas más comunes sobre nuestros productos, envíos, pagos y más.</p>
+
+                <h2>Preguntas Frecuentes</h2>
+                
+                <div class="faq-item">
+                    <div class="faq-question">¿Cómo realizo una compra?</div>
+                    <p>Para realizar una compra, simplemente navega por nuestros productos, selecciona los que desees, agrégalos al carrito y sigue los pasos del proceso de pago.</p>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">¿Qué métodos de pago aceptan?</div>
+                    <p>Aceptamos diversas formas de pago incluyendo tarjetas de crédito/débito, transferencias bancarias y pagos a través de plataformas seguras de pago en línea.</p>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">¿Cuál es el tiempo de envío?</div>
+                    <p>El tiempo de envío varía según la ubicación. Normalmente, los pedidos son procesados en 1-2 días hábiles y el tiempo de entrega puede variar entre 3-7 días hábiles.</p>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">¿Puedo realizar un seguimiento de mi pedido?</div>
+                    <p>Sí, una vez que tu pedido sea enviado, recibirás un correo electrónico con un número de seguimiento que podrás rastrear en nuestra página de seguimiento de envíos.</p>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">¿Cuál es la política de devoluciones?</div>
+                    <p>Aceptamos devoluciones dentro de los 30 días posteriores a la recepción del producto. El artículo debe estar en su estado original y con el empaque original.</p>
+                </div>
+
+                <div class="contact-box">
+                    <h3>¿No encontraste lo que buscabas?</h3>
+                    <p>Si tienes alguna pregunta que no esté respondida aquí, no dudes en contactarnos. Nuestro equipo de soporte está listo para ayudarte.</p>
+                    <a href="../contact.html" class="contact-link">
+                        <i class="fas fa-envelope"></i> Contáctanos
+                    </a>
+                </div>
+
+                <h2>Guías de Ayuda</h2>
+                <ul>
+                    <li><a href="#" style="color: #3498db; text-decoration: none;">Guía de tallas</a></li>
+                    <li><a href="#" style="color: #3498db; text-decoration: none;">Cómo realizar un pedido</a></li>
+                    <li><a href="#" style="color: #3498db; text-decoration: none;">Guía de devoluciones</a></li>
+                    <li><a href="#" style="color: #3498db; text-decoration: none;">Preguntas sobre pagos</a></li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Tienda Online. Todos los derechos reservados.</p>
+            <div class="footer-links">
+                <a href="../pages/terms.html">Términos</a> |
+                <a href="../pages/privacy.html">Privacidad</a> |
+                <a href="../pages/help.html">Ayuda</a>
+            </div>
+        </div>
+    </footer>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</body>
+</html>
