@@ -43,7 +43,8 @@ Perfil profesional inspirado en redes sociales para ingenieros de sistemas. Este
 
 ## 📁 Estructura del Proyecto
 
-```text
+<div align="center">
+
 perfil-redes/
 ├── 📄 index.html              # 🏠 Página principal del perfil
 ├── 📁 css/
@@ -53,7 +54,8 @@ perfil-redes/
 │   └── 📁 capturas/          # 📸 Capturas adicionales (vacío)
 ├── 📄 .gitkeep              # 📁 Mantener carpeta en Git
 └── 📄 README.md              # 📋 Documentación completa
-```
+
+</div>
 
 ### 🌳 Diagrama Jerárquico
 
