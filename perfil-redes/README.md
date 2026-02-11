@@ -48,7 +48,7 @@ Perfil profesional inspirado en redes sociales para ingenieros de sistemas. Este
 *Vista completa del perfil de usuario con estadísticas, biografía y galería de proyectos*
 
 ### 🖼️ Galería de Proyectos
-![Galería de Proyectos](./img/capturas/cap02.jpq)
+![Galería de Proyectos](./img/capturas/cap02.jpg)
 *Sección de proyectos con grid responsivo y efectos hover interactivos*
 
 ---
