@@ -41,7 +41,19 @@ Perfil profesional inspirado en redes sociales para ingenieros de sistemas. Este
 
 ---
 
-## 📁 Estructura del Proyecto
+## � Capturas del Proyecto
+
+### 🎯 Vista Principal del Perfil
+![Perfil de Redes Sociales](./img/capturas/cap01.png)
+*Vista completa del perfil de usuario con estadísticas, biografía y galería de proyectos*
+
+### 🖼️ Galería de Proyectos
+![Galería de Proyectos](./img/capturas/cap02.png)
+*Sección de proyectos con grid responsivo y efectos hover interactivos*
+
+---
+
+## �📁 Estructura del Proyecto
 
 ```mermaid
 graph TD
