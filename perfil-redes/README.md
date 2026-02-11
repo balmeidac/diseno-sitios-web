@@ -43,48 +43,25 @@ Perfil profesional inspirado en redes sociales para ingenieros de sistemas. Este
 
 ## 📁 Estructura del Proyecto
 
-<div align="center">
-
-perfil-redes/
-├── 📄 index.html              # 🏠 Página principal del perfil
-├── 📁 css/
-│   └── 🎨 styles.css         # 🎭 Hoja de estilos principal
-├── 📁 img/
-│   ├── 📸 perfil.png         # 👤 Foto de perfil circular
-│   └── 📁 capturas/          # 📸 Capturas adicionales (vacío)
-├── 📄 .gitkeep              # 📁 Mantener carpeta en Git
-└── 📄 README.md              # 📋 Documentación completa
-
-</div>
-
-### 🌳 Diagrama Jerárquico
-
-```text
-📁 perfil-redes/                    # 🚀 Raíz del proyecto
-│
-├── 🏠 index.html               # 📱 Página principal
-│   ├── 👤 Header (perfil)      # 📊 Info del usuario
-│   │   ├── 📸 .foto-contenedor   # Contenedor de imagen
-│   │   └── 📊 .info-perfil       # Información del usuario
-│   │       ├── 👤 h1             # Nombre de usuario
-│   │       ├── 📈 .stats          # Estadísticas
-│   │       └── 📝 .bio            # Biografía
-│   ├── 📋 Tabs (navegación)   # 🔗 Secciones
-│   │   ├── 📋 PROYECTOS          # Tab de proyectos
-│   │   └── 🏷️ ETIQUETADOS        # Tab de etiquetas
-│   └── 🖼️ Galería (proyectos) # 📸 Grid de imágenes
-│       └── 📦 .proyecto-item      # Cada proyecto individual
-│           └── 🖼️ img             # Imagen del proyecto
-│
-├── 🎨 css/                    # 🎭 Estilos del sitio
-│   └── 📄 styles.css          # 🌈 Todos los estilos CSS
-│
-├── 📸 img/                    # 🖼️ Recursos visuales
-│   ├── 👤 perfil.png          # 📷 Foto principal
-│   └── 📁 capturas/          # 📂 Contenedor adicional
-│
-├── 📋 README.md               # 📚 Documentación
-└── 📁 .gitkeep              # 🔒 Control de versiones
+```mermaid
+graph TD
+    A[📁 perfil-redes/] --> B[📄 index.html]
+    A --> C[📁 css/]
+    A --> D[📁 img/]
+    A --> E[📄 .gitkeep]
+    A --> F[📄 README.md]
+    
+    C --> G[🎨 styles.css]
+    
+    D --> H[📸 perfil.png]
+    D --> I[📁 capturas/]
+    
+    style A fill:#e1f5fe
+    style B fill:#f3e5f5
+    style C fill:#e8f5e8
+    style D fill:#fff3e0
+    style E fill:#fce4ec
+    style F fill:#f1f8e9
 ```
 
 ---
