@@ -1,6 +1,6 @@
 # 🚀 Perfil Redes - sys_engineer_uteq
 
-> 💻 **Ingeniero de Sistemas de Información** | ☕ **Coffee Enthusiast** | 🐛 **Bug Hunter**
+> 💻 **Ingeniero de Sistemas de Información** | ☕ **Apasionado por el código y el café. EC UTEQ** | 🐛 **Cazador de Bugs**
 
 ---
 
@@ -40,18 +40,17 @@ Perfil profesional inspirado en redes sociales para ingenieros de sistemas. Este
 
 ## 📁 Estructura del Proyecto
 
-```
+```text
 perfil-redes/
-├── 📄 index.html          # Página principal
+├── 📄 index.html              # 🏠 Página principal del perfil
 ├── 📁 css/
-│   └── 🎨 styles.css      # Hoja de estilos
+│   └── 🎨 styles.css         # 🎭 Hoja de estilos principal
 ├── 📁 img/
-│   ├── 📸 perfil.png      # Foto de perfil
-│   └── 📁 capturas/       # Capturas adicionales
-└── 📄 README.md           # Documentación
+│   ├── 📸 perfil.png         # 👤 Foto de perfil circular
+│   └── 📁 capturas/          # 📸 Capturas adicionales (vacío)
+├── 📄 .gitkeep              # 📁 Mantener carpeta en Git
+└── 📄 README.md              # 📋 Documentación completa
 ```
-
----
 
 ## 🎨 Diseño y Estilos
 
