@@ -47,8 +47,8 @@ A continuación presento las unidades de estudio y los enlaces a las prácticas 
 | :--- | :---: | :--- |
 | **3.1** Fundamentos CSS (Selectores, Colores) | ✅ | [Semana 10](./semana-10/) |
 | **3.2** El Modelo de Caja (Box Model) | ✅ | [Semana 11](./semana-11/) |
-| **3.3** Diseño Responsive (Flexbox & Grid) | ✅ [Semana 12](./semana-12/)|
-| **3.4** Buenas prácticas y Bootstrap | ⏳ | _Pendiente_ |
+| **3.3** Diseño Responsive (Flexbox & Grid) | ✅ | [Semana 12](./semana-12/)|
+| **3.4** Buenas prácticas y Bootstrap | ✅ | [Semana 13](./semana-13/) |
 
 ### 🔹 Unidad 4: Publicación y Mantenimiento
 *Hosting, FTP, Git y Optimización.*
