@@ -33,36 +33,22 @@ Bienvenido a mi repositorio académico. Aquí documento mi proceso de aprendizaj
 
 ## 📁 Estructura del Proyecto
 
-```mermaid
-graph TD
-    A[📁 diseno-sitios-web/] --> B[📁 semana-01/]
-    A --> C[📁 semana-02/]
-    A --> D[📁 semana-03/]
-    A --> E[📁 semana-04/]
-    A --> F[📁 semana-05/]
-    A --> G[📁 semana-06/]
-    A --> H[📁 semana-07/]
-    A --> I[📁 semana-10/]
-    A --> J[📁 semana-11/]
-    A --> K[📁 semana-12/]
-    A --> L[📁 semana-13/]
-    A --> M[📁 semana-14/]
-    A --> N[📄 README.md]
-    
-    style A fill:#e1f5fe
-    style B fill:#e8f5e8
-    style C fill:#e8f5e8
-    style D fill:#e8f5e8
-    style E fill:#e8f5e8
-    style F fill:#e8f5e8
-    style G fill:#e8f5e8
-    style H fill:#e8f5e8
-    style I fill:#e8f5e8
-    style J fill:#e8f5e8
-    style K fill:#e8f5e8
-    style L fill:#e8f5e8
-    style M fill:#e8f5e8
-    style N fill:#f1f8e9
+```
+diseno-sitios-web/
+├── 📁 semana-01/              # 🌐 Introducción a la web (HTTP/HTTPS)
+├── 📁 semana-02/              # 📋 Normas W3C y Accesibilidad (WCAG)
+├── 📁 semana-03/              # 🗺️ Estructura de sitio y navegación
+├── 📁 semana-04/              # �️ Intro desarrollo estático y herramientas
+├── �📁 semana-05/              # � Estructura básica HTML5
+├── �📁 semana-06/              # � Contenido: Listas, Tablas, Enlaces
+├── �📁 semana-07/              # � Formularios y Validación
+├── �📁 semana-10/              # 🎨 Fundamentos CSS (Selectores, Colores)
+├── 📁 semana-11/              # � El Modelo de Caja (Box Model)
+├── 📁 semana-12/              # 📱 Diseño Responsive (Flexbox & Grid)
+├── 📁 semana-13/              # 🎭 Buenas prácticas y Bootstrap
+├── 📁 semana-14/              # 🛍️ E-commerce estático avanzado
+├── 📁 perfil-redes/           # 👤 Red social profesional
+└── 📄 README.md               # 📚 Documentación completa
 ```
 
 ---
