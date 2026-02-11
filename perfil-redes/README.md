@@ -1,6 +1,6 @@
 # 🚀 Perfil Redes - sys_engineer_uteq
 
-> 💻 **Ingeniero de Sistemas de Información** | ☕ **Apasionado por el código y el café. EC UTEQ** | 🐛 **Cazador de Bugs**
+> 💻 **Ingeniero de Sistemas de Información 🇪🇨 UTEQ** | ☕ **Apasionado por el código y el café** | 🐛 **Cazador de Bugs**
 
 ---
 
