@@ -1,0 +1,141 @@
+@charset "utf-8";
+
+@font-face {
+    font-family: 'InstaFont';
+    src: url('fonts/segoe-ui.woff');
+}
+
+body {
+    background-color: #fafafa;
+    color: #262626;
+    margin: 0;
+    font-family: sans-serif;
+}
+
+/* Contenedor principal */
+.contenedor-principal {
+    max-width: 935px;
+    margin: 0 auto;
+    padding: 30px 20px;
+}
+
+/* Foto de perfil */
+.foto-circular {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border: 1px solid #dbdbdb;
+}
+
+/* Header del perfil */
+.perfil-header {
+    display: flex;
+    flex-wrap: wrap;
+    border-bottom: 1px solid #dbdbdb;
+    justify-content: center;
+    padding-bottom: 20px;
+}
+
+/* Información del perfil */
+.info-perfil {
+    margin-left: 40px;
+}
+
+/* Botón seguir */
+.btn-seguir {
+    margin-left: 15px;
+    padding: 6px 12px;
+    border: 1px solid #0095f6;
+    background-color: #0095f6;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Estadísticas */
+.stats {
+    margin: 15px 0;
+}
+
+.stats span {
+    margin-right: 20px;
+}
+
+/* Bio */
+.bio p {
+    margin: 5px 0;
+}
+
+/* Tabs */
+.tabs {
+    text-align: center;
+    margin-top: 30px;
+    color: #8e8e8e;
+    font-size: 12px;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+
+.tabs span {
+    margin: 0 20px;
+    cursor: pointer;
+}
+
+/* Galería de proyectos */
+.galeria-proyectos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+    margin-top: 20px;
+}
+
+.proyecto-item {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+}
+
+.proyecto-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.perfil-header {
+    display: flex;
+    flex-wrap: wrap;
+    border-bottom: 1px solid #dbdbdb;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.galeria-proyectos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    grid-template-rows: repeat(2, 300px);
+}
+
+/* Diseño responsive */
+@media  screen and (max-width: 768px) {
+   .perfil-header {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+   }
+}
+
+@media  screen and (max-width: 480px) {
+   .galeria-proyectos {
+    grid-template-columns: 1fr; /* 1 columna ideal para el scroll vertical */
+   }
+}
+
+@media (hover:hover) {
+    .proyecto-item:hover {
+        opacity: 0.8;
+        cursor: pointer;
+    }
+}

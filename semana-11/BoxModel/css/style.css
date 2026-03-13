@@ -1,0 +1,393 @@
+/* ========================================
+   ESTILOS GENERALES Y RESET
+   ======================================== */
+
+/* Reset básico para eliminar márgenes y paddings por defecto */
+* {
+    margin: 0;           /* BOX MODEL: Elimina margen exterior */
+    padding: 0;          /* BOX MODEL: Elimina relleno interior */
+    box-sizing: border-box; /* BOX MODEL: Modelo de caja alternativo */
+}
+
+/* Estilos base para el cuerpo del documento */
+body {
+    font-family: 'Playfair Display', 'Georgia', serif; /* Tipografía elegante */
+    line-height: 1.6;
+    color: #2c2c2c;       /* Gris oscuro elegante */
+    background: linear-gradient(135deg, #f8f6f3 0%, #e8e4dd 100%); /* Fondo sutil con gradiente */
+    font-size: 16px;
+}
+
+/* Contenedor principal para centrar el contenido */
+.container {
+    max-width: 1200px;    /* BOX MODEL: Ancho máximo del contenedor */
+    margin: 0 auto;       /* BOX MODEL: Centrar horizontalmente */
+    padding: 0 30px;      /* BOX MODEL: Más relleno lateral para elegancia */
+}
+
+/* ========================================
+   HEADER - CABECERA DEL SITIO
+   ======================================== */
+
+.header {
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%); /* Negro elegante con gradiente */
+    color: white;
+    padding: 3rem 0;      /* BOX MODEL: Más relleno vertical para elegancia */
+    margin-bottom: 3rem;  /* BOX MODEL: Mayor margen inferior */
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15); /* BOX MODEL: Sombra más sofisticada */
+    border-bottom: 1px solid #d4af37; /* Toque dorado elegante */
+}
+
+.header .logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2rem;    /* Reducido para más elegancia */
+    margin-bottom: 0.5rem; /* BOX MODEL: Espacio inferior */
+    font-weight: 300;       /* Más ligero y elegante */
+    letter-spacing: 2px;    /* Espaciado entre letras */
+    text-transform: uppercase;
+}
+
+.header .subtitle {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.9rem;    /* Reducido para sutileza */
+    opacity: 1;            /* Cambiado de 0.8 a 1 para más claridad */
+    letter-spacing: 1px;
+    font-weight: 400;       /* Aumentado de 300 a 400 para más claridad */
+    color: #d4af37;        /* Dorado elegante */
+}
+
+/* ========================================
+   CONTENIDO PRINCIPAL
+   ======================================== */
+
+.main-content {
+    padding: 3rem 0;     /* BOX MODEL: Más relleno vertical */
+}
+
+/* Título del catálogo */
+.titulo-catalogo {
+    text-align: center;
+    margin-bottom: 4rem;  /* BOX MODEL: Mayor margen inferior */
+    padding: 2rem;        /* BOX MODEL: Más relleno interno */
+}
+
+.titulo-catalogo h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;      /* Reducido para elegancia */
+    color: #1a1a1a;      /* Negro elegante */
+    margin-bottom: 1rem;   /* BOX MODEL: Espacio inferior */
+    font-weight: 300;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.titulo-catalogo p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.95rem;
+    color: #555;            /* Cambiado de #666 a #555 para más contraste */
+    font-weight: 400;       /* Aumentado de 300 a 400 para más claridad */
+    letter-spacing: 0.5px;
+}
+
+/* ========================================
+   CATÁLOGO DE PRODUCTOS - APLICACIÓN PRINCIPAL DEL BOX MODEL
+   ======================================== */
+
+.productos {
+    display: flex;         /* BOX MODEL: Usamos flexbox para alinear productos */
+    flex-wrap: wrap;      /* Permitir que los productos se envuelvan en múltiples líneas */
+    gap: 2.5rem;            /* BOX MODEL: Más espacio entre productos para elegancia */
+    justify-content: center; /* Centrar productos horizontalmente */
+}
+
+/* ========================================
+   TARJETA DE PRODUCTO INDIVIDUAL
+   ======================================== */
+
+.producto {
+    /* BOX MODEL - Dimensiones principales */
+    width: 380px;         /* BOX MODEL: Ancho más grande para elegancia */
+    height: auto;         /* BOX MODEL: Altura automática según contenido */
+    
+    /* BOX MODEL - Bordes y esquinas redondeadas */
+    border: 1px solid #e5e5e5; /* BOX MODEL: Borde sutil elegante */
+    border-radius: 8px;   /* BOX MODEL: Esquinas redondeadas sutiles */
+    
+    /* BOX MODEL - Relleno interno */
+    padding: 2rem;       /* BOX MODEL: Más relleno para elegancia */
+    
+    /* BOX MODEL - Márgenes externos (reemplazado por gap en flexbox) */
+    /* margin-bottom: 2rem; - No necesario con gap */
+    
+    /* BOX MODEL - Sombra para dar profundidad */
+    box-shadow: 0 8px 30px rgba(0,0,0,0.08); /* BOX MODEL: Sombra más elegante */
+    
+    /* Transiciones para efectos hover */
+    transition: all 0.4s ease; /* Más suave */
+    
+    /* Fondo de la tarjeta */
+    background-color: #ffffff;
+    position: relative; /* Para elementos posicionados */
+}
+
+/* Línea decorativa superior */
+.producto::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #d4af37 0%, #f4e4c1 100%);
+    border-radius: 8px 8px 0 0;
+}
+
+/* Efecto hover en productos */
+.producto:hover {
+    transform: translateY(-8px); /* Elevación más elegante */
+    box-shadow: 0 15px 40px rgba(0,0,0,0.12); /* BOX MODEL: Sombra más intensa */
+    border-color: #d4af37; /* BOX MODEL: Cambio a dorado */
+}
+
+/* ========================================
+   IMÁGENES DE PRODUCTOS
+   ======================================== */
+
+.producto img {
+    /* BOX MODEL - Dimensiones y ajuste */
+    width: 100%;          /* BOX MODEL: Ocupa todo el ancho del contenedor */
+    height: 220px;        /* BOX MODEL: Altura reducida para elegancia */
+    object-fit: cover;     /* Recorta imagen manteniendo proporción */
+    
+    /* BOX MODEL - Bordes y esquinas */
+    border-radius: 4px;   /* BOX MODEL: Esquinas redondeadas sutiles */
+    
+    /* BOX MODEL - Márgenes */
+    margin-bottom: 1.5rem;  /* BOX MODEL: Más espacio inferior */
+    
+    /* Sombra sutil */
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+/* ========================================
+   CONTENIDO TEXTUAL DE PRODUCTOS
+   ======================================== */
+
+.producto h3 {
+    /* BOX MODEL - Márgenes */
+    margin-bottom: 1rem;  /* BOX MODEL: Más espacio inferior */
+    
+    /* Tipografía elegante */
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem;
+    color: #1a1a1a;      /* Negro elegante */
+    font-weight: 400;       /* Más ligero */
+    letter-spacing: 0.5px;
+    
+    /* Control de altura para consistencia */
+    height: 2.8rem;       /* BOX MODEL: Altura fija para alinear títulos */
+    overflow: hidden;      /* Oculta texto que exceda */
+}
+
+.producto p {
+    /* BOX MODEL - Márgenes */
+    margin-bottom: 1.5rem;  /* BOX MODEL: Más espacio inferior */
+    
+    /* Tipografía */
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.85rem;     /* Reducido para elegancia */
+    color: #555;            /* Cambiado de #666 a #555 para más contraste */
+    line-height: 1.6;
+    font-weight: 400;       /* Aumentado de 300 a 400 para más claridad */
+    
+    /* Control de altura para consistencia */
+    height: 3.2rem;         /* BOX MODEL: Altura fija para descripciones */
+    overflow: hidden;     /* Oculta texto que exceda */
+}
+
+/* ========================================
+   PRECIO DE PRODUCTOS
+   ======================================== */
+
+.precio {
+    /* BOX MODEL - Display y dimensiones */
+    display: inline-block; /* BOX MODEL: Permite aplicar width/height a elemento inline */
+    width: 100%;         /* BOX MODEL: Ocupa todo el ancho */
+    
+    /* BOX MODEL - Relleno y márgenes */
+    padding: 1rem 1.2rem; /* BOX MODEL: Más relleno */
+    margin-top: 0.5rem;   /* BOX MODEL: Margen superior */
+    
+    /* BOX MODEL - Bordes y esquinas */
+    border: 1px solid #d4af37; /* BOX MODEL: Borde dorado elegante */
+    border-radius: 4px;   /* BOX MODEL: Esquinas sutiles */
+    
+    /* Tipografía y colores */
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2rem;     /* Reducido para elegancia */
+    font-weight: 500;
+    color: #1a1a1a;      /* Negro elegante */
+    text-align: center;
+    background: linear-gradient(135deg, #f8f6f3 0%, #ffffff 100%);
+    letter-spacing: 1px;
+}
+
+/* ========================================
+   FOOTER - PIE DE PÁGINA
+   ======================================== */
+
+.footer {
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%); /* Negro elegante */
+    color: white;
+    text-align: center;
+    padding: 2.5rem 0;      /* BOX MODEL: Más relleno vertical */
+    margin-top: 4rem;      /* BOX MODEL: Mayor margen superior */
+    border-top: 1px solid #d4af37; /* Línea dorada superior */
+}
+
+.footer p {
+    margin-bottom: 0.5rem; /* BOX MODEL: Espacio inferior */
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.85rem;     /* Reducido para elegancia */
+    font-weight: 400;       /* Aumentado de 300 a 400 para más claridad */
+    letter-spacing: 0.5px;
+    color: #ddd;           /* Cambiado de #ccc a #ddd para más claridad */
+}
+
+.footer p:last-child {
+    color: #d4af37;        /* Dorado elegante para el último párrafo */
+}
+
+/* ========================================
+   RESPONSIVE DESIGN - ADAPTACIÓN A DIFERENTES DISPOSITIVOS
+   ======================================== */
+
+/* Tablets (768px - 1024px) */
+@media (max-width: 768px) {
+    .productos {
+        gap: 1.5rem;      /* BOX MODEL: Reducir espacio entre productos */
+    }
+    
+    .producto {
+        width: 300px;     /* BOX MODEL: Reducir ancho de tarjetas */
+        padding: 1.2rem;  /* BOX MODEL: Reducir relleno */
+    }
+    
+    .producto img {
+        height: 200px;    /* BOX MODEL: Reducir altura de imágenes */
+    }
+}
+
+/* Móviles (hasta 767px) */
+@media (max-width: 767px) {
+    .container {
+        padding: 0 15px; /* BOX MODEL: Reducir relleno lateral */
+    }
+    
+    .header {
+        padding: 1.5rem 0; /* BOX MODEL: Reducir relleno del header */
+    }
+    
+    .header .logo {
+        font-size: 2rem;  /* Reducir tamaño del logo */
+    }
+    
+    .titulo-catalogo {
+        margin-bottom: 2rem; /* BOX MODEL: Reducir margen inferior */
+    }
+    
+    .productos {
+        gap: 1rem;        /* BOX MODEL: Reducir espacio entre productos */
+        justify-content: center;
+    }
+    
+    .producto {
+        width: 100%;      /* BOX MODEL: Tarjetas ocupan todo el ancho en móvil */
+        max-width: 350px; /* BOX MODEL: Ancho máximo */
+        padding: 1rem;    /* BOX MODEL: Reducir relleno */
+    }
+    
+    .producto img {
+        height: 180px;    /* BOX MODEL: Reducir altura de imágenes */
+    }
+    
+    .producto h3 {
+        font-size: 1.2rem; /* Reducir tamaño de título */
+        height: 2.4rem;    /* BOX MODEL: Ajustar altura */
+    }
+    
+    .producto p {
+        font-size: 0.9rem; /* Reducir tamaño de descripción */
+        height: 2.7rem;     /* BOX MODEL: Ajustar altura */
+    }
+    
+    .precio {
+        font-size: 1.2rem; /* Reducir tamaño del precio */
+        padding: 0.6rem 0.8rem; /* BOX MODEL: Reducir relleno */
+    }
+}
+
+/* Móviles pequeños (hasta 480px) */
+@media (max-width: 480px) {
+    .header .logo {
+        font-size: 1.8rem; /* Reducir más el logo */
+    }
+    
+    .titulo-catalogo h2 {
+        font-size: 1.8rem; /* Reducir título principal */
+    }
+    
+    .producto {
+        padding: 0.8rem;   /* BOX MODEL: Reducir más el relleno */
+    }
+    
+    .producto img {
+        height: 150px;    /* BOX MODEL: Reducir más altura de imágenes */
+    }
+}
+
+/* ========================================
+   COMENTARIOS ADICIONALES SOBRE EL BOX MODEL
+   ======================================== */
+
+/*
+NOTAS IMPORTANTES SOBRE LA APLICACIÓN DEL BOX MODEL:
+
+1. MARGIN (Margen exterior):
+   - Separa elementos entre sí
+   - Puede tener valores negativos
+   - No afecta el tamaño del elemento
+   - Colapsa verticalmente entre elementos adyacentes
+
+2. PADDING (Relleno interior):
+   - Separa el contenido del borde
+   - No admite valores negativos
+   - Afecta el tamaño total del elemento
+   - El fondo se extiende por esta área
+
+3. BORDER (Borde):
+   - Línea alrededor del elemento
+   - Puede tener estilo, grosor y color
+   - Afecta el tamaño total del elemento
+   - Puede tener esquinas redondeadas (border-radius)
+
+4. WIDTH/HEIGHT:
+   - Definen las dimensiones del contenido
+   - Con box-sizing: border-box incluyen padding y border
+   - Con box-sizing: content-box solo afectan al contenido
+
+5. BOX-SHADOW:
+   - Sombra fuera del elemento
+   - No afecta el layout ni el tamaño
+   - Crea profundidad visual
+
+6. BORDER-RADIUS:
+   - Redondea las esquinas del borde
+   - Puede ser circular o elíptico
+   - No afecta el box model básico
+
+7. DISPLAY: FLEX:
+   - Cambia el comportamiento del box model
+   - Los elementos flex se alinean según reglas específicas
+   - Gap reemplaza margin entre elementos flex
+*/
