@@ -212,13 +212,13 @@ class ShoppingCart {
 
 ```bash
 # Clonar repositorio
-git clone https://github.com/balmeidac/diseno-sitios-web.git
+git clone https://github.com/balmeidac/semana-19.git
 
 # Abrir directamente en el navegador
 # No requiere servidor — abrir index.html desde el explorador de archivos
 ```
 
-También disponible vía **GitHub Pages** activando Pages en la configuración del repositorio apuntando a la rama `main`.
+También disponible vía **GitHub Pages** activando Pages en la configuración del repositorio apuntando a la rama `main` y en folder `/(root)`.
 
 ---
 
