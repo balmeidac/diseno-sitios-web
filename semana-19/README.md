@@ -20,26 +20,60 @@ El sitio consta de las siguientes páginas principales:
 - Contenido accesible
 
 ## Estructura de Archivos
-html5-site/ 
-│
-    ├── index.html # Página principal
-    ├── productos.html # Página de productos 
-    ├── contacto.html # Página de contacto 
-    ├── registro.html # Página de registro 
-    ├── img/ # Directorio de imágenes 
-    │   ├── banner.jpg # Imagen de banner principal
-    |   ├── logo.png # Imagen de logo del sitio
-    |   └── perfil.png # Imagen de perfil del usuario
-    │   ├── destacados/ # Imágenes de productos destacados 
-    │   │   ├── dest1.jpg 
-    │   │   ├── dest2.jpg
-    |   |   └── dest3.jpg 
-    │   └── productos/ # Imágenes del catálogo de productos
-    │       ├── prod1.jpg 
-    │       ├── prod2.jpg 
-    │       ├── prod3.jpg 
-    │       └── prod4.jpg 
-    └── README.md # Este archivo
+
+```mermaid
+flowchart TD
+    ROOT["📁 PCGamerStore/"]
+
+    ROOT --> IDX["📄 index.html\nPágina de inicio"]
+    ROOT --> PROD["📄 productos.html\nCatálogo de productos"]
+    ROOT --> CART["📄 carrito.html\nCarrito de compras"]
+    ROOT --> CONT["📄 contacto.html\nFormulario de contacto"]
+    ROOT --> REG["📄 registro.html\nRegistro de usuarios"]
+    ROOT --> ERR["📄 404.html\nPágina de error"]
+    ROOT --> README["📄 README.md\nDocumentación"]
+
+    ROOT --> CSS["📁 css/"]
+    CSS --> STYLES["📄 styles.css"]
+
+    ROOT --> JS["📁 js/"]
+    JS --> CARTJS["📄 cart.js"]
+
+    ROOT --> IMG["📁 img/"]
+    IMG --> BANNER["🖼️ banner.jpg"]
+    IMG --> LOGO["🖼️ logo.png"]
+    IMG --> PERFIL["🖼️ perfil.png"]
+
+    IMG --> DEST["📁 destacados/"]
+    DEST --> D1["🖼️ dest1.jpg"]
+    DEST --> D2["🖼️ dest2.jpg"]
+    DEST --> D3["🖼️ dest3.jpg"]
+
+    IMG --> PRODS["📁 productos/"]
+    PRODS --> P1["🖼️ prod1.jpg"]
+    PRODS --> P2["🖼️ prod2.jpg"]
+    PRODS --> P3["🖼️ prod3.jpg"]
+    PRODS --> P4["🖼️ prod4.jpg"]
+
+    IMG --> CAPS["📁 capturas/"]
+    CAPS --> C1["🖼️ home.png"]
+    CAPS --> C2["🖼️ productos.png"]
+    CAPS --> C3["🖼️ carrito.png"]
+```
+
+## Capturas de Pantalla
+
+> Las capturas se encuentran en la carpeta `img/capturas/`.
+
+| Página | Vista previa |
+|--------|-------------|
+| Inicio | ![Inicio](img/capturas/home.png) |
+| Productos | ![Productos](img/capturas/productos.png) |
+| Carrito | ![Carrito](img/capturas/carrito.png) |
+| Contacto | ![Contacto](img/capturas/contacto.png) |
+| Registro | ![Registro](img/capturas/registro.png) |
+
+---
 
 ## Cómo Usar
 
