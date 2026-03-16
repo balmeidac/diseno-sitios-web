@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Tienda Online</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/cart.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="js/cart.js" defer></script>
+    <script src="js/contact.js" defer></script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="nav-container">
+                <div class="logo">
+                    <h1>Tienda Online</h1>
+                </div>
+                <nav class="nav-menu">
+                    <ul>
+                        <li><a href="index.html" class="nav-link">Inicio</a></li>
+                        <li><a href="index.html#productos" class="nav-link">Productos</a></li>
+                        <li><a href="index.html#ofertas" class="nav-link">Ofertas</a></li>
+                        <li><a href="contacto.html" class="nav-link active">Contacto</a></li>
+                    </ul>
+                </nav>
+                <div class="nav-actions">
+                    <button class="btn-cart">
+                        🛒 Carrito
+                        <span class="cart-count">0</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-contact">
+        <div class="container">
+            <div class="hero-content">
+                <h2>Contáctanos</h2>
+                <p>Estamos aquí para ayudarte con tus preguntas y pedidos</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="main-contact">
+        <div class="container">
+            <div class="contact-grid">
+                <!-- Formulario de Contacto -->
+                <section class="contact-form-section">
+                    <h2 class="section-title">Envíanos un Mensaje</h2>
+                    
+                    <form id="contactForm" class="contact-form">
+                        <div class="form-group">
+                            <label for="name">Nombre Completo *</label>
+                            <input type="text" id="name" name="name" required>
+                            <span class="form-error">Este campo es obligatorio</span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Correo Electrónico *</label>
+                            <input type="email" id="email" name="email" required>
+                            <span class="form-error">Ingresa un correo válido</span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Teléfono</label>
+                            <input type="tel" id="phone" name="phone" placeholder="+593 000 000 000">
+                            <span class="form-error">Ingresa un número válido</span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="subject">Asunto *</label>
+                            <select id="subject" name="subject" required>
+                                <option value="">Selecciona un asunto</option>
+                                <option value="consulta">Consulta general</option>
+                                <option value="pedido">Información de pedido</option>
+                                <option value="tecnico">Soporte técnico</option>
+                                <option value="devolucion">Devoluciones</option>
+                                <option value="sugerencia">Sugerencias</option>
+                            </select>
+                            <span class="form-error">Selecciona un asunto</span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Mensaje *</label>
+                            <textarea id="message" name="message" rows="5" required placeholder="Describe tu consulta o pedido en detalle..."></textarea>
+                            <span class="form-error">Este campo es obligatorio</span>
+                        </div>
+
+                        <div class="form-checkbox">
+                            <input type="checkbox" id="newsletter" name="newsletter">
+                            <label for="newsletter">Deseo recibir información sobre ofertas y nuevos productos</label>
+                        </div>
+
+                        <div class="form-actions">
+                            <button type="submit" class="btn-primary btn-submit">
+                                <span class="btn-text">Enviar Mensaje</span>
+                                <span class="btn-loading" style="display: none;">Enviando...</span>
+                            </button>
+                            <button type="reset" class="btn-secondary">Limpiar Formulario</button>
+                        </div>
+                    </form>
+                </section>
+
+                <!-- Información de Contacto -->
+                <section class="contact-info-section">
+                    <h2 class="section-title">Información de Contacto</h2>
+                    
+                    <div class="contact-info-grid">
+                        <div class="contact-card">
+                            <div class="contact-icon">
+                                📧
+                            </div>
+                            <div class="contact-details">
+                                <h3>Correo Electrónico</h3>
+                                <p>info@tiendaonline.com</p>
+                                <p>soporte@tiendaonline.com</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-card">
+                            <div class="contact-icon">
+                                📞
+                            </div>
+                            <div class="contact-details">
+                                <h3>Teléfono</h3>
+                                <p>+593 2 250 0000</p>
+                                <p>+593 99 999 9999</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-card">
+                            <div class="contact-icon">
+                                🕐
+                            </div>
+                            <div class="contact-details">
+                                <h3>Horario de Atención</h3>
+                                <p>Lunes a Viernes: 9:00 - 18:00</p>
+                                <p>Sábados: 10:00 - 14:00</p>
+                                <p>Domingos: Cerrado</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-card">
+                            <div class="contact-icon">
+                                📍
+                            </div>
+                            <div class="contact-details">
+                                <h3>Dirección</h3>
+                                <p>Av. Amazonas N25-34</p>
+                                <p>Quito, Ecuador</p>
+                                <p>Código Postal: 170515</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Redes Sociales -->
+                    <div class="social-section">
+                        <h3>Síguenos en Redes Sociales</h3>
+                        <div class="social-links">
+                            <a href="#" class="social-link facebook">
+                                <span class="social-icon">📘</span>
+                                <span>Facebook</span>
+                            </a>
+                            <a href="#" class="social-link twitter">
+                                <span class="social-icon">🐦</span>
+                                <span>Twitter</span>
+                            </a>
+                            <a href="#" class="social-link instagram">
+                                <span class="social-icon">📷</span>
+                                <span>Instagram</span>
+                            </a>
+                            <a href="#" class="social-link whatsapp">
+                                <span class="social-icon">💬</span>
+                                <span>WhatsApp</span>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Mapa de Ubicación -->
+            <section class="map-section">
+                <h2 class="section-title">Encuentranos en el Mapa</h2>
+                
+                <div class="map-container">
+                    <div class="map-placeholder">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.7988985255!2d-78.4876!3d-0.1833!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91d5a5b5b5b5b5b5%3A0x5b5b5b5b5b5b5b5!2sTienda%20Online!5e0!3m2!1ses!2sec!4v1234567890!5m2!1ses!2sec"
+                            width="100%" 
+                            height="450" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                    
+                    <div class="map-info">
+                        <div class="map-directions">
+                            <h3>¿Cómo Llegar?</h3>
+                            <ul>
+                                <li><strong>Transporte Público:</strong> Parada Ecovía a 2 cuadras</li>
+                                <li><strong>Estacionamiento:</strong> Parqueadero gratuito disponible</li>
+                                <li><strong>Accesibilidad:</strong> Rampa para sillas de ruedas</li>
+                                <li><strong>Zona:</strong> Sector financiero, cerca del centro</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="map-actions">
+                            <button class="btn-primary" onclick="openDirections()">
+                                🗺️ Obtener Direcciones
+                            </button>
+                            <button class="btn-secondary" onclick="saveLocation()">
+                                📍 Guardar Ubicación
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Tienda Online</h3>
+                    <p>Tu tienda de confianza para productos tecnológicos</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Enlaces</h4>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="index.html#productos">Productos</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                        <li><a href="#">Políticas</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Servicio al Cliente</h4>
+                    <ul>
+                        <li><a href="contacto.html">Contacto</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Devoluciones</a></li>
+                        <li><a href="#">Garantía</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Síguenos</h4>
+                    <div class="social-links">
+                        <a href="#">Facebook</a>
+                        <a href="#">Twitter</a>
+                        <a href="#">Instagram</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Tienda Online. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

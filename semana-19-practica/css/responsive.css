@@ -1,0 +1,616 @@
+/* ===================================
+   ESTILOS RESPONSIVOS - ECOMMERCE
+   Aplicando Flexbox, CSS Grid y Media Queries
+   =================================== */
+
+/* ===================================
+   BASE RESPONSIVO - IMÁGENES FLUIDAS
+   =================================== */
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Evitar scroll horizontal en todos los dispositivos */
+body {
+    overflow-x: hidden;
+}
+
+/* ===================================
+   TABLETS (768px - 1023px)
+   2 columnas de productos
+   =================================== */
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    
+    /* Container ajustado para tablets */
+    .container {
+        padding: 0 30px;
+    }
+    
+    /* Navegación - Más espacio horizontal */
+    .nav-container {
+        padding: 1.25rem 0;
+    }
+    
+    .nav-menu ul {
+        gap: 1.5rem;
+    }
+    
+    .logo h1 {
+        font-size: 1.75rem;
+    }
+    
+    /* Hero Section - Ajuste de fuentes */
+    .hero {
+        padding: 3.5rem 0;
+    }
+    
+    .hero-content h2 {
+        font-size: 2.25rem;
+    }
+    
+    .hero-content p {
+        font-size: 1.15rem;
+    }
+    
+    /* Product Grid - 2 columnas usando Flexbox */
+    .product-grid {
+        gap: 25px;
+        padding: 0 10px;
+    }
+    
+    .product {
+        flex: 1 1 300px;
+        max-width: 350px;
+    }
+    
+    .product-image img {
+        height: 280px;
+    }
+    
+    .product-info {
+        padding: 1.75rem;
+    }
+    
+    .product-title {
+        font-size: 1.2rem;
+    }
+    
+    .product-description {
+        font-size: 0.95rem;
+    }
+    
+    .price-current {
+        font-size: 1.35rem;
+    }
+    
+    /* Footer - 3 columnas en tablets */
+    .footer-content {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2.5rem;
+    }
+    
+    /* Main content padding */
+    .main {
+        padding: 2.5rem 0;
+    }
+    
+    .section-title {
+        font-size: 1.8rem;
+        margin-bottom: 2.5rem;
+    }
+}
+
+/* ===================================
+   DESKTOP (1024px en adelante)
+   3-4 columnas de productos con CSS Grid
+   =================================== */
+
+@media (min-width: 1024px) {
+    
+    /* Container para desktop */
+    .container {
+        padding: 0 40px;
+    }
+    
+    /* Navegación desktop */
+    .nav-container {
+        padding: 1.5rem 0;
+    }
+    
+    .nav-menu ul {
+        gap: 2.5rem;
+    }
+    
+    .logo h1 {
+        font-size: 2rem;
+    }
+    
+    /* Hero Section desktop */
+    .hero {
+        padding: 5rem 0;
+    }
+    
+    .hero-content h2 {
+        font-size: 3rem;
+    }
+    
+    .hero-content p {
+        font-size: 1.4rem;
+    }
+    
+    /* Product Grid - 3-4 columnas usando CSS Grid */
+    .product-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 30px;
+        padding: 0;
+    }
+    
+    /* Alternativa: Exactamente 4 columnas */
+    .product-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 25px;
+    }
+    
+    .product {
+        max-width: none;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .product-image img {
+        height: 220px;
+    }
+    
+    .product-info {
+        padding: 2rem;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    
+    .product-title {
+        font-size: 1.15rem;
+        margin-bottom: 0.75rem;
+    }
+    
+    .product-description {
+        font-size: 0.9rem;
+        margin-bottom: 1.25rem;
+        flex: 1;
+    }
+    
+    .product-price {
+        margin-bottom: 1.5rem;
+    }
+    
+    .price-current {
+        font-size: 1.4rem;
+    }
+    
+    /* Footer desktop - 4 columnas */
+    .footer-content {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 3rem;
+    }
+    
+    /* Main content desktop */
+    .main {
+        padding: 4rem 0;
+    }
+    
+    .section-title {
+        font-size: 2.25rem;
+        margin-bottom: 3rem;
+    }
+    
+    /* Botones mejorados en desktop */
+    .btn-cart {
+        padding: 0.875rem 1.75rem;
+        font-size: 1rem;
+    }
+    
+    .btn-primary {
+        padding: 1.125rem 2.25rem;
+        font-size: 1.15rem;
+    }
+    
+    .btn-add-cart {
+        padding: 0.875rem;
+        font-size: 0.95rem;
+    }
+}
+
+/* ===================================
+   LARGE DESKTOP (1440px+)
+   Optimización para pantallas grandes
+   =================================== */
+
+@media (min-width: 1440px) {
+    
+    .container {
+        max-width: 1400px;
+    }
+    
+    /* Product Grid - 4 columnas espaciadas */
+    .product-grid {
+        gap: 35px;
+        grid-template-columns: repeat(4, 1fr);
+    }
+    
+    .product-image img {
+        height: 240px;
+    }
+    
+    .product-info {
+        padding: 2.25rem;
+    }
+    
+    /* Hero section más grande */
+    .hero-content h2 {
+        font-size: 3.5rem;
+    }
+    
+    .hero-content p {
+        font-size: 1.5rem;
+    }
+    
+    .section-title {
+        font-size: 2.5rem;
+    }
+}
+
+/* ===================================
+   MÓVILES (<768px)
+   Menú vertical y productos en 1 columna
+   =================================== */
+
+@media (max-width: 767px) {
+    
+    /* Container para móviles */
+    .container {
+        padding: 0 15px;
+    }
+    
+    /* Header móvil */
+    .header {
+        position: relative;
+    }
+    
+    .nav-container {
+        flex-direction: column;
+        padding: 1rem 0;
+        gap: 1rem;
+    }
+    
+    .logo h1 {
+        font-size: 1.25rem;
+    }
+    
+    /* Menú vertical en móviles */
+    .nav-menu ul {
+        flex-direction: column;
+        gap: 0.75rem;
+        text-align: center;
+        width: 100%;
+    }
+    
+    .nav-link {
+        display: block;
+        padding: 0.5rem;
+        border-bottom: 1px solid var(--border-color);
+    }
+    
+    .nav-link:last-child {
+        border-bottom: none;
+    }
+    
+    /* Nav actions móviles */
+    .nav-actions {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .btn-cart {
+        padding: 0.625rem 1.25rem;
+        font-size: 0.9rem;
+    }
+    
+    /* Hero móvil */
+    .hero {
+        padding: 2.5rem 0;
+    }
+    
+    .hero-content h2 {
+        font-size: 1.75rem;
+        margin-bottom: 0.75rem;
+    }
+    
+    .hero-content p {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .btn-primary {
+        padding: 0.75rem 1.5rem;
+        font-size: 1rem;
+    }
+    
+    /* Product Grid - 1 columna en móviles */
+    .product-grid {
+        flex-direction: column;
+        gap: 20px;
+        padding: 0;
+    }
+    
+    .product {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+    
+    .product-image img {
+        height: 200px;
+    }
+    
+    .product-info {
+        padding: 1.25rem;
+    }
+    
+    .product-title {
+        font-size: 1rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    .product-description {
+        font-size: 0.85rem;
+        margin-bottom: 0.75rem;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        line-clamp: 2;
+        box-orient: vertical;
+        overflow: hidden;
+    }
+    
+    .product-price {
+        margin-bottom: 1rem;
+    }
+    
+    .price-current {
+        font-size: 1.15rem;
+    }
+    
+    .price-original {
+        font-size: 0.9rem;
+    }
+    
+    .btn-add-cart {
+        padding: 0.625rem;
+        font-size: 0.85rem;
+    }
+    
+    /* Footer móvil */
+    .footer {
+        padding: 2rem 0 1rem;
+    }
+    
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        text-align: center;
+    }
+    
+    .footer-section h3,
+    .footer-section h4 {
+        font-size: 1.1rem;
+    }
+    
+    .social-links {
+        justify-content: center;
+    }
+    
+    .footer-bottom {
+        padding-top: 1.5rem;
+        font-size: 0.85rem;
+    }
+    
+    /* Main content móvil */
+    .main {
+        padding: 2rem 0;
+    }
+    
+    .section-title {
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    /* Product badge móvil */
+    .product-badge {
+        top: 8px;
+        right: 8px;
+        padding: 0.2rem 0.6rem;
+        font-size: 0.7rem;
+    }
+}
+
+/* ===================================
+   MÓVILES PEQUEÑOS (<480px)
+   Optimización para pantallas muy pequeñas
+   =================================== */
+
+@media (max-width: 479px) {
+    
+    .container {
+        padding: 0 10px;
+    }
+    
+    .hero-content h2 {
+        font-size: 1.5rem;
+    }
+    
+    .product-grid {
+        gap: 15px;
+    }
+    
+    .product {
+        border-radius: 6px;
+    }
+    
+    .product-image img {
+        height: 180px;
+    }
+    
+    .product-info {
+        padding: 1rem;
+    }
+    
+    .btn-cart {
+        padding: 0.5rem 1rem;
+        font-size: 0.8rem;
+    }
+    
+    .cart-count {
+        top: -6px;
+        right: -6px;
+        padding: 0.2rem 0.4rem;
+        font-size: 0.65rem;
+    }
+}
+
+/* ===================================
+   ORIENTACIÓN LANDSCAPE EN MÓVILES
+   =================================== */
+
+@media (max-width: 767px) and (orientation: landscape) {
+    
+    .hero {
+        padding: 1.5rem 0;
+    }
+    
+    .hero-content h2 {
+        font-size: 1.5rem;
+    }
+    
+    .hero-content p {
+        font-size: 0.9rem;
+        margin-bottom: 1rem;
+    }
+    
+    .product-image img {
+        height: 150px;
+    }
+    
+    .main {
+        padding: 1.5rem 0;
+    }
+}
+
+/* ===================================
+   IMPRESIÓN - OCULTAR ELEMENTOS INNECESARIOS
+   =================================== */
+
+@media print {
+    
+    .header,
+    .nav-actions,
+    .btn-add-cart,
+    .footer {
+        display: none;
+    }
+    
+    .product-grid {
+        display: block;
+    }
+    
+    .product {
+        break-inside: avoid;
+        margin-bottom: 1rem;
+        border: 1px solid #ccc;
+    }
+    
+    .hero {
+        background: none;
+        color: black;
+    }
+    
+    body {
+        font-size: 12pt;
+        line-height: 1.4;
+    }
+}
+
+/* ===================================
+   UTILIDADES RESPONSIVAS
+   =================================== */
+
+/* Clases helper para responsive */
+.hidden-mobile {
+    display: block;
+}
+
+.visible-mobile {
+    display: none;
+}
+
+@media (max-width: 767px) {
+    .hidden-mobile {
+        display: none;
+    }
+    
+    .visible-mobile {
+        display: block;
+    }
+}
+
+/* Textos responsivos */
+.text-responsive {
+    font-size: clamp(1rem, 2.5vw, 1.25rem);
+}
+
+.title-responsive {
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+}
+
+/* Espaciado responsivo */
+.section-padding {
+    padding: clamp(2rem, 5vw, 4rem) 0;
+}
+
+/* ===================================
+   ANIMACIONES Y TRANSICIONES RESPONSIVAS
+   =================================== */
+
+/* Reducir animaciones en móviles para mejor rendimiento */
+@media (prefers-reduced-motion: reduce) {
+    
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* Animaciones optimizadas para móviles */
+@media (max-width: 767px) {
+    
+    .product {
+        transition: transform 0.2s ease;
+    }
+    
+    .product:hover {
+        transform: translateY(-3px);
+    }
+    
+    .product-image img {
+        transition: transform 0.2s ease;
+    }
+    
+    .product:hover .product-image img {
+        transform: scale(1.02);
+    }
+}

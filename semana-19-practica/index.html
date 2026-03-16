@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecommerce Responsivo - Semana 19</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/cart.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="js/cart.js" defer></script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="nav-container">
+                <div class="logo">
+                    <h1>Tienda Online</h1>
+                </div>
+                <nav class="nav-menu">
+                    <ul>
+                        <li><a href="index.html" class="nav-link">Inicio</a></li>
+                        <li><a href="index.html#productos" class="nav-link">Productos</a></li>
+                        <li><a href="index.html#ofertas" class="nav-link">Ofertas</a></li>
+                        <li><a href="contacto.html" class="nav-link">Contacto</a></li>
+                    </ul>
+                </nav>
+                <div class="nav-actions">
+                    <button class="btn-cart">
+                        🛒 Carrito
+                        <span class="cart-count">0</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="ofertas" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h2>Grandes Ofertas en Tecnología</h2>
+                <p>Hasta 50% de descuento en productos seleccionados</p>
+                <button class="btn-primary">Ver Ofertas</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="main">
+        <div class="container">
+            <!-- Products Section -->
+            <section id="productos" class="products-section">
+                <h2 class="section-title">Productos Destacados</h2>
+                
+                <div class="product-grid">
+                    <!-- Product 1 -->
+                    <article class="product" data-product-id="laptop-gaming">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=300&h=300&fit=crop&crop=center" alt="Laptop Gaming">
+                            <div class="product-badge">-20%</div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Laptop Gaming Pro</h3>
+                            <p class="product-description">Potente laptop para gaming y trabajo profesional</p>
+                            <div class="product-price">
+                                <span class="price-current">$999</span>
+                                <span class="price-original">$1,249</span>
+                            </div>
+                            <button class="btn-add-cart">Añadir al carrito</button>
+                        </div>
+                    </article>
+
+                    <!-- Product 2 -->
+                    <article class="product" data-product-id="smartphone-5g">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1592899677977-9c10ca588bbd?w=300&h=300&fit=crop&crop=center" alt="Smartphone">
+                            <div class="product-badge">Nuevo</div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Smartphone 5G</h3>
+                            <p class="product-description">Última generación con cámara profesional</p>
+                            <div class="product-price">
+                                <span class="price-current">$699</span>
+                                <span class="price-original">$799</span>
+                            </div>
+                            <button class="btn-add-cart">Añadir al carrito</button>
+                        </div>
+                    </article>
+
+                    <!-- Product 3 -->
+                    <article class="product" data-product-id="auriculares-bluetooth">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=300&h=300&fit=crop&crop=center" alt="Auriculares">
+                            <div class="product-badge">-15%</div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Auriculares Bluetooth</h3>
+                            <p class="product-description">Cancelación de ruido activa y sonido premium</p>
+                            <div class="product-price">
+                                <span class="price-current">$149</span>
+                                <span class="price-original">$175</span>
+                            </div>
+                            <button class="btn-add-cart">Añadir al carrito</button>
+                        </div>
+                    </article>
+
+                    <!-- Product 4 -->
+                    <article class="product" data-product-id="smartwatch-fitness">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1541807084-5c52b6b3adef?w=300&h=300&fit=crop&crop=center" alt="Smartwatch">
+                            <div class="product-badge">Popular</div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Smartwatch Fitness</h3>
+                            <p class="product-description">Monitoreo de salud y actividad física</p>
+                            <div class="product-price">
+                                <span class="price-current">$249</span>
+                                <span class="price-original">$299</span>
+                            </div>
+                            <button class="btn-add-cart">Añadir al carrito</button>
+                        </div>
+                    </article>
+
+                    <!-- Product 5 -->
+                    <article class="product" data-product-id="tablet-pro">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=300&h=300&fit=crop&crop=center" alt="Tablet">
+                            <div class="product-badge">-30%</div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Tablet Pro</h3>
+                            <p class="product-description">Pantalla retina y rendimiento profesional</p>
+                            <div class="product-price">
+                                <span class="price-current">$449</span>
+                                <span class="price-original">$649</span>
+                            </div>
+                            <button class="btn-add-cart">Añadir al carrito</button>
+                        </div>
+                    </article>
+
+                    <!-- Product 6 -->
+                    <article class="product" data-product-id="camara-mirrorless">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=300&h=300&fit=crop&crop=center" alt="Cámara">
+                            <div class="product-badge">Nuevo</div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Cámara Mirrorless</h3>
+                            <p class="product-description">Fotografía profesional 4K</p>
+                            <div class="product-price">
+                                <span class="price-current">$1,299</span>
+                                <span class="price-original">$1,499</span>
+                            </div>
+                            <button class="btn-add-cart">Añadir al carrito</button>
+                        </div>
+                    </article>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Tienda Online</h3>
+                    <p>Tu tienda de confianza para productos tecnológicos</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Enlaces</h4>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="index.html#productos">Productos</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                        <li><a href="#">Políticas</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Síguenos</h4>
+                    <div class="social-links">
+                        <a href="#">Facebook</a>
+                        <a href="#">Twitter</a>
+                        <a href="#">Instagram</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Tienda Online. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
