@@ -27,17 +27,27 @@ Ecommerce estático completamente responsivo desarrollado con **HTML5 semántico
 - 🏷️ **Badges de descuentos** y novedades
 - 💰 **Precios con descuentos** visibles
 - 🎨 **Efectos hover** interactivos
-- 📱 **Navegación adaptativa**
+- 📱 **Diseño adaptativo** perfecto
 - 🛍️ **Carrito de compras** funcional
+- 📝 **Página de contacto** con formulario y mapa
+- 🗺️ **Mapa interactivo** de ubicación
 
 ## 📁 Estructura del Proyecto
 
 ```
 semana-19-practica/
 ├── 📄 index.html              # 🏠 Página principal del ecommerce
+├── 📄 contacto.html            # 📝 Página de contacto
 ├── 📁 css/
 │   ├── 🎨 styles.css          # 🎭 Estilos base y componentes
-│   └── 📱 responsive.css      # 📲 Estilos responsivos (Flexbox + Grid)
+│   ├── 📱 responsive.css      # 📲 Estilos responsivos (Flexbox + Grid)
+│   └── 🛒 cart.css            # 🛒 Estilos del carrito
+├── 📁 js/
+│   ├── 🛒 cart.js             # 🛒 Lógica del carrito
+│   └── 📝 contact.js           # 📝 Lógica del formulario
+├── 📁 img/
+│   └── 📸 capturas/          # 📸 Capturas de pantalla
+│       └── 📄 README.md       # 📋 Guía de capturas
 └── 📄 README.md               # 📚 Documentación completa
 ```
 
@@ -50,17 +60,15 @@ semana-19-practica/
 - ✅ Menú vertical centrado
 - ✅ Productos en 1 columna
 - ✅ Imágenes fluidas (100% width)
-- ✅ Tipografía optimizada
 - ✅ Sin scroll horizontal
 
-### 📱 **Tablet (768px-1023px)**
+### 📊 **Tablet (768px-1023px)**
 ```css
 @media (min-width: 768px) and (max-width: 1023px)
 ```
 - ✅ 2 columnas de productos (Flexbox)
-- ✅ Navegación horizontal optimizada
+- ✅ Navegación optimizada
 - ✅ Espaciado aumentado
-- ✅ Fuentes más grandes
 
 ### 💻 **Desktop (1024px+)**
 ```css
@@ -68,8 +76,44 @@ semana-19-practica/
 ```
 - ✅ 3-4 columnas (CSS Grid)
 - ✅ Experiencia completa
-- ✅ Animaciones avanzadas
 - ✅ Layout optimizado
+
+## 📸 Capturas de Pantalla del Sitio
+
+### 🏠 Página Principal - Ecommerce
+
+![Página Principal del Ecommerce](./img/capturas/homepage-desktop.png)
+*Vista desktop del ecommerce con catálogo de productos y navegación principal*
+
+### 📱 Versión Móvil - Productos
+
+![Versión Móvil del Catálogo](./img/capturas/mobile-products.png)
+*Catálogo de productos adaptado para dispositivos móviles con 1 columna*
+
+### 🛒 Carrito de Compras - Modal
+
+![Modal del Carrito de Compras](./img/capturas/cart-modal.png)
+*Modal del carrito con productos añadidos, controles de cantidad y total*
+
+### 📝 Página de Contacto - Formulario
+
+![Formulario de Contacto](./img/capturas/contact-form.png)
+*Formulario de contacto con validación en tiempo real y diseño responsivo*
+
+### 🗺️ Página de Contacto - Mapa
+
+![Mapa de Ubicación](./img/capturas/contact-map.png)
+*Sección del mapa interactivo con información de ubicación y direcciones*
+
+### 📊 Catálogo de Productos - Desktop
+
+![Catálogo Desktop](./img/capturas/products-desktop.png)
+*Vista desktop del catálogo con 4 columnas de productos usando CSS Grid*
+
+### 📱 Catálogo de Productos - Tablet
+
+![Catálogo Tablet](./img/capturas/products-tablet.png)
+*Vista tablet del catálogo con 2 columnas usando Flexbox*
 
 ## 🛠️ Implementación Técnica
 
@@ -88,7 +132,7 @@ semana-19-practica/
 }
 ```
 
-### 🎯 **CSS Grid para Desktop**
+### 🎯 **CSS Grid para Desktop (1024px+)**
 ```css
 @media (min-width: 1024px) {
     .product-grid {
@@ -153,7 +197,7 @@ body {
 - **Prefers-reduced-motion** soportado
 - **Hardware acceleration** activada
 
-## 🚀 Buenas Práticas Aplicadas
+## 🚀 Buenas Prácticas Aplicadas
 
 ### 📋 **Organización del Código**
 - ✅ **Comentarios descriptivos** en cada sección
