@@ -16,6 +16,7 @@
                     <li><a href="productos.html"><i class="fas fa-desktop"></i> Productos</a></li>
                     <li><a href="contacto.html"><i class="fas fa-envelope"></i> Contacto</a></li>
                     <li><a href="registro.html"><i class="fas fa-user-plus"></i> Registro</a></li>
+                    <li><a href="carrito.html" class="cart-icon"><i class="fas fa-shopping-cart"></i> <span id="cart-count">0</span></a></li>
                 </ul>
             </nav>
         </div>
@@ -34,31 +35,31 @@
             <div class="featured-products">
                 <h2 class="text-center">Destacados de la Semana</h2>
                 <div class="products-grid">
-                    <div class="product-card">
+                    <div class="product-card" data-id="1" data-name="PC Gamer Pro" data-price="1499.99">
                         <img src="img/destacados/dest1.jpg" alt="PC Gamer Pro">
                         <div class="product-info">
                             <h3>PC Gamer Pro</h3>
                             <p class="price">$1,499.99</p>
                             <p>Equipo de alto rendimiento para gaming competitivo</p>
-                            <a href="#" class="btn">Ver Detalles</a>
+                            <button class="btn add-to-cart-btn">Agregar al Carrito <i class="fas fa-cart-plus"></i></button>
                         </div>
                     </div>
-                    <div class="product-card">
+                    <div class="product-card" data-id="2" data-name="Laptop Gamer" data-price="1199.99">
                         <img src="img/destacados/dest2.jpg" alt="Laptop Gamer">
                         <div class="product-info">
                             <h3>Laptop Gamer</h3>
                             <p class="price">$1,199.99</p>
                             <p>Potencia para jugar en cualquier lugar</p>
-                            <a href="#" class="btn">Ver Detalles</a>
+                            <button class="btn add-to-cart-btn">Agregar al Carrito <i class="fas fa-cart-plus"></i></button>
                         </div>
                     </div>
-                    <div class="product-card">
+                    <div class="product-card" data-id="3" data-name="Kit Gamer" data-price="299.99">
                         <img src="img/destacados/dest3.jpg" alt="Accesorios Gamer">
                         <div class="product-info">
                             <h3>Kit Gamer</h3>
                             <p class="price">$299.99</p>
                             <p>Todo lo que necesitas para tu setup gamer</p>
-                            <a href="#" class="btn">Ver Detalles</a>
+                            <button class="btn add-to-cart-btn">Agregar al Carrito <i class="fas fa-cart-plus"></i></button>
                         </div>
                     </div>
                 </div>
@@ -68,7 +69,7 @@
 
     <footer>
         <div class="container">
-            <p>&copy; 2025 PC Gamer Store. Todos los derechos reservados.</p>
+            <p>&copy; 2026 PC Gamer Store. Todos los derechos reservados.</p>
             <div class="social-links">
                 <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
                 <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
@@ -77,5 +78,6 @@
             </div>
         </div>
     </footer>
+    <script src="js/cart.js"></script>
 </body>
 </html>

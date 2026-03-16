@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio - PC Gamer Store</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-home"></i> Inicio</a></li>
+                    <li><a href="productos.html"><i class="fas fa-desktop"></i> Productos</a></li>
+                    <li><a href="contacto.html"><i class="fas fa-envelope"></i> Contacto</a></li>
+                    <li><a href="registro.html"><i class="fas fa-user-plus"></i> Registro</a></li>
+                    <li><a href="carrito.html" class="cart-icon"><i class="fas fa-shopping-cart"></i> <span id="cart-count">0</span></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1>🎮 Domina el Juego con PC Gamer Store</h1>
+                <p class="highlight">Equipos de élite con RTX 5090, Ryzen 9 y periféricos pro. Desde setups entry hasta estaciones de guerra para eSports. ¡Envío gratis + Garantía de 2 años!</p>
+                <div class="hero-buttons">
+                    <a href="productos.html" class="btn btn-primary">🔥 Ver Ofertas Exclusivas</a>
+                    <a href="registro.html" class="btn btn-secondary">🎯 Únete a la comunidad Gamer</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="container">
+            <div class="featured-products">
+                <h2 class="text-center">Destacados de la Semana</h2>
+                <div class="products-grid">
+                    <div class="product-card" data-id="1" data-name="PC Gamer Pro" data-price="1499.99">
+                        <img src="img/destacados/dest1.jpg" alt="PC Gamer Pro">
+                        <div class="product-info">
+                            <h3>PC Gamer Pro</h3>
+                            <p class="price">$1,499.99</p>
+                            <p>Equipo de alto rendimiento para gaming competitivo</p>
+                            <button class="btn add-to-cart-btn">Agregar al Carrito <i class="fas fa-cart-plus"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-card" data-id="2" data-name="Laptop Gamer" data-price="1199.99">
+                        <img src="img/destacados/dest2.jpg" alt="Laptop Gamer">
+                        <div class="product-info">
+                            <h3>Laptop Gamer</h3>
+                            <p class="price">$1,199.99</p>
+                            <p>Potencia para jugar en cualquier lugar</p>
+                            <button class="btn add-to-cart-btn">Agregar al Carrito <i class="fas fa-cart-plus"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-card" data-id="3" data-name="Kit Gamer" data-price="299.99">
+                        <img src="img/destacados/dest3.jpg" alt="Accesorios Gamer">
+                        <div class="product-info">
+                            <h3>Kit Gamer</h3>
+                            <p class="price">$299.99</p>
+                            <p>Todo lo que necesitas para tu setup gamer</p>
+                            <button class="btn add-to-cart-btn">Agregar al Carrito <i class="fas fa-cart-plus"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 1. Sección de Categorías -->
+        <section class="categories-section">
+            <div class="container">
+                <h2 class="text-center">Explora por Categoría</h2>
+                <div class="categories-grid">
+                    <a href="productos.html" class="category-card">
+                        <div class="category-icon">
+                            <i class="fas fa-desktop"></i>
+                        </div>
+                        <h3>PCs Gamer</h3>
+                        <p>RTX 5090, Ryzen 9, Intel i9</p>
+                    </a>
+                    <a href="productos.html" class="category-card">
+                        <div class="category-icon">
+                            <i class="fas fa-laptop"></i>
+                        </div>
+                        <h3>Laptops</h3>
+                        <p>Portátiles de alto rendimiento</p>
+                    </a>
+                    <a href="productos.html" class="category-card">
+                        <div class="category-icon">
+                            <i class="fas fa-keyboard"></i>
+                        </div>
+                        <h3>Periféricos</h3>
+                        <p>Teclados, mouse, headsets</p>
+                    </a>
+                    <a href="productos.html" class="category-card">
+                        <div class="category-icon">
+                            <i class="fas fa-tv"></i>
+                        </div>
+                        <h3>Monitores</h3>
+                        <p>144Hz, 240Hz, 4K, Ultrawide</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. Banner de Ofertas Flash -->
+        <section class="flash-sale">
+            <div class="container">
+                <div class="flash-content">
+                    <div class="flash-badge">⚡ OFERTA FLASH</div>
+                    <h2>50% OFF en Accesorios Gamer</h2>
+                    <p class="flash-description">Teclados mecánicos, mouse RGB y auriculares con sonido 7.1</p>
+                    <div class="countdown">
+                        <div class="countdown-item">
+                            <span class="countdown-number" id="hours">12</span>
+                            <span class="countdown-label">Horas</span>
+                        </div>
+                        <div class="countdown-item">
+                            <span class="countdown-number" id="minutes">45</span>
+                            <span class="countdown-label">Minutos</span>
+                        </div>
+                        <div class="countdown-item">
+                            <span class="countdown-number" id="seconds">30</span>
+                            <span class="countdown-label">Segundos</span>
+                        </div>
+                    </div>
+                    <a href="productos.html" class="btn btn-flash">Ver Oferta Ahora</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Sección ¿Por qué elegirnos? -->
+        <section class="why-us">
+            <div class="container">
+                <h2 class="text-center">¿Por qué elegir PC Gamer Store?</h2>
+                <div class="benefits-grid">
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="fas fa-shipping-fast"></i>
+                        </div>
+                        <h3>Envío Gratis 24h</h3>
+                        <p>Recibe tu equipo en menos de 24 horas en cualquier ciudad del Ecuador</p>
+                    </div>
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3>Garantía 2 Años</h3>
+                        <p>Todos nuestros productos incluyen garantía extendida sin costo adicional</p>
+                    </div>
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="fas fa-headset"></i>
+                        </div>
+                        <h3>Soporte Especializado</h3>
+                        <p>Expertos gamers a tu disposición para resolver cualquier duda técnica</p>
+                    </div>
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="fas fa-lock"></i>
+                        </div>
+                        <h3>Pago Seguro</h3>
+                        <p>Transacciones protegidas con encriptación SSL y múltiples métodos de pago</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Testimonios -->
+        <section class="testimonials">
+            <div class="container">
+                <h2 class="text-center">Lo que dicen nuestros clientes</h2>
+                <div class="testimonials-grid">
+                    <div class="testimonial-card">
+                        <div class="testimonial-stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">"Mi PC Gamer Pro con RTX 5090 corre todo en 4K a 144fps. El envío fue increíblemente rápido, llegó en 18 horas."</p>
+                        <div class="testimonial-author">
+                            <img class="author-avatar-img" src="https://randomuser.me/api/portraits/men/32.jpg" alt="Juan Díaz">
+                            <div class="author-info">
+                                <h4>Juan Díaz</h4>
+                                <span>Streamer en Twitch</span>
+                            </div>
+                        </img>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">"El soporte técnico me ayudó a configurar mi setup completo. Atención personalizada de verdaderos gamers."</p>
+                        <div class="testimonial-author">
+                            <img class="author-avatar-img" src="https://randomuser.me/api/portraits/women/44.jpg" alt="María Rodríguez">
+                            <div class="author-info">
+                                <h4>María Rodríguez</h4>
+                                <span>Profesional de eSports</span>
+                            </div>
+                        </img>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <p class="testimonial-text">"Excelente relación calidad-precio. Mi laptop ASUS ROG funciona perfectamente para trabajar y jugar."</p>
+                        <div class="testimonial-author">
+                            <img class="author-avatar-img" src="https://randomuser.me/api/portraits/men/85.jpg" alt="Carlos Pérez">
+                            <div class="author-info">
+                                <h4>Carlos Pérez</h4>
+                                <span>Diseñador Gráfico</span>
+                            </div>
+                        </img>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. Estadísticas -->
+        <section class="stats-section">
+            <div class="container">
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <div class="stat-number">10,000+</div>
+                        <div class="stat-label">PCs Vendidos</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">50,000+</div>
+                        <div class="stat-label">Clientes Felices</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">4.9/5</div>
+                        <div class="stat-label">Calificación Promedio</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">24h</div>
+                        <div class="stat-label">Entrega Garantizada</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. Newsletter -->
+        <section class="newsletter">
+            <div class="container">
+                <div class="newsletter-content">
+                    <div class="newsletter-text">
+                        <h2>Únete a la comunidad Gamer</h2>
+                        <p>Suscríbete y recibe <strong>10% de descuento</strong> en tu primera compra + acceso a ofertas exclusivas</p>
+                    </div>
+                    <form class="newsletter-form" onsubmit="event.preventDefault(); alert('¡Gracias por suscribirte! Revisa tu email para el código de descuento.');">
+                        <input type="email" placeholder="Tu correo electrónico" required>
+                        <button type="submit" class="btn btn-primary">Suscribirme</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. Carrusel de Marcas -->
+        <section class="brands-section">
+            <div class="container">
+                <h2 class="text-center">Trabajamos con las mejores marcas</h2>
+                <div class="brands-grid">
+                    <div class="brand-item">
+                        <i class="fas fa-microchip"></i>
+                        <span>ASUS ROG</span>
+                    </div>
+                    <div class="brand-item">
+                        <i class="fas fa-dragon"></i>
+                        <span>MSI</span>
+                    </div>
+                    <div class="brand-item">
+                        <i class="fas fa-snake"></i>
+                        <span>RAZER</span>
+                    </div>
+                    <div class="brand-item">
+                        <i class="fas fa-mouse"></i>
+                        <span>LOGITECH</span>
+                    </div>
+                    <div class="brand-item">
+                        <i class="fas fa-headphones"></i>
+                        <span>HYPERX</span>
+                    </div>
+                    <div class="brand-item">
+                        <i class="fas fa-memory"></i>
+                        <span>CORSAIR</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 8. Botón WhatsApp Flotante -->
+        <a href="https://wa.me/593999999999" class="whatsapp-float" target="_blank" aria-label="Contactar por WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+            <span class="whatsapp-tooltip">¿Necesitas ayuda? Escríbenos</span>
+        </a>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <!-- Columna 1: Logo y descripción -->
+                <div class="footer-column footer-brand">
+                    <h3>🎮 PC Gamer Store</h3>
+                    <p>Tu tienda de confianza para equipos gaming de alto rendimiento en Ecuador. Calidad garantizada y soporte especializado.</p>
+                    <div class="footer-contact-mini">
+                        <p><i class="fas fa-phone"></i> +593 98 765 4321</p>
+                        <p><i class="fas fa-envelope"></i> ventas@pcgamerstore.com</p>
+                    </div>
+                </div>
+
+                <!-- Columna 2: Enlaces rápidos -->
+                <div class="footer-column">
+                    <h4>Enlaces Rápidos</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="productos.html">Catálogo</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                        <li><a href="registro.html">Crear Cuenta</a></li>
+                        <li><a href="carrito.html">Mi Carrito</a></li>
+                    </ul>
+                </div>
+
+                <!-- Columna 3: Información legal -->
+                <div class="footer-column">
+                    <h4>Información Legal</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Términos y Condiciones</a></li>
+                        <li><a href="#">Política de Privacidad</a></li>
+                        <li><a href="#">Política de Devoluciones</a></li>
+                        <li><a href="#">Garantía de Productos</a></li>
+                        <li><a href="#">Preguntas Frecuentes (FAQ)</a></li>
+                    </ul>
+                </div>
+
+                <!-- Columna 4: Soporte -->
+                <div class="footer-column">
+                    <h4>Soporte y Ayuda</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Centro de Ayuda</a></li>
+                        <li><a href="#">Estado de Pedido</a></li>
+                        <li><a href="#">Rastrear Envío</a></li>
+                        <li><a href="#">Soporte Técnico</a></li>
+                        <li><a href="#">Reportar un Problema</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="footer-payment">
+                    <span>Métodos de pago:</span>
+                    <i class="fas fa-credit-card" title="Tarjetas de crédito"></i>
+                    <i class="fas fa-university" title="Transferencia bancaria"></i>
+                    <i class="fas fa-mobile-alt" title="Pago móvil"></i>
+                    <i class="fas fa-money-bill-wave" title="Efectivo"></i>
+                </div>
+                <div class="footer-security">
+                    <i class="fas fa-lock" title="Sitio seguro SSL"></i>
+                    <span>Compra 100% segura</span>
+                </div>
+                <p class="copyright">&copy; 2026 PC Gamer Store. Todos los derechos reservados.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Discord"><i class="fab fa-discord"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="js/cart.js"></script>
+</body>
+</html>

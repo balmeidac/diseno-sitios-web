@@ -1,0 +1,82 @@
+* {
+  box-sizing: border-box;
+  font-family: sans-serif;
+  color: #aaa;
+}
+
+h3 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #ffffff;
+}
+
+.meta-info {
+  color: #46d369;
+  font-weight: bold;
+  font-size: 0.9rem;
+  margin: 5px 0;
+}
+
+.poster {
+  height: 180px;
+  background-color: #444;
+  background-image: linear-gradient(to bottom, #444, #141414);
+  margin-bottom: 10px;
+}
+
+.movie-card {
+  background-color: #2f2f2f;
+  width: 300px;
+  padding: 15px;
+  border: 2px solid transparent;
+  margin: 20px;
+  position: relative;
+}
+
+.movie-card:hover {
+  border-color: #e50914;
+}
+
+.synopsis {
+  height: 60px;
+  font-size: 0.8rem;
+  color: #aaa;
+  overflow-y: scroll;
+}
+
+.watched-badge {
+  display: inline-block;
+  padding: 5px 10px;
+  margin-top: 8px;
+
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.4px;
+  color: #ffffff;
+
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+  opacity: 0.7;
+}
+
+.top-badge {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background-color: #e50914;
+  color: #fff;
+  padding: 8px;
+  font-weight: bold;
+  font-size: 0.8rem;
+  box-shadow: 0 2px 5px black;
+}
+
+.actions {
+  visibility: hidden;
+}
+
+.movie-card:hover .actions {
+  visibility: visible;
+  color: #aaa;
+  font-size: 0.8rem;
+}
